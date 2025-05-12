@@ -3,12 +3,6 @@
 # OEIS sequence: A365933
 
 def A365933(n):
-    if n == 1: return 1
-    remainders, exponent = [], 1
-    while (rem:=(10**exponent // 9 % n)) not in remainders:
-        remainders.append(rem); exponent += 1
-    return (exponent - remainders.index(rem) - 1) * 9
-def A365933(n):
     if n==1: return 1
     a,b,x,y=1,1,1%n,11%n
     while x!=y:

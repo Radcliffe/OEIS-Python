@@ -3,10 +3,6 @@
 # OEIS sequence: A265640
 
 from math import isqrt
-from sympy.ntheory.factor_ import core, isprime
-def ok(n): return isqrt(n)**2 == n or isprime(core(n))
-print([k for k in range(1, 145) if ok(k)]) # _Michael S. Branicky_, Oct 03 2024
-from math import isqrt
 from sympy import primepi, mobius
 def A265640(n):
     def bisection(f,kmin=0,kmax=1):

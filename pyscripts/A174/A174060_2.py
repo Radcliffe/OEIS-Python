@@ -3,10 +3,6 @@
 # OEIS sequence: A174060
 
 from math import isqrt
-A174060 = [0]
-for n in range(1,56): A174060.append(A174060[-1] + isqrt(n)**2)
-print(A174060) # _Karl-Heinz Hofmann_, Jun 15 2023
-from math import isqrt
 def A174060(n): return ((m:=isqrt(n+1))*(6*m*(n+1) - (m+1)*(3*m**2+m-1)))//6
 # _Karl-Heinz Hofmann_, Jun 15 2023
 

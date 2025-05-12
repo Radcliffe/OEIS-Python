@@ -4,11 +4,6 @@
 
 from math import isqrt
 from itertools import count, islice
-def sqr(n): return isqrt(n)**2 == n
-def agen(): yield from (k*k for k in count(1) if k%10 and len(s:=str(k*k))%2==0 and sqr(int(s[::-1])))
-print(list(islice(agen(), 6))) # _Michael S. Branicky_, May 23 2022
-from math import isqrt
-from itertools import count, islice
 from sympy import integer_nthroot
 def A354256_gen(): # generator of terms
     for l in count(2,2):

@@ -3,11 +3,6 @@
 # OEIS sequence: A327580
 
 import numpy as np
-for n in range(1, 21):
-    A = [ sum([ np.cos(np.pi * (j*k-1)/2) for k in range(1, n//j+1)])
-            for j in range(1, n+1) ]
-    print(np.array(np.rint(A), dtype=int))
-import numpy as np
 m, maxn = 1, 1000
 D = np.zeros((maxn, maxn), dtype=int);
 for j in range(maxn): D[j::j+1, j]=1

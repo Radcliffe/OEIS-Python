@@ -3,12 +3,6 @@
 # OEIS sequence: A359800
 
 from math import isqrt
-def a(n):
-    t, k = str(n*n), isqrt(10*n**2)
-    while not (s:=str(k*k)).startswith(t) or s[len(t)]=="0": k += 1
-    return int(s[len(t):])
-print([a(n) for n in range(1, 53)]) # _Michael S. Branicky_, Jan 15 2023
-from math import isqrt
 from sympy.ntheory.primetest import is_square
 def A359800(n):
     m = 10*n*n

@@ -3,8 +3,5 @@
 # OEIS sequence: A352598
 
 from math import prod
-def a(n): return prod(int(d)**2 for d in str(n) if d != '0')
-print([a(n) for n in range(1, 64)]) # _Michael S. Branicky_, Mar 22 2022
-from math import prod
 def A352598(n): return prod(map(lambda x:(0, 1, 4, 9, 16, 25, 36, 49, 64, 81)[int(x)],filter(lambda x:x>'1',str(n)))) # _Chai Wah Wu_, Sep 17 2024
 

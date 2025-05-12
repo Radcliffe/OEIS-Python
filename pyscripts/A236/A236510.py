@@ -3,7 +3,7 @@
 # OEIS sequence: A236510
 
 import re
-...
+   
 def factorize(n):
    for prime in primes:
       power = 0
@@ -11,11 +11,11 @@ def factorize(n):
          n /= prime
          power += 1
       yield power
-...
+   
 re_zeros = re.compile('(?P<zeros>0*)(?P<middle>.*[^0])(?P=zeros)')
-...
+   
 is_palindrome = lambda s: s==s[::-1]
-...
+   
 def has_palindromic_factorization(n):
    if n==1:
       return True
@@ -26,6 +26,6 @@ def has_palindromic_factorization(n):
          return True
    except AttributeError:
       return False
-...
+   
 a = has_palindromic_factorization
 

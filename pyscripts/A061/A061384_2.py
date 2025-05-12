@@ -3,16 +3,6 @@
 # OEIS sequence: A061384
 
 from itertools import count, islice
-def Q(n, s): # length-n strings of 0..9 with sum s, after _Robert Israel_
-    if s == 0: yield "0"*n
-    elif n == 1: yield (str(s) if s <= 9 else "")
-    else:
-        m = min(9, s) + 1
-        yield from (str(i)+t for i in range(m) for t in Q(n-1, s-i))
-def agen():
-    yield from (int(t) for n in count(1) for t in Q(n, n) if t[0] != "0")
-print(list(islice(agen(), 43))) # _Michael S. Branicky_, May 26 2022
-from itertools import count, islice
 from collections import Counter
 from sympy.utilities.iterables import partitions, multiset_permutations
 def A061384_gen(): # generator of terms

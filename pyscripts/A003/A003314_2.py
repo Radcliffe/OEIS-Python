@@ -3,8 +3,6 @@
 # OEIS sequence: A003314
 
 def A003314(n):
-    return n*int(math.log(4*n,2))-2**int(math.log(2*n,2)) # _Indranil Ghosh_, Feb 03 2017
-def A003314(n):
     s, i, z = n-1, n-1, 1
     while 0 <= i: s += i; i -= z; z += z
     return s

@@ -3,25 +3,6 @@
 # OEIS sequence: A057332
 
 from sympy import isprime
-from itertools import product
-def sign(n): return (n > 0) - (n < 0)
-def unds(n):
-  s = str(n)
-  if len(s) == 1: return True
-  signs = set(sign(int(s[i-1]) - int(s[i])) for i in range(1, len(s), 2))
-  if len(signs) > 1: return False
-  if len(s) % 2 == 0: return signs == {1} or signs == {-1}
-  return sign(int(s[-1]) - int(s[-2])) in signs - {0}
-def candidate_pals(n): # of length 2n + 1
-  if n == 0: yield from [2, 3, 5, 7]; return # one-digit primes
-  for rightbutend in product("0123456789", repeat=n-1):
-    rightbutend = "".join(rightbutend)
-    for end in "1379": # multi-digit primes must end in 1, 3, 7, or 9
-      left = end + rightbutend[::-1]
-      for mid in "0123456789": yield int(left + mid + rightbutend + end)
-def a(n): return sum(1 for p in candidate_pals(n) if unds(p) and isprime(p))
-print([a(n) for n in range(6)]) # _Michael S. Branicky_, Apr 15 2021
-from sympy import isprime
 def f(w,dir):
     if dir == 1:
         for s in w:

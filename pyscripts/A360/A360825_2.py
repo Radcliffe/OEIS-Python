@@ -7,11 +7,5 @@ from sympy import nextprime
 def A360825(n):
     if n == 3: return 2
     m = nextprime(n)
-    return reduce(lambda i, j: i*j%m,range(2,n+1),1)%m # _Chai Wah Wu_, Feb 22 2023
-from functools import reduce
-from sympy import nextprime
-def A360825(n):
-    if n == 3: return 2
-    m = nextprime(n)
     return (m-1)*pow(reduce(lambda i,j:i*j%m,range(n+1,m),1),-1,m)%m # _Chai Wah Wu_, Feb 23 2023
 

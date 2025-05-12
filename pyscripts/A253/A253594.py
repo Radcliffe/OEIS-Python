@@ -3,18 +3,18 @@
 # OEIS sequence: A253594
 
 from itertools import count
-.
+ 
 def base(n,b):
    while n:
       m = n%b
       yield m
       n = (n-m)//b
-.
+ 
 def is_palindrome(seq):
    seq = list(seq)
    l = len(seq)//2
    return seq[:l] == seq[-1:-l-1:-1]
-.
+ 
 def a():
    for n in count(2):
       base_representations = [(b,list(base(n,b))) for b in range(2,n-1)]

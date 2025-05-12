@@ -3,9 +3,5 @@
 # OEIS sequence: A356838
 
 from sympy import factorint
-from collections import Counter
-def a(n):
-    return Counter(factorint(n)).most_common(1)[0][0]
-from sympy import factorint
 def A356838(n): return max(factorint(n).items(),key=lambda x:(x[1],-x[0]))[0] # _Chai Wah Wu_, Sep 10 2022
 

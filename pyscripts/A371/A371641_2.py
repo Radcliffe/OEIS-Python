@@ -3,22 +3,6 @@
 # OEIS sequence: A371641
 
 from itertools import count
-from sympy.ntheory import digits
-from sympy import factorint, isprime
-def fromdigits(d, b):
-    n = 0
-    for di in d: n *= b; n += di
-    return n
-def a(n):
-    for k in count(4):
-        if isprime(k): continue
-        sf = []
-        for p, e in factorint(k).items():
-            sf.extend(e*digits(p, n)[1:])
-        if fromdigits(sf, n)%k == 0:
-            return k
-print([a(n) for n in range(2, 6)]) # _Michael S. Branicky_, Apr 01 2024
-from itertools import count
 from sympy import factorint, integer_log
 def A371641(n):
     for m in count(4):

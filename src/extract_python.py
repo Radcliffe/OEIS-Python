@@ -27,6 +27,7 @@ def write_python_code(python_lines, sequence_number, index):
         for line in python_lines:
             f.write(line + "\n")
         f.write("\n")
+    python_lines.clear()
     print(f"Wrote to {dest_file}")
 
 
@@ -50,15 +51,17 @@ def extract_python_code_from_file(file_path):
         if line.language != "Python":
             continue
         line = line.content.rstrip()
-        if line.startswith('(Python)') and len(python_lines) > 0:
+        if line.startswith('(Python)'):
+            if len(python_lines) > 0:
+                write_python_code(python_lines, sequence_number, index)
+                index += 1
             line = line[8:].lstrip()
-            write_python_code(python_lines, sequence_number, index)
-            index += 1
         if line:
             # Replace leading periods with spaces
             stripped_line = line.lstrip('.')
-            if stripped_line:
-                line = ' ' * (len(line) - len(stripped_line)) + stripped_line
+            if stripped_line.lower().startswith('see '):
+                continue
+            line = ' ' * (len(line) - len(stripped_line)) + stripped_line
             python_lines.append(line)
     if len(python_lines) > 0:
         write_python_code(python_lines, sequence_number, index)

@@ -3,9 +3,6 @@
 # OEIS sequence: A052294
 
 from sympy import isprime
-def ok(n): return isprime(bin(n).count("1"))
-print([k for k in range(101) if ok(k)]) # _Michael S. Branicky_, Jun 16 2022
-from sympy import isprime
 def ok(n): return isprime(n.bit_count())
 print([k for k in range(101) if ok(k)]) # _Michael S. Branicky_, Dec 27 2023
 

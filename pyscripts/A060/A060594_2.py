@@ -3,15 +3,5 @@
 # OEIS sequence: A060594
 
 from sympy import primefactors
-def a007814(n): return 1 + bin(n - 1).count('1') - bin(n).count('1')
-def a(n):
-    if n%2==0:
-        A=a007814(n)
-        b=2**A
-        c=n//b
-        return min(b//2, 4)*a(c)
-    else: return 2**len(primefactors(n))
-print([a(n) for n in range(1, 101)]) # _Indranil Ghosh_, Jul 18 2017, after the Maple program
-from sympy import primefactors
 def A060594(n): return (1<<len(primefactors(n>>(s:=(~n & n-1).bit_length()))))*(1 if n&1 else 1<<min(2,s-1)) # _Chai Wah Wu_, Oct 26 2022
 

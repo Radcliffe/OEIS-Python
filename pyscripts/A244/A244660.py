@@ -3,7 +3,7 @@
 # OEIS sequence: A244660
 
 from itertools import count
-.
+ 
 def check(n,power):
    np = str(n**power)
    l=len(np)
@@ -21,7 +21,7 @@ def check(n,power):
             old = bit
          if go:
             return True
-.
+ 
 for n in count(1):
    if check(n,2):
       print(n)

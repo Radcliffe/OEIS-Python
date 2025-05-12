@@ -3,10 +3,6 @@
 # OEIS sequence: A356690
 
 from math import prod
-from sympy import primerange
-def a(n): return prod(primerange(10*n, 10*(n+1)))
-print([a(n) for n in range(43)]) # _Michael S. Branicky_, Aug 23 2022
-from math import prod
 from sympy import isprime
 def A356690(n): return prod(m for i in (1,3,7,9) if isprime(m:=10*n+i)) if n else 210 # _Chai Wah Wu_, Sep 23 2022
 

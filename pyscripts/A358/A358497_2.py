@@ -3,16 +3,6 @@
 # OEIS sequence: A358497
 
 def A358497(n):
-    d,s,k = dict(),str(n),1
-    for i in range(len(s)):
-        if d.get(s[i],0) == 0:
-            d[s[i]] = str(k)
-            k = (k + 1)%10
-    s_t = list(s)
-    for i in range(len(s)):s_t[i] = d[s[i]]
-    return int(''.join(s_t))
-print([A358497(i) for i in range(100)])
-def A358497(n):
     s, c, i  = str(n), {}, 49
     for d in map(ord,s):
         if d not in c:

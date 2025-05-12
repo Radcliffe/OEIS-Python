@@ -3,17 +3,6 @@
 # OEIS sequence: A377090
 
 from sympy import isprime
-from itertools import count, islice
-def cond(n): return isprime(n)
-def agen(): # generator of terms
-    an, aset, m = 0, {0}, 1
-    for n in count(0):
-        yield an
-        an = next(s for k in count(m) for s in [k, -k] if s not in aset and cond(abs(an-s)))
-        aset.add(an)
-        while m in aset and -m in aset: m += 1
-print(list(islice(agen(), 62))) # _Michael S. Branicky_, Dec 27 2024
-from sympy import isprime
 def A377090(n):
     while len(terms := A377090.terms) <= n:
         while (k := A377090.N) in terms: A377090.N = (k<0)-k

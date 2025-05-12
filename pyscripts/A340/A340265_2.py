@@ -3,16 +3,6 @@
 # OEIS sequence: A340265
 
 from sympy import totient as phi
-N = 100
-# a(n) = n + 1 - a(phi(n)), n > 0, a(0) = 0
-a = [ 0 ] * N
-# a(1) = 1 + 1 - a(phi(1)) = 2 - a(1) => 2 a(1) = 2 => a(1) = 1
-# a(n), n > 1 computed using dynamic programming
-a[1] = 1
-for n in range(2, N):
-  a[n] = n + 1 - a[phi(n)]
-print(a[1:])
-from sympy import totient as phi
 def a(n): return 1 if n==1 else n + 1 - a(phi(n))
 print([a(n) for n in range(1, 100)]) # _Michael S. Branicky_, Jan 03 2021
 

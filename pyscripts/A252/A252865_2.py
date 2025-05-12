@@ -4,24 +4,6 @@
 
 from math import gcd
 from sympy import factorint
-A252865_list, l1, l2, s, b = [1,2,3], 3, 2, 4, set()
-for _ in range(10**2):
-    i = s
-    while True:
-        if max(factorint(i).values()) == 1:
-            if not i in b and gcd(i,l1) == 1 and gcd(i,l2) > 1:
-                A252865_list.append(i)
-                l2, l1 = l1, i
-                b.add(i)
-                while s in b:
-                    b.remove(s)
-                    s += 1
-                break
-        else:
-            b.add(i)
-        i += 1 # _Chai Wah Wu_, Dec 24 2014
-from math import gcd
-from sympy import factorint
 from itertools import count, islice
 def issquarefree(n): return max(factorint(n).values()) == 1
 def agen(): # generator of terms

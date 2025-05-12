@@ -3,11 +3,6 @@
 # OEIS sequence: A371696
 
 from itertools import count, islice
-from sympy import isprime, factorint
-def ok(k): return not isprime(k) and int("".join(str(p)[::-1]*e for p, e in list(factorint(k).items())[::-1]))%k == 0
-def agen(): yield from filter(ok, count(4))
-print(list(islice(agen(), 7))) # Michael S. Branicky, Apr 13 2024
-from itertools import count, islice
 from sympy import factorint
 def A371696_gen(startvalue=4): # generator of terms >= startvalue
     for n in count(max(startvalue,4)):

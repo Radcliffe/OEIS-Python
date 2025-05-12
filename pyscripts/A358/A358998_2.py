@@ -4,21 +4,6 @@
 
 from sympy import isprime
 from math import factorial
-S=[]
-nomb=200
-i=0
-while len(S) < nomb:
-    i+=1
-    if isprime(i):
-        continue
-    som=0
-    for j in range(len(str(i))):
-        som+=factorial(int(ix[j]))
-    if  not isprime(som):
-        continue
-    S.append(i)
-from sympy import isprime
-from math import factorial
 def f(n): return sum(factorial(int(d)) for d in str(n))
 def ok(n): return not isprime(n) and isprime(f(n))
 print([k for k in range(900) if ok(k)]) # _Michael S. Branicky_, Feb 11 2023

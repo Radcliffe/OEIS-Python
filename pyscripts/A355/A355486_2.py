@@ -3,15 +3,6 @@
 # OEIS sequence: A355486
 
 from sympy import prime
-def f(n):
-  S = 0
-  for x in range(1, n + 1):
-    for y in range(x + 1 , n + 1):
-      if ((pow(x, y, n) == pow(y, x, n))):
-        S += 2
-  return S
-def a(n): return f(prime(n))
-from sympy import prime
 def A355486(n):
     p = prime(n)
     return sum(2 for x in range(2,p-1) for y in range(x+1,p) if pow(x,y,p)==pow(y,x,p)) # _Chai Wah Wu_, Aug 30 2022

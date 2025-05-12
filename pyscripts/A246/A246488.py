@@ -12,6 +12,6 @@ for n in range(1,10**4):
         p2 = int(s1+str(m+1)+s2)
         if isprime(p1) and isprime(p2):
             A246488.append(p1), A246488.append(p2)
-.
+ 
 A246488 = sorted(set(A246488)) # _Chai Wah Wu_, Sep 05 2014
 

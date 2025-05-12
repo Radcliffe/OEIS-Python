@@ -3,12 +3,6 @@
 # OEIS sequence: A356862
 
 from sympy import factorint
-from collections import Counter
-def ok(k):
-    c = Counter(factorint(k)).most_common(2)
-    return not (len(c) > 1 and c[0][1] == c[1][1])
-print([k for k in range(2, 105) if ok(k)])
-from sympy import factorint
 from itertools import count, islice
 def A356862_gen(startvalue=2): # generator of terms >= startvalue
     return filter(lambda n:len(f:=sorted(factorint(n).values(),reverse=True))==1 or f[0]!=f[1],count(max(startvalue,2)))

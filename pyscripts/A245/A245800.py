@@ -14,7 +14,7 @@ for n in range(1, 10**7):
         prev = count
         total = 0
         count = 0
-.
+ 
 print("\ndone")
 print(math.sqrt(math.e))
 # _Rob van den Tillaart_, Aug 22 2014 [Corrected by _Derek Orr_, Oct 16 2014]

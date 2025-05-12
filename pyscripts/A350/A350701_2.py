@@ -3,9 +3,6 @@
 # OEIS sequence: A350701
 
 from math import isqrt
-from sympy import fibonacci as fi
-print([0,0] + [(isqrt(fi(k+1)-1) - isqrt(fi(k))) for k in range(2, 55)])
-from math import isqrt
 from gmpy2 import fib2
 def A350701(n): return 0 if n <= 1 else (lambda x:isqrt(x[0]-1)-isqrt(x[1]))(fib2(n+1)) # _Chai Wah Wu_, Jan 25 2022
 

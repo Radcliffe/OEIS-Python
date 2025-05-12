@@ -3,16 +3,5 @@
 # OEIS sequence: A359612
 
 from sympy import factorint
-def a(n):
-    max_factor = 0
-    min_exponent = float("inf")
-    for p, exponent in factorint(n).items():
-        if exponent < min_exponent:
-            max_factor = p
-            min_exponent = exponent
-        elif exponent == min_exponent:
-            max_factor = max(max_factor, p)
-    return max_factor
-from sympy import factorint
 def A359612(n): return (f:=list(map(tuple,zip(*sorted(factorint(n).items(),reverse=True)))))[0][f[1].index(min(f[1]))] # _Chai Wah Wu_, Feb 07 2023
 

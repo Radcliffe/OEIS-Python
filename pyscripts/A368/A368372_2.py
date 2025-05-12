@@ -3,15 +3,6 @@
 # OEIS sequence: A368372
 
 from fractions import Fraction
-from itertools import count, islice
-def agen(): # generator of terms
-    A = H = 0
-    for n in count(1):
-        A += n
-        H += Fraction(1, n)
-        yield ((A*Fraction(1, n) - n/H)).numerator
-print(list(islice(agen(), 30))) # _Michael S. Branicky_, Jan 24 2024
-from fractions import Fraction
 from sympy import harmonic
 def A368372(n): return (Fraction(n+1,2)-Fraction(n,harmonic(n))).numerator # _Chai Wah Wu_, Jan 25 2024
 

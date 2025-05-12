@@ -3,11 +3,6 @@
 # OEIS sequence: A336860
 
 from gmpy2 import is_square, isqrt
-def a(n):
-  if n == 1:
-    return 1
-  return a(isqrt(n)) + n - isqrt(n) ** 2
-from gmpy2 import is_square, isqrt
 a = [0, 1]
 n = 20
 for i in range(2, n+1):

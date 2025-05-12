@@ -32,7 +32,7 @@ y = str(a)
 for x in b:
     if str(x) in y:
         y = y.replace(str(x)," ",1)#replace first occurrence only
-........
+        
 while "  " in y:
     y = y.replace("  "," ")#replace long chains of spaces with a single space
 z = y.split(" ")#split terms into a list

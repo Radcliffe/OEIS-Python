@@ -3,17 +3,6 @@
 # OEIS sequence: A175583
 
 from sympy import isprime, divisors
-from sympy.combinatorics.subsets import Subset
-for n in range(1,10**5):
-    d = divisors(n)
-    s = sum(d)
-    if not s % 2 and max(d)<= s//2 and isprime(s//2-n):
-        for x in range(1,2**len(d)):
-            if sum(Subset.unrank_binary(x,d).subset) == s//2:
-                print(n,end=', ')
-                break
-# _Chai Wah Wu_, Aug 13 2014
-from sympy import isprime, divisors
 import numpy as np
 A175583 = []
 for n in range(1,10**5):

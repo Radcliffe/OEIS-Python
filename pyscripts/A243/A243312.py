@@ -3,10 +3,10 @@
 # OEIS sequence: A243312
 
 # coding=utf-8
-.
+ 
 import itertools
-.
-.
+ 
+ 
 def all_expressions(generic_expression, operation_combinations):
     """
     Merges a source expression and combinations of binary operators to generate a list of all possible expressions.
@@ -18,8 +18,8 @@ def all_expressions(generic_expression, operation_combinations):
     for combination in operation_combinations:
         expression_combinations.append(generic_expression.format(*combination))
     return expression_combinations
-.
-.
+ 
+ 
 def all_bracketings(expr):
     """
     Generates all possible permutations of parentheses for an expression.
@@ -33,8 +33,8 @@ def all_bracketings(expr):
             for left_expr in all_bracketings(expr[:i]):
                 for right_expr in all_bracketings(expr[i + 1:]):
                     yield "({}{}{})".format(left_expr, expr[i], right_expr)
-.
-.
+ 
+ 
 def num_valid_expressions(num_digits):
     """Perform all calculations with the given operations and in the range of digits specified.
     @param int num_digits: the number of digits in the expression
@@ -56,8 +56,8 @@ def num_valid_expressions(num_digits):
             except ZeroDivisionError:
                 pass
     return valid_expression_count
-.
-.
+ 
+ 
 if __name__ == "__main__":
     min_num_digits = 1
     max_num_digits = 6
