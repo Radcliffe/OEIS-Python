@@ -9,8 +9,6 @@ from typing import List, Tuple
 import py_compile
 from collections import Counter
 
-bad_prints = []
-
 
 def compile_all_scripts(python_dir: Path) -> List[Tuple[str, str]]:
     """
@@ -78,7 +76,7 @@ def write_report_excel(compile_errors: List[Tuple[str, str]], report_file: Path)
     df = pd.DataFrame(compile_errors, columns=["Sequence", "Index", "Line", "Error type", "Error message"])
     df.to_excel(report_file, index=False)
     print(f"Report written to {report_file}. Found {len(compile_errors)} compile errors.")
-    print(Counter(row[4] for row in compile_errors))
+
 
 def write_report_markdown(compile_errors: List[Tuple[str, str]], report_file: Path):
     """
@@ -89,16 +87,14 @@ def write_report_markdown(compile_errors: List[Tuple[str, str]], report_file: Pa
         report_file (Path): Path to the report file.
     """
     with open(report_file, 'w') as f:
-        f.write("# OEIS Python scripts that fail to compile in Python 3\n")
+        f.write("# OEIS Python scripts that fail to compile in Python 3.13.2\n")
         f.write("| Sequence | Index | Line | Error type | Error message |\n")
         f.write("|----------|-------|------|------------|----------------|\n")
         for error in compile_errors:
-            # Link sequence number to OEIS
             sequence_number = error[0]
             seq_link = f"[{sequence_number}](https://oeis.org/{sequence_number})"
             f.write(f"| {seq_link} | {error[1]} | {error[2]} | {error[3]} | {error[4]} |\n")
     print(f"Report written to {report_file}. Found {len(compile_errors)} compile errors.")
-
 
 
 def remove_compiled_files(python_dir: Path):
@@ -127,16 +123,14 @@ def detect_error(err_message: str) -> str:
 
 if __name__ == "__main__":
     # Set the path to the OEIS sequence directory
-    python_dir = Path("../pyscripts")
+    python_dir = Path("oeispy")
     # Find import errors
     compile_errors = compile_all_scripts(python_dir)
     # Write report to Excel file
-    report_file = Path("compile_errors.xlsx")
+    report_file = Path("../reports/compile_errors.xlsx")
     write_report_excel(compile_errors, report_file)
     # Write report to Markdown file
-    report_file = Path("compile_errors.md")
+    report_file = Path("../reports/compile_errors.md")
     write_report_markdown(compile_errors, report_file)
-    print(f"Found {len(compile_errors)} compile errors.")
     # Remove compiled files
     remove_compiled_files(python_dir)
-    # print(*bad_prints, sep="\n")
