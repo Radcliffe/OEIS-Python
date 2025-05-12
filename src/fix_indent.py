@@ -19,9 +19,11 @@ def fix_indentation(filepath):
                 line.content = ' ' * len(match.group(1)) + match.group(2)
                 changed = True
     if changed:
-        writer = OEISWriter(filepath)
+        fixed_filepath = filepath.replace(".seq", "_indent_fixed.seq")
+        writer = OEISWriter(fixed_filepath)
         writer.write_lines(lines)
-        print(f"Fixed indentation in {filepath}")
+        sequence_id = lines[0].sequence_id
+        print(sequence_id)
 
 
 def fix_indentation_in_directory(directory):
