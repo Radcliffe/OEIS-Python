@@ -1,14 +1,12 @@
 # OEIS Python scripts that fail to compile in Python 3.13.2
 | Sequence | Index | Line | Error type | Error message |
 |----------|-------|------|------------|----------------|
-| [A182505](https://oeis.org/A182505) | 1 | 5 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A182511](https://oeis.org/A182511) | 1 | 5 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A182538](https://oeis.org/A182538) | 1 | 4 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A182508](https://oeis.org/A182508) | 1 | 5 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A182509](https://oeis.org/A182509) | 1 | 5 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A182537](https://oeis.org/A182537) | 1 | 4 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A214852](https://oeis.org/A214852) | 1 | 14 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
-| [A214621](https://oeis.org/A214621) | 1 | 39 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A214755](https://oeis.org/A214755) | 1 | 14 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A214916](https://oeis.org/A214916) | 1 | 4 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A214754](https://oeis.org/A214754) | 1 | 16 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |

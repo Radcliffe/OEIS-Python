@@ -96,6 +96,6 @@ if __name__ == "__main__":
     # Walk through the directory and extract Python code from each file
     for root, _, files in sorted(os.walk(oeis_data_dir)):
         for file in files:
-            if file.endswith(".seq"):
+            if file.endswith(".seq") and not file.endswith("_indent_fixed.seq"):
                 filepath = os.path.join(root, file)
                 extract_python_code_from_file(filepath)
