@@ -3,6 +3,6 @@
 # OEIS sequence: A000740
 
 from sympy import mobius, divisors
-def a(n): return sum([mobius(n / d) * 2**(d - 1) for d in divisors(n)])
+def a(n): return sum([mobius(n // d) * 2**(d - 1) for d in divisors(n)])
 [a(n) for n in range(1, 101)]  # _Indranil Ghosh_, Jun 28 2017
 

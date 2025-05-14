@@ -3,17 +3,15 @@
 # OEIS sequence: A246544
 
 import math
- 
 def divs(n):
     large_divisors = []
     for i in range(1, int(math.sqrt(n) + 1)):
-        if n % i is 0:
+        if n % i == 0:
             yield i
-            if i is not n / i:
+            if i !=  n // i:
                 large_divisors.insert(0, n / i)
     for divisor in large_divisors:
         yield divisor
- 
 a = 2
 while a < 1000000000:
     q = list(divs(a))[:-1]

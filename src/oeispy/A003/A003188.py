@@ -3,5 +3,5 @@
 # OEIS sequence: A003188
 
 def A003188(n):
-    return int(bin(n^(n/2))[2:],2) # _Indranil Ghosh_, Jan 23 2017
+    return int(bin(n^(n//2))[2:],2) # _Indranil Ghosh_, Jan 23 2017
 
