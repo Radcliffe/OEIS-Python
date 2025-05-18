@@ -6,7 +6,7 @@ prpr = 1
 prev = 2
 for n in range(2,99):
   current = (prpr * prev) % n + 1
-  print prpr,
+  print(prpr, end=', ')
   prpr = prev
   prev = current
 

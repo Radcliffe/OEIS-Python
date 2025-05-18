@@ -1,7 +1,6 @@
 # OEIS Python scripts that fail to compile in Python 3.13.2
 | Sequence | Index | Line | Error type | Error message |
 |----------|-------|------|------------|----------------|
-| [A182511](https://oeis.org/A182511) | 1 | 5 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A182538](https://oeis.org/A182538) | 1 | 4 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A182508](https://oeis.org/A182508) | 1 | 5 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A182509](https://oeis.org/A182509) | 1 | 5 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |

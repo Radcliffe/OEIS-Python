@@ -3,6 +3,6 @@
 # OEIS sequence: A006080
 
 from sympy import binomial as C, totient, divisors
-def a003239(n): return 1 if n<2 else sum([totient(n/d)*C(2*d, d) for d in divisors(n)])/(2*n)
+def a003239(n): return 1 if n<2 else sum([totient(n//d)*C(2*d, d) for d in divisors(n)])/(2*n)
 def a(n): return 1 if n<2 else a003239(n)/2 + 2**(n - 2) # _Indranil Ghosh_, Apr 24 2017
 

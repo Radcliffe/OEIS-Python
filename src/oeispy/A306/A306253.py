@@ -7,10 +7,10 @@ def gcd(x, y):
     while(y):
         x, y = y, x % y
     return x
-roots = []
+roots = [0]
 for n in range(2, 140):
     # find U(n)
-    un = [i for i in range(n, 0, -1) if (gcd(i, n) is 1)]
+    un = [i for i in range(n, 0, -1) if (gcd(i, n) == 1)]
     # for each element in U(n), check if it's a generator
     order = len(un)
     is_cyclic = False

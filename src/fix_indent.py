@@ -4,7 +4,7 @@ import sys
 
 from read_oeis import OEISReader, OEISWriter
 
-def fix_indentation(filepath):
+def fix_indentation(filepath, sequences_changed):
     """
     Fix the indentation of the OEIS file.
     """
@@ -23,6 +23,7 @@ def fix_indentation(filepath):
         writer = OEISWriter(fixed_filepath)
         writer.write_lines(lines)
         sequence_id = lines[0].sequence_id
+        sequences_changed.append(sequence_id)
         print(sequence_id)
 
 
@@ -31,11 +32,15 @@ def fix_indentation_in_directory(directory):
     Fix the indentation of all OEIS files in the directory.
     """
     # Walk through the directory and fix indentation for each file
+    sequences_changed = []
     for root, _, files in sorted(os.walk(directory)):
         for file in files:
             if file.endswith(".seq"):
                 filepath = os.path.join(root, file)
-                fix_indentation(filepath)
+                fix_indentation(filepath, sequences_changed)
+    # Write list of sequences changed to file
+    with open('../reports/sequences_with_periods_as_indent.txt', 'w') as f:
+        f.write('\n'.join(sequences_changed) + '\n')
 
 
 if __name__ == "__main__":
