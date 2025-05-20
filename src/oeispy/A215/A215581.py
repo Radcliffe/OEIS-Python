@@ -14,5 +14,5 @@ while n+k*2 < TOP:
   n += k
   k += 1
 for k in range(n):
-  print a[k],
+  print(a[k], end=', ')
 

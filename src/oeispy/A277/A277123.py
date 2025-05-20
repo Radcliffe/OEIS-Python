@@ -8,5 +8,5 @@ for n in range(1,3001):
   while not sympy.isprime(p):  p+=1    # find the n'th prime
   sum += p*p
   p+=1
-  if sympy.isprime(sum):  print str(n)+',',
+  if sympy.isprime(sum):  print(n, end=', ')
 

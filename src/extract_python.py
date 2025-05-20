@@ -46,6 +46,23 @@ def write_python_code(python_lines, sequence_number, index):
     print(f"Wrote to {dest_file}")
 
 
+def has_non_comment(python_lines):
+    """
+    Check if the list of Python lines contains any non-comment lines.
+
+    Args:
+        python_lines (list): The list of lines of Python code.
+
+    Returns:
+        bool: True if there are non-comment lines, False otherwise.
+    """
+    for line in python_lines:
+        line = line.strip()
+        if line and not line.startswith('#'):
+            return True
+    return False
+
+
 def extract_python_code_from_file(file_path):
     """
     Extracts Python code from a given file.
@@ -78,7 +95,7 @@ def extract_python_code_from_file(file_path):
                 continue
             line = ' ' * (len(line) - len(stripped_line)) + stripped_line
             python_lines.append(line)
-    if len(python_lines) > 0:
+    if has_non_comment(python_lines):
         write_python_code(python_lines, sequence_number, index)
 
 

@@ -6,7 +6,7 @@ def bitlist(n):
     output = []
     while n != 0:
         output.append(n % 2)
-        n /= 2
+        n //= 2
     return output
 #converts a number into a list of the digits in binary reversed
 def bitsum(bitlist):
@@ -22,7 +22,7 @@ def a(bitlist):
     for x in range(l):
         output += bitlist[x] * (l - x) * (2**(x + 1) - 1)
     return output
-#to get the first n numbers of the sequence, write:
-for x in range(1, n + 1):
-    print x, a(bitlist(x))
+#to get the first 60 numbers of the sequence, write:
+for x in range(0, 60):
+    print(a(bitlist(x)))
 
