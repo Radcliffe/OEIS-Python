@@ -4,7 +4,7 @@
 
 prpr, prev = 0, 1
 for n in range(2, 99):
-   current = prev + (prpr ^ n)
-   print prpr,
-   prpr, prev = prev, current
+  current = prev + (prpr ^ n)
+  print prpr,
+  prpr, prev = prev, current
 

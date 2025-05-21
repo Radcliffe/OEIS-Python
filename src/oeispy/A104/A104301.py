@@ -4,7 +4,7 @@
 
 from sympy import isprime
 A104301_list = []
-for n in range(1,2000):
+for n in range(1, 2000):
     x = int(str((n+1)**2)+str(n**2))
     if isprime(x):
         A104301_list.append(x) # _Chai Wah Wu_, Sep 13 2014

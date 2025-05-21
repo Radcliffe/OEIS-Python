@@ -4,7 +4,7 @@
 
 import math
 f = math.factorial
-def C(n,r): return f(n)/f(r)/f(n - r)
+def C(n, r): return f(n)//f(r)//f(n - r)
 def A(n):
     s=0
     for k in range(0, n+1):

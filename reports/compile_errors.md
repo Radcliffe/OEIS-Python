@@ -39,7 +39,6 @@
 | [A228162](https://oeis.org/A228162) | 1 | 2 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A232115](https://oeis.org/A232115) | 1 | 17 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A232863](https://oeis.org/A232863) | 1 | 7 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
-| [A234362](https://oeis.org/A234362) | 1 | 12 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A235269](https://oeis.org/A235269) | 1 | 4 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A235707](https://oeis.org/A235707) | 1 | 2 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A236346](https://oeis.org/A236346) | 1 | 10 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |

@@ -13,5 +13,5 @@ for n in range(67):
     y = g
     a = (x+y)*0.5
     g = math.sqrt(x*y)
-  print str(int(a))+',',
+  print(int(a), end=', ')
 
