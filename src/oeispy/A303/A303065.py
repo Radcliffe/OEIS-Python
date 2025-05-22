@@ -8,6 +8,6 @@ for n in range(1024):
     c0 = b.count('0')
     c1 = len(b) - c0
     diff = c0 - c1
-    print str(d[100+diff])+',',
+    print(d[100+diff], end=', ')
     d[100+diff] += 1
 

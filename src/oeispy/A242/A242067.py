@@ -11,5 +11,5 @@ for n in range(60):
     if tn>sq and tn<cb:  s+=1
     elif tn>=cb:  break
     t+=1
-  print str(s)+',',
+  print(s, end=', ')
 

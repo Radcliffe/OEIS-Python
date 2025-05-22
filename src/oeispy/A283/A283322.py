@@ -4,18 +4,18 @@
 
 import math
 f=math.factorial
-def C(n,r): return f(n)/f(r)/f(n - r)
-def T(n,k):
-    if k==n: return f(n)/2
-    elif k==n-1: return n**2 * f(n - 1) / 2
+def C(n, r): return f(n)//f(r)//f(n - r)
+def T(n, k):
+    if k==n: return f(n)//2
+    elif k==n-1: return n**2 * f(n - 1) // 2
     else: return C(n, k)**2 * f(k)
 i=0
 l=[]
-for n in range(0,401):
+for n in range(0, 401):
     for k in range(0, n+1):
-        if n<2: l+=[1,]
-        else: l+=[T(n,k),]
-    print str(i)+" "+str(sum(l))
+        if n<2: l+=[1, ]
+        else: l+=[T(n, k), ]
+    print(f"{i} {sum(l)}")
     l=[]
     i+=1 # _Indranil Ghosh_, Mar 16 2017
 

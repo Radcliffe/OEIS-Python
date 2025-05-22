@@ -3,7 +3,7 @@
 # OEIS sequence: A242028
 
 from sympy import divisors, lcm
-A242028 = [n for n in range(3,10**5) if lcm(
+A242028 = [n for n in range(3, 10**5) if lcm(
           [2*d for d in divisors(n) if n > 2*d and n % (2*d)] +
           [d for d in divisors(2*n-1) if n > d >=2 and n % d] +
           [d for d in divisors(2*n+1) if n > d >=2 and n % d]) < n]

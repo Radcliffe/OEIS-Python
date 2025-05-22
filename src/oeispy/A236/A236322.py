@@ -12,5 +12,5 @@ def occurrences(string, sub):
         else:
             return count
 def a(n):
-    return occurrences(str(n**n),str(n))
+    return occurrences(str(n**n), str(n))
 

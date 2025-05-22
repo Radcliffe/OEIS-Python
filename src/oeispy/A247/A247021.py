@@ -5,5 +5,5 @@
 for n in range(10**3):
   s = str(int(n*(n+1)/2))
   if not (s.count('0') + s.count('3') + s.count('6') + s.count('8') + s.count('9')):
-    print(int(s),end=', ') # _Derek Orr_, Sep 19 2014
+    print(int(s), end=', ') # _Derek Orr_, Sep 19 2014
 
