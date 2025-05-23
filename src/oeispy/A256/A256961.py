@@ -6,17 +6,14 @@ def flip(i,n):
   m = i%n
   m2 = n-m-1
   return i-m+m2
- 
 def revert(i,moves):
   for move,leader in reversed(moves):
     if i==leader-1:
       i=0
     else:
       i+=1
-    
     i = flip(i,move)
   return i+3
- 
 def a256961():
   moves = []
   while True:

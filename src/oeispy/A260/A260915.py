@@ -3,7 +3,6 @@
 # OEIS sequence: A260915
 
 import datetime
- 
 def prime_number_days():
    j = 0
    date = datetime.date(1000,1,1)

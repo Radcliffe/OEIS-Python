@@ -4,7 +4,6 @@
 
 def score(n,step):
    return n*(step**(n//step+(1 if n%step!=0 else 0)))
- 
 def best(n):
    return max(range(1,(n-1)//2+1),key=lambda step:score(n,step))
 

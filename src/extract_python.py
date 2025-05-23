@@ -89,11 +89,8 @@ def extract_python_code_from_file(file_path):
                 index += 1
             line = line[8:].lstrip()
         if line:
-            # Replace leading periods with spaces
-            stripped_line = line.lstrip('.')
-            if stripped_line.lower().startswith('see '):
+            if line.lower().lstrip().startswith('see '):
                 continue
-            line = ' ' * (len(line) - len(stripped_line)) + stripped_line
             python_lines.append(line)
     if has_non_comment(python_lines):
         write_python_code(python_lines, sequence_number, index)

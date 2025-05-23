@@ -4,15 +4,12 @@
 
 def a():
     digits = [1,2,3,4,5,6,7,8,9]
- 
     combs = []
     for n in range(1,10):
         combs += list(combinations(digits,n))
- 
     # for each choice of digits, find the smallest element of the sequence which contains those digits, as a template
     templates = [''.join(str(d)*(lcm(comb)//d) for d in comb) for comb in combs]
     templates.sort(key=len)
- 
     # for each number of digits
     for i in count(1):
         # templates whose lengths divide i
