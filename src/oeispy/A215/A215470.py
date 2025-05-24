@@ -47,5 +47,5 @@ for s in range(1, n):
     if a*b==0 or c*d==0:
         break
     if prime[a]+prime[b]+prime[c]+prime[d]==4:
-        print s,
+        print(s, end=', ')
 

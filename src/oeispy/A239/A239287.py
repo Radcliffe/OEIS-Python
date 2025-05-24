@@ -5,6 +5,6 @@
 i=0
 for n in range(0,20):
     for k in range(0, n+1):
-        print str(i)+" "+str((n/2) - min(k, n - k))
+        print(str(i)+" "+str((n//2) - min(k, n - k)))
         i+=1 # _Indranil Ghosh_, Mar 15 2017
 

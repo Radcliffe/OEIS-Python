@@ -3,9 +3,9 @@
 # OEIS sequence: A228162
 
 for i, ai in enumerate([1, 2, 2, 3, 5]):
-    print '%d %d' % (i, ai)
+    print('%d %d' % (i, ai))
 p, q = 2, 4
 for i in range(5, 15):
-    print '%d %d' % (i, 4*p + 2*q + 1)
+    print('%d %d' % (i, 4*p + 2*q + 1))
     p, q = 3*p*p + 2*p + p*q, 2*p*p + 2*p*q + 2*q
 

@@ -9,8 +9,8 @@ for p in range(2,777):
         failed = True
         for x in range(2,TOP):
             if isprime(p*x+x-1):
-                print str(x)+',',
+                print(x, end=', ')
                 failed = False
                 break
-        if failed: print '-1,',
+        if failed: print(-1, end=', ')
 
