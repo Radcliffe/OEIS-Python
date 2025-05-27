@@ -118,7 +118,7 @@ class ImportAnalyzer:
         for file_path in python_files:
             self.analyze_file(file_path)
     
-    def generate_report(self, output_file="import_report.md"):
+    def generate_report(self, output_file="../reports/import_report.md"):
         """Generate a Markdown report with import statistics."""
         if not self.import_counts:
             print("No imports found to report")
@@ -164,7 +164,7 @@ class ImportAnalyzer:
 def main():
     parser = argparse.ArgumentParser(description="Analyze Python imports in a directory")
     parser.add_argument("directory", help="Directory to analyze")
-    parser.add_argument("-o", "--output", default="import_report.md", 
+    parser.add_argument("-o", "--output", default="../reports/import_report.md", 
                        help="Output file for the report (default: import_report.md)")
     
     args = parser.parse_args()

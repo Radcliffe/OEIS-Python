@@ -1,17 +1,17 @@
 # Python Import Analysis Report
 
 Total unique packages imported: 55
-Total import statements found: 21532
-Files analyzed: 14698
+Total import statements found: 21554
+Files analyzed: 14714
 
 ## Import Statistics
 
 | Package | Import Count |
 |---------|--------------|
-| sympy | 10100 |
-| itertools | 4584 |
-| math | 3359 |
-| collections | 803 |
+| sympy | 10109 |
+| itertools | 4587 |
+| math | 3366 |
+| collections | 805 |
 | functools | 749 |
 | gmpy2 | 404 |
 | fractions | 301 |
@@ -35,8 +35,8 @@ Files analyzed: 14698
 | unidecode | 8 |
 | datetime | 7 |
 | hashlib | 6 |
+| matplotlib | 6 |
 | dataclasses | 5 |
-| matplotlib | 5 |
 | primesieve | 5 |
 | scipy | 5 |
 | copy | 4 |
