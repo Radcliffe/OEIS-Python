@@ -45,39 +45,6 @@ def compile_all_scripts(python_dir: Path) -> List[Tuple[str, str]]:
     return compile_errors
 
 
-# def fix_print_statement(file_path: Path, line_number: int):
-#     """
-#     Fix the print statement in the script.
-#
-#     Args:
-#         file_path (Path): Path to the script.
-#         line_number (str): Line number where the error occurred.
-#     """
-#     with open(file_path, 'r', encoding='utf-8') as file:
-#         lines = file.readlines()
-#
-#     # Fix the print statement
-#     lines[line_number - 1] = lines[line_number].replace("print ", "print(") + ")\n"
-#
-#     with open(file_path, 'w', encoding='utf-8') as file:
-#         file.writelines(lines)
-#     print(f"Fixed print statement in {file_path} at line {line_number}")
-
-
-def write_report_excel(compile_errors: List[Tuple[str, str]], report_file: Path):
-    """
-    Write the compile errors to an Excel file.
-
-    Args:
-        compile_errors (List[Tuple[str, str]]): List of tuples containing the file path and error message.
-        report_file (Path): Path to the report file.
-    """
-    import pandas as pd
-    df = pd.DataFrame(compile_errors, columns=["Sequence", "Index", "Line", "Error type", "Error message"])
-    df.to_excel(report_file, index=False)
-    print(f"Report written to {report_file}. Found {len(compile_errors)} compile errors.")
-
-
 def write_report_markdown(compile_errors: List[Tuple[str, str]], report_file: Path):
     """
     Write the compile errors to a Markdown file.
@@ -126,9 +93,6 @@ if __name__ == "__main__":
     python_dir = Path("oeispy")
     # Find import errors
     compile_errors = compile_all_scripts(python_dir)
-    # Write report to Excel file
-    report_file = Path("../reports/compile_errors.xlsx")
-    write_report_excel(compile_errors, report_file)
     # Write report to Markdown file
     report_file = Path("../reports/compile_errors.md")
     write_report_markdown(compile_errors, report_file)
