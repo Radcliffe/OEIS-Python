@@ -14,7 +14,7 @@ for n in range(1000):
     while not (X in Xs):
         Xs.append(X)
         if X==0:
-            print str(n)+',',
+            print(n, end=', ')
             break
         X = X ^ ROR(X) ^ ROL(X)
 
