@@ -15,6 +15,6 @@ for n in range(3,sumLimit):
 # all combos of 2
 c1 = combinations_with_replacement(palPrimes,2)
 for i,j in c1:
-    if (i+j) < sumLimit: sums.d(i+j)
+    if (i+j) < sumLimit: sums.add(i+j)
 print(sorted(sums))
 

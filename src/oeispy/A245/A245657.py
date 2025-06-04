@@ -7,6 +7,6 @@ from sympy import isprime
 from sympy import prime
 for n in range(1,10**3):
   p = str(prime(n))
-  if not isprime(p+'3') and not isprime(p+'9') and not isprime('3'+p) and not isprime('9'+p):
+  if not isprime(int(p+'3')) and not isprime(int(p+'9')) and not isprime(int('3'+p)) and not isprime(int('9'+p)):
     print(int(p),end=', ') # _Derek Orr_, Sep 16 2014
 

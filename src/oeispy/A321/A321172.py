@@ -7,7 +7,7 @@ def cycle(m, n):
      if (m%2==1 and n%2==1): return 0
      grid = [[0]*n for _ in range(m)]
      grid[0][0] = 1; grid[1][0] = 1
-     counter = 0; stop = m*n-1
+     counter = [0]; stop = m*n-1
      def run(i, j, nb_points):
          for ni, nj in [(i-1, j), (i+1, j), (i, j+1), (i, j-1)] :
              if  0<=ni<=m-1 and 0<=nj<=n-1 and grid[ni][nj]==0 and (ni,nj)!=(0,1):
@@ -15,9 +15,9 @@ def cycle(m, n):
                  run(ni, nj, nb_points+1)
                  grid[ni][nj] = 0
              elif (ni,nj)==(0,1) and nb_points==stop:
-                 counter += 1
+                 counter[0] += 1
      run(1, 0, 2)
-     return counter
+     return counter[0]
 L=[];n=7#maximum for a time < 1 mn
 for i in range(2,n):
     for j in range(2,i+1):

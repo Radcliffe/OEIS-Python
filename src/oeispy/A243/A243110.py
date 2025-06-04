@@ -3,11 +3,11 @@
 # OEIS sequence: A243110
 
 from itertools import islice
-from sympy import next_prime, n_order
+from sympy import nextprime, n_order
 def A243110_gen(): # generator of terms
     p, c = 5, 2
     yield 3
-    while p:=next_prime(p):
+    while p:=nextprime(p):
         if p-1>c*(k:=n_order(10,p)):
             c = (p-1)//k
             yield int(p) # _Chai Wah Wu_, Jan 23 2024

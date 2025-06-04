@@ -3,12 +3,12 @@
 # OEIS sequence: A251743
 
 def nc2(n):
-    return n * (n-1) / 2
+    return n * (n-1) // 2
 def numAdjacentNodes(levels):
     ret = 0
     for level in range(1, levels+1):
         ret += ((1 << level) + nc2(1 << level))
     return ret
 for height in range(1, 33):
-    print numAdjacentNodes(height)
+    print(numAdjacentNodes(height), end=', ')
 

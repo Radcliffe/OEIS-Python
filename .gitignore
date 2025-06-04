@@ -178,3 +178,4 @@ oeisdata/
 *_indent_fixed.seq
 .DS_Store
 scratch/
+*.out

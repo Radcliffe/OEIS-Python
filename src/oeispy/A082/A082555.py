@@ -3,5 +3,5 @@
 # OEIS sequence: A082555
 
 def is_A082555(n): return is_A032924(n) and A010051(n)
-[p for p in range(1888) if is_A082555(n)] # _M. F. Hasler_, Feb 15 2023
+[p for p in range(1888) if is_A082555(p)] # _M. F. Hasler_, Feb 15 2023
 

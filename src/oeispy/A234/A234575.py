@@ -6,5 +6,5 @@ for n in range(1, 19):
   for k in range(1, n+1):
     c = n//k + n%k
     print('%2d' % c, end=' ')
-print()
+  print()
 

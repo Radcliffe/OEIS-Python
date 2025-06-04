@@ -27,5 +27,5 @@ cube=lambda k: (2**k**3+3*2**((k+1>>1)*k**2)+9*2**((k**2+1>>1)*k)+2**(k**3+1>>1)
 tesseract=lambda k: (2**k**4+4*2**((k+1>>1)*k**3)+30*2**((k**2+1>>1)*k**2)+16*2**((k**3+1>>1)*k)+2**(k**4+1>>1)+12*2**(k**3*(k+1)>>1)+12*2**((k**2+3>>2)*k**2)+48*2**(((k**2+1>>1)*k+1>>1)*k)+12*2**((k**2+1>>1)*k**2+1>>1)+32*2**(k**2*(k**2+2)//3)+32*2**((k+1>>1)*k*(k**2+2)//3)+32*2**((k*(k**2-1)//3+k+1>>1)*k)+32*2**(k**2*(k**2+2)//3+1>>1)+12*2**(k**2*(k**2+1)>>1)+12*2**(k**4+3>>2)+48*2**(k*(k**3+k+2)>>2)+48*2**(k**4+7>>3))//384
 nonequivalents=lambda n,k: (lambda k: 2,line,A054247,cube,tesseract)[n](k) if n<5 else 2**k if k<2 else specific(cycleLengths(n,k))
 A002262=(lambda n: (lambda s: (lambda o: (o,s-o))(n-s*(s+1)//2))(isqrt((n<<3)+1)-1>>1))
-print(tuple(map(lambda n: nonequivalents(*A002262(n)),range(28)))) # _Nathan L. Skirrow_, May 29 2023
+print(tuple(map(lambda n: nonequivalents(*A002262(n)),range(28)))) # _Natalia L. Skirrow_, May 29 2023
 

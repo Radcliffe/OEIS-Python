@@ -4,11 +4,11 @@
 
 import math
 f=math.factorial
-def C(n,r): return f(n)/f(r)/f(n - r)
+def C(n,r): return f(n)//f(r)//f(n - r)
 def T(n,m): return sum([(-1)**j*C(m,j)*(2**(m - j) - 1)**n for j in range (0, m+1)])
 i=1
 for n in range(1,11):
     for m in range(1, n+1):
-        print str(i)+" "+str(2*T(n, m) + 2**(n*m) + (2**n - 2)**m + (2**m - 2)**n - 2*(2**m - 1)**n - 2*(2**n - 1)**m)
+        print(str(i)+" "+str(2*T(n, m) + 2**(n*m) + (2**n - 2)**m + (2**m - 2)**n - 2*(2**m - 1)**n - 2*(2**n - 1)**m))
         i+=1 # _Indranil Ghosh_, Mar 14 2017
 

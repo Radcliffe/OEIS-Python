@@ -6,5 +6,5 @@ def A084558(n):
   i=1
   while n: i+=1; n//=i
   return(i-1)
-print(list(map(A084558,range(101)))) # _Nathan L. Skirrow_, May 28 2023
+print(list(map(A084558,range(101)))) # _Natalia L. Skirrow_, May 28 2023
 

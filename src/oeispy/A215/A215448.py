@@ -6,7 +6,7 @@ a = [1]*33
 a[1]=0
 sum = a[0]+a[1]
 for n in range(2,33):
-    print a[n-2],
+    print(a[n-2], end=', ')
     a[n] = a[n-1] + a[n-2] + sum
     sum += a[n]
 

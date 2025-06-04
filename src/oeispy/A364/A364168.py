@@ -4,7 +4,7 @@
 
 from math import isqrt
 def isok(h):
-    if (n & 15) not in [0, 3, 4, 7, 11, 12, 15]: return False
+    if (h & 15) not in [0, 3, 4, 7, 11, 12, 15]: return False
     c = 0
     for p in range(1, isqrt(h)+1):
         q, r = divmod(h,p)

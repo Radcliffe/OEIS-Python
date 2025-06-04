@@ -6,5 +6,5 @@ def A084558(n):
  i=1
  while n: i+=1;n//=i
  return(i-1)
-A211670=lambda n: n and A084558(n.bit_length()-1) # _Nathan L. Skirrow_, May 17 2023
+A211670=lambda n: n and A084558(n.bit_length()-1) # _Natalia L. Skirrow_, May 17 2023
 

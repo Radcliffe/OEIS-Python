@@ -3,5 +3,5 @@
 # OEIS sequence: A211668
 
 from sympy import integer_log
-A048766=lambda n: integer_log(n,3)[0].bit_length() # _Nathan L. Skirrow_, May 17 2023
+A048766=lambda n: integer_log(n,3)[0].bit_length() # _Natalia L. Skirrow_, May 17 2023
 

@@ -9,5 +9,5 @@ def A368070(n):
     if m!=(m:=n>>k&1): r=r[::-1]
     for j in range(k): r[j+1]+=r[j]
     r.insert(0,0)
-  return sum(r) # _Nathan L. Skirrow_, Apr 20 2025
+  return sum(r) # _Natalia L. Skirrow_, Apr 20 2025
 

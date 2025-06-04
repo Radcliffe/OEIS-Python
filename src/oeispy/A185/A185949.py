@@ -12,7 +12,7 @@ for n in range (1, 100):
             num = "%d" % (pattern)
         else:
             num = "%d%d" % (j, pattern)
-        if (is_prime(num)):
+        if (is_prime(int(num))):
             print(num)
             break
 

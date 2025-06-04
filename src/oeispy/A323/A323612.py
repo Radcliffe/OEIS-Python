@@ -7,14 +7,14 @@ def zahl(z):
    r = 0
    while r < len(a) and a[0] == a[r]:
       r = r + 1
-      b = str(z*z)
-      s = 0
+   b = str(z*z)
+   s = 0
    while r < len(b) and b[0] == b[s]:
       s = s + 1
-      if r >= 2:
-         return(s-r)
-      else:
-         return(-1)
+   if r >= 2:
+      return(s-r)
+   else:
+      return(-1)
 anz = 0
 for i in range(1000000):
    if zahl(i) >= 0:

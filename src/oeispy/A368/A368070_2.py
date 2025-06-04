@@ -11,5 +11,5 @@ def A368070(n):
     i=inte(r)
     r=i if n>>k&1 else [sum(i)]+[-c for c in i[1:]]
   return int(fact(n.bit_length()+1)*sum(inte(r)))
-#without the multiplication, this is the probability that a sequence of real numbers in [0,1] satisfies the chain of inequalities. # _Nathan L. Skirrow_, Apr 20 2025
+#without the multiplication, this is the probability that a sequence of real numbers in [0,1] satisfies the chain of inequalities. # _Natalia L. Skirrow_, Apr 20 2025
 
