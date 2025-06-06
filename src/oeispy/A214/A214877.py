@@ -3,5 +3,5 @@
 # OEIS sequence: A214877
 
 for n in range(44):
-    print n ** (n%10),
+    print(n ** (n%10), end=', ')
 

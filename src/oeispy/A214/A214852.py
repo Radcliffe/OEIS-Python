@@ -12,9 +12,9 @@ def count10(x):
       m+=m
     return c0-c1
 prpr, prev = 0,1
-TOP = 1<<16
+TOP = 3000
 for i in range(1,TOP):
     if count10(prev)==0:
-        print i,
+        print(i, end=", ")
     prpr, prev = prev, prpr+prev
 

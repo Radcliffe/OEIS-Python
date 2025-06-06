@@ -8,10 +8,10 @@ def sod(n):
         kk= kk+(n%10)
         n =int(n//10)
     return kk
-for c in range (2, 10**4):
+for c in range (2, 10**3):
     bb=0
     for a in range(1,200):
-        bb=bb+sod(c**a,10)
+        bb=bb+sod(c**a)
         if bb==c*a:
             print (c,a)
 

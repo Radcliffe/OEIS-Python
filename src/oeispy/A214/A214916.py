@@ -5,8 +5,8 @@
 import math
 prpr = prev = 1
 for n in range(2, 33):
-    print prpr,
-    cur = math.factorial(n) / prpr
+    print(prpr, end=', ')
+    cur = math.factorial(n) // prpr
     prpr = prev
     prev = cur
 

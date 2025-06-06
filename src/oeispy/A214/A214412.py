@@ -21,5 +21,5 @@ for n in range(777):
             break
         i += 1
     if yes==0:
-        print n,
+        print(n, end=', ')
 

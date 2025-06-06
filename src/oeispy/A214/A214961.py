@@ -4,13 +4,13 @@
 
 prpr = prev = 1
 for n in range(1, 55):
-    print prpr,
+    print(prpr, end=', ')
     b = k = 0
     while k<=prev:
-        d = b*(b+1)/2
+        d = b*(b+1)//2
         k = 0
         if d%prpr==0:
-            k = d / prpr
+            k = d // prpr
         b += 1
     prpr = prev
     prev = k

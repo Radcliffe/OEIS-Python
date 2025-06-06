@@ -4,7 +4,7 @@
 
 a = 0
 for n in range(100):
-    print a,
+    print(a, end=', ')
     ta = a
     c0 = (a==0)
     while ta>0:

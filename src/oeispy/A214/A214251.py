@@ -33,5 +33,5 @@ for n in range(1, 92):
     k+= grid[(posY-1)*SIZE+posX-1] + grid[(posY-1)*SIZE+posX+1]
     k+= grid[(posY+1)*SIZE+posX-1] + grid[(posY+1)*SIZE+posX+1]
     k+= grid[posY*SIZE+posX-1] + grid[posY*SIZE+posX+1]
-    print k,
+    print(k, end=', ')
 

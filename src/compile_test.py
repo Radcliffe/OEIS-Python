@@ -22,7 +22,7 @@ def compile_all_scripts(python_dir: Path) -> List[Tuple[str, str]]:
     """
     compile_errors = []
     for root, _, files in sorted(os.walk(python_dir)):
-        for file in files:
+        for file in sorted(files):
             if file.endswith(".py"):
                 file_path = Path(root) / file
                 try:
