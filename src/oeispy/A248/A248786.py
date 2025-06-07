@@ -6,5 +6,5 @@ from math import *
 from decimal import *
 getcontext().prec = 100
 for n in range(0,101):
-  print n,(29*n+floor(n/29.0))+ 0**n-0**(n%29)
+  print(n, (29*n+floor(n/29.0))+ 0**n-0**(n%29))
 

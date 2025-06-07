@@ -9,13 +9,13 @@ def HW(x):
 def TW(x):
   if x==0: return 0
   return sum([ ((x>>i)&1)*(i+1) for i in range(int(math.log(x, 2))+1) ])
-max_h = L+1; max_t = lambda h: L + (h-1)*h/2 + 1
+max_h = L+1; max_t = lambda h: L + (h-1)*h//2 + 1
 T = [None] * max_h
 for h in range(max_h): T[h] = [0] * max_t(h)
 for i in range(2**L):
   h = HW(i); t = TW(i)
   if t < max_t(h): T[h][t] = T[h][t] + 1
 for h in range(max_h):
-  for t in range(max_t(h)): print T[h][t], ';',
-  print
+  for t in range(max_t(h)): print(T[h][t], end=', ')
+  print()
 

@@ -4,5 +4,5 @@
 
 from math import *
 for n in range(0,101):
-  print n,(29*n+ceil(n/29.0))
+  print(n, (29*n+ceil(n/29.0)))
 
