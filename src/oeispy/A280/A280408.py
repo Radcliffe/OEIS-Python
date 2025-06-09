@@ -7,10 +7,10 @@ def a(n):
     if n==1: return [2]
     l=[n, ]
     while True:
-        if n%2==0: n/=2
+        if n%2==0: n//=2
         else: n = 3*n + 1
         l+=[n, ]
         if n<2: break
     return list(filter(lambda i: isprime(i), l))
-for n in range(1, 21): print a(n) # _Indranil Ghosh_, Apr 14 2017
+for n in range(1, 21): print(a(n)) # _Indranil Ghosh_, Apr 14 2017
 

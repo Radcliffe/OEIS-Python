@@ -14,6 +14,6 @@ def t(n):
                                 if (a*d+b*c)==(a+d)**n:
                                     s+=1
     return s
-for i in range(0,104):
-    print str(i)+" "+str(t(i))
+for i in range(0,24):
+    print(t(i), end=', ')
 
