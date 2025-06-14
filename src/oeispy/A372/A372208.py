@@ -9,10 +9,5 @@ def T_Lah(n, k):
         return 1
     else:
         return T_Lah(n-1, k-1) + ((n+k-1)**3) * T_Lah(n-1, k)
-def print_triangle(rows):
-    for n in range(rows):
-        row_values = [T_Lah(n, k) for k in range(n+1)]
-        print(' '.join(map(str, row_values)).center(rows*10))
-rows = 10
-print_triangle(rows)
+print([T_Lah(n, k) for n in range(3, 12) for k in range(3, n+1)])
 

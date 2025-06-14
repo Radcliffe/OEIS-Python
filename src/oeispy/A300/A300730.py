@@ -14,11 +14,11 @@ def g(i,s,perms):
        if c == 2:
            break
    if c == 1:
-       print i
+       print(i)
 S=[1, 2, 7,24,85,285,1143]
 S1=[0,1, 2, 7,24,85,285,1143]
 perms = [p for p in itertools.product(S1, repeat=len(S))]
-s=np.asarray(S,dtype=np.int)
+s=np.asarray(S,dtype=np.int64)
 for i in range(1,6268):
    if i not in S:
        g(i,s,perms)

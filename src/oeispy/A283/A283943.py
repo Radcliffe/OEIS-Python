@@ -12,5 +12,5 @@ v=[s(n) for n in range(0, 101)]
 u=[p(n) for n in range(0, 101)]
 def w(i, j): return u[i - 1] + v[j - 1] + (i - 1) * (j - 1) - 1
 for n in range(1, 11):
-    print [w(k, n - k + 1) for k in range(1, n + 1)] # _Indranil Ghosh_, Mar 26 2017
+    print([w(k, n - k + 1) for k in range(1, n + 1)]) # _Indranil Ghosh_, Mar 26 2017
 

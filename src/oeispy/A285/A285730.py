@@ -4,6 +4,6 @@
 
 from sympy import primefactors
 def a006530(n): return 1 if n==1 else max(primefactors(n))
-def A(n, k): return a006530(n) if k==1 else a006530(n)*A(n/a006530(n), k - 1)
-for n in range(1, 21): print [A(k, n - k + 1) for k in range(1, n + 1)] # _Indranil Ghosh_, Apr 28 2017
+def A(n, k): return a006530(n) if k==1 else a006530(n)*A(n//a006530(n), k - 1)
+for n in range(1, 21): print([A(k, n - k + 1) for k in range(1, n + 1)]) # _Indranil Ghosh_, Apr 28 2017
 

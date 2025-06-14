@@ -8,6 +8,7 @@ dependencies = [
     "gmpy2>=2.2.1",
     "graphillion>=2.1",
     "ipython>=9.2.0",
+    "matplotlib>=3.10.3",
     "numpy>=2.2.5",
     "openpyxl>=3.1.5",
     "pandas>=2.2.3",

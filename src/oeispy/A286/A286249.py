@@ -4,7 +4,7 @@
 
 from sympy import factorint
 import math
-def T(n, m): return ((n + m)**2 - n - 3*m + 2)/2
+def T(n, m): return ((n + m)**2 - n - 3*m + 2)//2
 def P(n):
     f = factorint(n)
     return sorted([f[i] for i in f])
@@ -13,6 +13,6 @@ def a046523(n):
     while True:
         if P(n) == P(x): return x
         else: x+=1
-def t(n, k): return 0 if n%k!=0 else T(a046523(n/k), k)
-for n in range(1, 21): print [t(n, k) for k in range(1, n + 1)] # _Indranil Ghosh_, May 08 2017
+def t(n, k): return 0 if n%k!=0 else T(a046523(n//k), k)
+for n in range(1, 21): print([t(n, k) for k in range(1, n + 1)]) # _Indranil Ghosh_, May 08 2017
 

@@ -12,5 +12,5 @@ for i in range(1,101):
   while diff-prime(j) >=0:
    diff-=prime(j)
    j+=1
-  print diff,',',
+  print(diff, end=', ')
 

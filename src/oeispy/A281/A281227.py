@@ -4,12 +4,12 @@
 
 from sympy import isprime
 def gray(n):
-    return bin(n^(n/2))[2:]
+    return bin(n^(n//2))[2:]
 i=1
 j=1
 while j<=481:
     if isprime(i)==True and isprime(int(gray(i)))==True:
-        print str(j)+" "+str(i)
+        print(str(j)+" "+str(i))
         j+=1
     i+=1
 

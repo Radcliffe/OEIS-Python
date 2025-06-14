@@ -3,12 +3,12 @@
 # OEIS sequence: A281379
 
 def G(n):
-    return bin(n^(n/2))[2:]
+    return bin(n^(n//2))[2:]
 i=0
 j=1
 while j<=10000:
     if G(i)==G(i)[::-1]:
-        print str(j)+" "+str(i)
+        print(str(j)+" "+str(i))
         j+=1
     i+=1
 

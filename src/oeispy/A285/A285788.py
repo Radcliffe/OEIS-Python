@@ -4,5 +4,5 @@
 
 from sympy import gcd, isprime
 def a(n): return list(filter(lambda k: isprime(k)==0 and gcd(k, n)==1, range(1, n + 1)))
-for n in range(1, 21): print a(n) # _Indranil Ghosh_, Apr 26 2017
+for n in range(1, 21): print(a(n)) # _Indranil Ghosh_, Apr 26 2017
 

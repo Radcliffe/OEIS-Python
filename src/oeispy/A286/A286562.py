@@ -8,5 +8,5 @@ def a(n, k):
     while n%(k**i)==0:
         i+=1
     return i-1
-for n in range(1, 21): print [a(k, n - k + 1) for k in range(1, n + 1)][::-1] # _Indranil Ghosh_, May 20 2017
+for n in range(1, 21): print([a(k, n - k + 1) for k in range(1, n + 1)][::-1]) # _Indranil Ghosh_, May 20 2017
 

@@ -4,5 +4,5 @@
 
 def D(n): return sum([int(i) for i in str(n)])
 for n in range(37,317):
-    if D(27*n)==27:print str(n)+",", # _Indranil Ghosh_, Mar 15 2017
+    if D(27*n)==27:print(n, end=', ') # _Indranil Ghosh_, Mar 15 2017
 

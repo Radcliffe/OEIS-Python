@@ -21,7 +21,7 @@ i=1
 j=1
 while j<=2014:
     if isprime(i)==True and isprime(elias_gamma(i))==True:
-        print str(j)+" "+str(i)
+        print(str(j)+" "+str(i))
         j+=1
     i+=1
 

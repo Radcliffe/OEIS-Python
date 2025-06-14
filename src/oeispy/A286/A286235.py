@@ -3,7 +3,7 @@
 # OEIS sequence: A286235
 
 from sympy import totient
-def T(n, m): return ((n + m)**2 - n - 3*m + 2)/2
-def t(n, k): return T(totient(k), int(n/k))
-for n in range(1, 21): print [t(n, k) for k in range(1, n + 1)] # _Indranil Ghosh_, May 11 2017
+def T(n, m): return ((n + m)**2 - n - 3*m + 2)//2
+def t(n, k): return T(totient(k), int(n//k))
+for n in range(1, 21): print([t(n, k) for k in range(1, n + 1)]) # _Indranil Ghosh_, May 11 2017
 
