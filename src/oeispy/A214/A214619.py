@@ -13,15 +13,15 @@ for n in range(1,TOP):
     t = x = n
     while x:
         curDi += 10**( x%10 )
-        x /= 10
+        x //= 10
     for p in primes:
         if t%p==0:
             if curSm==0:
                 curSm = p
             curLa = p
-            t/=p
+            t//=p
             while t%p==0:
-                t/=p
+                t//=p
             if t==1:
                 break
     digitset[n] = curDi
@@ -33,5 +33,5 @@ for n in range(1,TOP):
             flags[n]+=1
 for n in range(1,TOP):
     if flags[n]>0:
-        print n,
+        print(n)
 
