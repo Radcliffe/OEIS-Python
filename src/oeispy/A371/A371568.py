@@ -4,6 +4,7 @@
 
 # The Akiyama-Tanigawa algorithm for the binomial generates the rows.
 # Adds row(0) = 0^k and column(0) = 0^n.
+from math import comb as binomial
 def ATBinomial(n, len):
     A = [0] * len
     R = [0] * len

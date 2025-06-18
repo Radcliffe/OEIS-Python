@@ -10,5 +10,5 @@ def A360443(n):
     j = min((ch, j) for j, ch in enumerate(tail) if s[i-1] < ch)[1]
     s = s[:i-1] + tail[j] + ''.join(sorted(tail[:j] + tail[j+1:]))
     return int(s)
-for n in range(100): print(n, A360443(n))
+for n in range(1, 100): print(n, A360443(n))
 

@@ -4,6 +4,7 @@
 
 from sympy.combinatorics.permutations import Permutation
 def a(n):
+  if n == 0: return 0
   def eytzinger(t, k=1, i=0):
     if (k < len(t)):
       i = eytzinger(t, k * 2, i)

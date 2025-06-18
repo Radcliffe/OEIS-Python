@@ -18,7 +18,6 @@ def agen(): # generator of terms
                 sr = str(right)
                 if len(sr) == k and isqrt(right)**2 == right:
                     sk.add(tt)
-        found += len(sk)
         yield from sorted(sk)
 print(list(islice(agen(), 20))) # _Michael S. Branicky_, Nov 21 2023
 

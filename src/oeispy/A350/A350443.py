@@ -14,6 +14,6 @@ def ok(n):
             if c > 1:
                 return False
             d = di
-    return ok(d) and len(str(d)) == len(s) - 1
+    return d and ok(d) and len(str(d)) == len(s) - 1
 print([k for k in range(3260) if ok(k)]) # _Michael S. Branicky_, Dec 31 2021
 

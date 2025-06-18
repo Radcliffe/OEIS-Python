@@ -23,5 +23,5 @@ def composconst(cnt):
     complist=list(comps)
     cnt2 = len(complist)
     return nsum(lambda k: (complist[int(k)]-1)/nprod(lambda l: complist[int(l)],[0,k-1]),[0,cnt2-1])
-compconst(50)
+composconst(50)
 

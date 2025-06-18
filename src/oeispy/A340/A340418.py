@@ -7,7 +7,7 @@ rec = -1
 for n in range(1, 397):
     m, ct = n, 0
     while m > 1:
-        if m%2 == 0: m /= 2
+        if m%2 == 0: m //= 2
         elif isprime(m) == 1: m = m*m - 1
         else: m -= 1
         ct += 1

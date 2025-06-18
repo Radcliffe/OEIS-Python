@@ -10,6 +10,6 @@ def bgen():
     D = "123456789"
     return ((D[i],)+r for d in count(1) for i in range(9) for r in mc("0"+D[i:], d-1))
 def agen():
-    yield from (int("".join(t)) for t in filter(c, cgen()))
+    yield from (int("".join(t)) for t in filter(c, bgen()))
 print(list(islice(agen(), 34))) # _Michael S. Branicky_, Sep 11 2024
 

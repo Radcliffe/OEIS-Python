@@ -3,5 +3,5 @@
 # OEIS sequence: A365074
 
 from gmpy2 import *
-print([k for k in range(0,2000) if is_prime((fac(n)- k*k - 1))])
+print([k for k in range(0,2000) if is_prime((fac(k)- k*k - 1))])
 

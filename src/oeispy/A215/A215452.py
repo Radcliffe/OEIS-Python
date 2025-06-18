@@ -4,7 +4,7 @@
 
 s = a = 1
 for n in range(2,333):
-    print a,
+    print(a, end=", ")
     a = s % (a+n)
     s += a
 

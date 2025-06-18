@@ -4,16 +4,16 @@
 
 def a(n):
     if n==1: return 0
-    l=[n, ]
+    l=[n]
     while True:
-        if n%2==0: n=(n/2)*3
-        else: n = (n - 1)/2
+        if n%2==0: n=(n//2)*3
+        else: n = (n - 1)//2
         if not n in l:
-            l+=[n, ]
+            l+=[n]
             if n<2: break
         else: break
     if l[-1]==1: return len(l)-1
     return len(l)
 for n in range(1, 20001):
-    print str(n)+" "+str(a(n)) # _Indranil Ghosh_, Apr 13 2017
+    print(n, a(n)) # _Indranil Ghosh_, Apr 13 2017
 

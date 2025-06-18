@@ -3,7 +3,7 @@
 # OEIS sequence: A355703
 
 from numpy import log
-from math import comb
+from math import comb, floor
 for n in range(1, 50):
     x = comb(n, floor(log(n)))
     print("{}, ".format(x), end='')
