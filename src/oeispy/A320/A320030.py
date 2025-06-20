@@ -7,11 +7,11 @@ from scipy import signal
 frameSize = 301
 filter = [[0,1,0],[1,0,1],[0,1,0]] # this defines the CA neighborhood
 frame  = np.zeros((frameSize,frameSize))
-frame[frameSize/2,frameSize/2] = 1
+frame[frameSize//2,frameSize//2] = 1
 mod = 3
-sequence = []
+sequence = [1]
 for j in range(140):
     frame = signal.convolve2d(frame, filter, mode='same')
     frame = np.mod(frame, mod)
-    sequence.append(np.sum(frame.reshape(1,-1)))
+    sequence.append(int(np.sum(frame.reshape(1,-1))))
 

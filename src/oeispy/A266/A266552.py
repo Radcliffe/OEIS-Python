@@ -8,9 +8,9 @@ def a(n):
     l=[n, ]
     while True:
         if isprime(n): n = 3*n + 1
-        else: n/=min(primefactors(n))
+        else: n//=min(primefactors(n))
         l+=[n, ]
         if n==2: break
     return l
-for n in range(2, 21): print a(n) # _Indranil Ghosh_, Apr 22 2017
+for n in range(2, 21): print(a(n)) # _Indranil Ghosh_, Apr 22 2017
 

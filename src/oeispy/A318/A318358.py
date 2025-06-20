@@ -3,7 +3,7 @@
 # OEIS sequence: A318358
 
 import bisect
-from sympy.solvers.diophantine import diop_quadratic
+from sympy.solvers.diophantine.diophantine import diop_quadratic
 from sympy.abc import x,y
 A318358_list, A318358_set, p, q = [2], {2}, 2, 2**2
 for _ in range(100):

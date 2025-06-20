@@ -5,9 +5,9 @@
 for a in range(1,1000):
    for b in range (1, 10):
       numb = 10*a + b
-      f = int(str(zahl)[0])
+      f = int(str(numb)[0])
       first = 10*f + b
       last = 10*b + f
       if numb %  first == 0 and numb % last == 0 :
-         print(numb)
+         print(numb, end=', ')
 

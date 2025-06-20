@@ -4,7 +4,6 @@
 
 terms = [2,3]
 while len(terms) < 100:
-    print(len(terms))
     options = []
     for x in range(len(terms)):
         for y in range(x,len(terms)):
@@ -13,7 +12,6 @@ while len(terms) < 100:
         if options.count(y) == 1 and y > max(terms):
             terms.append(y)
             break
-for x in range(len(terms)):
-    print(str(x+1)+" "+terms[x])
+print(terms)
 # _David Consiglio, Jr._, Apr 18 2018
 

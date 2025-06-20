@@ -7,5 +7,5 @@ b, c, d, e = 2, 3, 5, 7
 for p in primerange(11, 10**9):
     a, b, c, d, e = b, c, d, e, p
     if a + d == b + c and a + e == c + d:
-        print a
+        print(a, end=', ')
 

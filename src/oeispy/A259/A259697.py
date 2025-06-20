@@ -5,5 +5,5 @@
 from sympy import bell, binomial
 def a011971(n, k): return sum([binomial(k, i)*bell(n - k + i) for i in range(k + 1)])
 def T(n, k): return 1 if k==0 else sum([a011971(i - 1, k - 1) for i in range(k, n + 1)])
-for n in range(10): print [T(n, k) for k in range(n + 1)] # _Indranil Ghosh_, Jun 17 2017
+for n in range(10): print([T(n, k) for k in range(n + 1)]) # _Indranil Ghosh_, Jun 17 2017
 

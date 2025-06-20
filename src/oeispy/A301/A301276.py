@@ -11,5 +11,5 @@ for i in range(2,10001):
     newmu = mu+(datapoint-mu)/i
     variance = (variance*(i-2) + (datapoint-mu)*(datapoint-newmu))/(i-1)
     mu = newmu
-    A301275_list.append(variance.denominator) # _Chai Wah Wu_, Mar 22 2018
+    A301276_list.append(variance.denominator) # _Chai Wah Wu_, Mar 22 2018
 
