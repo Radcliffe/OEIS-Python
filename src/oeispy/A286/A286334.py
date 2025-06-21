@@ -3,11 +3,10 @@
 # OEIS sequence: A286334
 
 #
-from __future__ import division
 from math import floor
 least = [None] * 101
 i = 1
-while None in least.values():
+while None in least:
     for j in range(i+1):
         p = int(floor(100*j/i+.5))
         if least[p] is None:

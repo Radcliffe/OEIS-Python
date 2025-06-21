@@ -3,5 +3,5 @@
 # OEIS sequence: A281873
 
 from sympy import egyptian_fraction
-print(egyptian_fraction(4)) # _Pontus von Brömssen_, Feb 10 2019
+print(egyptian_fraction((4, 1))) # _Pontus von Brömssen_, Feb 10 2019
 
