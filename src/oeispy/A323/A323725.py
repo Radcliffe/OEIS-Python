@@ -3,5 +3,5 @@
 # OEIS sequence: A323725
 
 from sympy import egyptian_fraction
-def A323725(n): return egyptian_fraction(n)[-1] # _Pontus von Brömssen_, Aug 03 2020
+def A323725(n): return egyptian_fraction((n,1))[-1] # _Pontus von Brömssen_, Aug 03 2020
 
