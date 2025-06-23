@@ -3,6 +3,6 @@
 # OEIS sequence: A260674
 
 from sympy import prime
-from fractions import gcd
+from math import gcd
 A260674_list = [p for p in (prime(n) for n in range(1,10**3)) if gcd(2**p+1,3**p+1) > 1] # _Chai Wah Wu_, Nov 23 2015
 

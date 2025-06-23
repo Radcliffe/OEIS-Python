@@ -3,13 +3,13 @@
 # OEIS sequence: A269306
 
 s = 0
-for i in range(1,100):
+for i in range(0, 100):
   alfa = ""
   k = i + s
   s = k
   while k > 9:
     alfa = alfa + "9"
     k = k - 9
-  alfa = str(k)+alfa
-  print alfa
+  alfa = str(k) + alfa
+  print(alfa)
 

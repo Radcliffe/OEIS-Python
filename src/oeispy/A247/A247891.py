@@ -21,5 +21,5 @@ for n in range(129):
   while b:
     a = basexor(a,b, base)
     b //= base
-  print str(a)+',',
+  print(a, end=', ')
 
