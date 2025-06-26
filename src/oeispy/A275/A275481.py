@@ -24,5 +24,5 @@ def Unique_Catalan_Triangle(k):
     for n in l:
         if n <= k and l.count(n) == 1 :
             unique.append(n)
-    print sorted(unique)
+    print(sorted(unique))
 

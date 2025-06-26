@@ -8,8 +8,8 @@ c = 0
 for n in range(2,10**5):
   if not isprime(n):
     c += 1
-    p = str(c)+str(n)
+    p = int(str(c)+str(n))
     if isprime(p):
-      print(int(p),end=', ')
+      print(p,end=', ')
 # _Derek Orr_, Sep 18 2014
 

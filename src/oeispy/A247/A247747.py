@@ -36,7 +36,7 @@ while "  " in y:
     y = y.replace("  ", " ")#replace long chains of spaces with a single space
 z = y.split(" ")#split terms into a list
 z = filter(None, z)#remove null terms
-f = map(int, z)#convert to integers
+f = list(map(int, z))#convert to integers
 print(f[0:-1])
 # Code for A245770 by David Consiglio, Jr., Jan 03 2015
 # Modified by Manfred Scheucher,  Jun 05 2015

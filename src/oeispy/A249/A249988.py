@@ -3,5 +3,5 @@
 # OEIS sequence: A249988
 
 import math
-for n in range(381): print str(int(math.trunc(1000*math.sin(math.pi*n/180))))+',',
+for n in range(381): print(int(1000*math.sin(math.pi*n/180)), end=', ')
 

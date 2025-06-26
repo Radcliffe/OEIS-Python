@@ -3,7 +3,7 @@
 # OEIS sequence: A239519
 
 for n in range(55):
-  sum = i = 0
+  sum_ = i = 0
   k = 1
   while i<n:
     product = 1
@@ -11,7 +11,7 @@ for n in range(55):
       product *= n - i
       i += 1
       if i>=n:  break
-    sum += product
+    sum_ += product
     k += 1
-  print str(sum)+',',
+  print(sum_, end=', ')
 

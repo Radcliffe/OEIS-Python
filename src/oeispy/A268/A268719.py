@@ -11,6 +11,6 @@ def a006068(n):
         n=n^ns
         s<<=1
     return n
-def T(n, k): a003188(a006068(n) + a006068(k))
-for n in range(21): print [T(n, k) for k in range(n + 1)] # _Indranil Ghosh_, Jun 07 2017
+def T(n, k): return a003188(a006068(n) + a006068(k))
+for n in range(21): print([T(n, k) for k in range(n + 1)]) # _Indranil Ghosh_, Jun 07 2017
 

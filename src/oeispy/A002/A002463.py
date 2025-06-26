@@ -8,7 +8,7 @@ def a_list(nn):
     for n in range(1, nn + 1, 2):
         lcmc = 1
         for m in range(n//2 + 1):
-            lcmc = lcm(lcmc, (C(2*n - 2*m, n - m)*C(2*m, m)/4**n).denominator())
+            lcmc = lcm(lcmc, (C(2*n - 2*m, n - m)*C(2*m, m)/4**n).denominator)
         m = n//2
         l.append(lcmc*C(2*n - 2*m, n - m)*C(2*m, m)//4**n)
     return l # _Indranil Ghosh_, Jul 02 2017, after PARI code by _Michel Marcus_

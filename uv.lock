@@ -489,6 +489,7 @@ dependencies = [
     { name = "openpyxl" },
     { name = "pandas" },
     { name = "pydantic" },
+    { name = "pyroaring" },
     { name = "requests" },
     { name = "scipy" },
     { name = "sha256bit" },
@@ -514,6 +515,7 @@ requires-dist = [
     { name = "openpyxl", specifier = ">=3.1.5" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "pydantic", specifier = ">=2.11.4" },
+    { name = "pyroaring", specifier = ">=1.0.1" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "scipy", specifier = ">=1.15.3" },
     { name = "sha256bit", specifier = ">=0.1.0" },
@@ -709,6 +711,28 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/bb/22/f1129e69d94ffff626bdb5c835506b3a5b4f3d070f17ea295e12c2c6f60f/pyparsing-3.2.3.tar.gz", hash = "sha256:b9c13f1ab8b3b542f72e28f634bad4de758ab3ce4546e4301970ad6fa77c38be", size = 1088608 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/05/e7/df2285f3d08fee213f2d041540fa4fc9ca6c2d44cf36d3a035bf2a8d2bcc/pyparsing-3.2.3-py3-none-any.whl", hash = "sha256:a749938e02d6fd0b59b356ca504a24982314bb090c383e3cf201c95ef7e2bfcf", size = 111120 },
+]
+
+[[package]]
+name = "pyroaring"
+version = "1.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6a/3d/eb76bd6b8e0afe478206c274a328382fcda8788bb9e52d63c3035bb75f95/pyroaring-1.0.1.tar.gz", hash = "sha256:e0ab5f8a18a7ba99b8f7a152dca300ef5bd9eff0a7df56a08714114497b63f10", size = 187063 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9a/e0/6027bc51ae09078baae9ac12a5747069f5f08c881f1d01c0d2a9e6eb0bdd/pyroaring-1.0.1-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:c53e3511534f8a9176972003b2bcb1abae60c6d22dce4bddc61c99770e426dbf", size = 726238 },
+    { url = "https://files.pythonhosted.org/packages/de/7a/2ffec847b66d5e40abdd03fc30438173f2e79484b618e37053d68431dcd8/pyroaring-1.0.1-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:7e9b73dc8b2bcb27f20a3be4947cd89841f41f53426bee8f03f8ad68c7cd0b90", size = 397158 },
+    { url = "https://files.pythonhosted.org/packages/cf/23/b69d9a499d452a9168a2785ea9ca0ee88261c7b158f59d23f60795bcc009/pyroaring-1.0.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:a25e8ccc7ab2b78a6d937e288a6b15bb89f07e76007273010f8154669c1902be", size = 335993 },
+    { url = "https://files.pythonhosted.org/packages/50/f3/ec07245dfa0ff30f9d55d4fe8c103cde78ef9a6583985f5bc7957ef12f0d/pyroaring-1.0.1-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9af383e5b63cef57beb005de343faa5c984574f3e5f23904fc74bba53bbdbfbc", size = 1896205 },
+    { url = "https://files.pythonhosted.org/packages/aa/17/27353a9ecaedbaa8bef42341b40cbdbd1719a0c1d1036965a647dcea7d92/pyroaring-1.0.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:cf2b2ea69d218911b244abf05cdc52fb5f45ddb4ef2730921d6b56ce1ba6d57a", size = 2111831 },
+    { url = "https://files.pythonhosted.org/packages/06/15/837fe253bf0c2d5e734d70a000f0164867e579aad9c6374c8a71f59e203f/pyroaring-1.0.1-cp313-cp313-manylinux_2_24_armv7l.manylinux_2_31_armv7l.whl", hash = "sha256:f3068dd1dfc560c92093cf10de8bf7683d6d9b3550bb5ec674a9e5a47e4c9cfa", size = 1821392 },
+    { url = "https://files.pythonhosted.org/packages/42/84/385bb2497a613dec8600451c29b37d0e49fed771db7b56b4ed2c6dd15743/pyroaring-1.0.1-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:40b10657164e53ed2618ec7490e166bf37b062abbd64e6096179dd47beb4af70", size = 1832613 },
+    { url = "https://files.pythonhosted.org/packages/2f/a7/e1317020c7cd8b291e8cd265b1e0ec0403c2f39ffff04688ea2a5ca41106/pyroaring-1.0.1-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:b813c7136eecb112379406634a158efcbfbe3ce0503421fc2f8f7c4bf44526cb", size = 2879844 },
+    { url = "https://files.pythonhosted.org/packages/a7/0e/61e9da1d8e0036a853c4cf58be4483e120f7c82188bb9367f630c6e5c808/pyroaring-1.0.1-cp313-cp313-musllinux_1_2_armv7l.whl", hash = "sha256:3d5c047cb9c673c5445fc9f9ba2229609434ae01601e5b0195ac354ad942ee54", size = 2710019 },
+    { url = "https://files.pythonhosted.org/packages/45/6b/0811b6f512176379cd0994c2bd89693f40b108afd51780179975de42e9ec/pyroaring-1.0.1-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:8b92fa384e5ac7d6dd69601d5dd828eecf810d7978c92bc85128834bf72e6572", size = 3041329 },
+    { url = "https://files.pythonhosted.org/packages/5d/09/2d962ef897cb5894f300fce4099a3477178270d9e6507e2d4a788ffd09b1/pyroaring-1.0.1-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:eff8546f6e96bfb57321cc796cfd32bc9e757de930896f96333fd0d14dfb5e3c", size = 3171547 },
+    { url = "https://files.pythonhosted.org/packages/e6/b0/284b151c6a885d8f8f6a385e3957b9c34c5c96b7331ebfae41704a32c1cb/pyroaring-1.0.1-cp313-cp313-win32.whl", hash = "sha256:eab133dd4836706e1639fe2c936598ba3464a082c77803b614c4a807f5ea10fe", size = 226843 },
+    { url = "https://files.pythonhosted.org/packages/b2/1a/e2fbedcb591de8a0a8380121b208ede1b5ceba22c16b706e59dba101f741/pyroaring-1.0.1-cp313-cp313-win_amd64.whl", hash = "sha256:14b01e0d8acfe2f7b786fc7c6b441c1e67d337835f2b946142e6d79d1137f782", size = 278486 },
+    { url = "https://files.pythonhosted.org/packages/b3/02/49635b1ffc3337a633b1f9b2f4aa8586cbdd357b1db4927ecad395a2ac5e/pyroaring-1.0.1-cp313-cp313-win_arm64.whl", hash = "sha256:e0537a2e3d5ebd64e5b017e5e11461489b613dae83437a683330ee26012bb828", size = 236854 },
 ]
 
 [[package]]

@@ -12,5 +12,5 @@ count = 0;
 for i in range(20000):
    if(digit_Sum(i*i) + 1 == digit_Sum((i+1)*(i+1))):
       count = count +1
-      print(anz,"   ",i);
+      print(count,"   ",i)
 
