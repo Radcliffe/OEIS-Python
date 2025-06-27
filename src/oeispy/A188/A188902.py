@@ -3,6 +3,6 @@
 # OEIS sequence: A188902
 
 from sympy import divisor_count, Integer
-def a(n): return (divisor_count(n) / 2).numerator()
+def a(n): return (divisor_count(n) / 2).numerator
 print([a(n) for n in range(2, 51)])  # _Indranil Ghosh_, May 27 2017
 

@@ -3,6 +3,6 @@
 # OEIS sequence: A239275
 
 from sympy import bernoulli
-def a(n): return (2**n * bernoulli(n, 1)).numerator()
+def a(n): return (2**n * bernoulli(n, 1)).numerator
 print([a(n) for n in range(51)]) # _Indranil Ghosh_, Jul 18 2017
 

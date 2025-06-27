@@ -9,13 +9,13 @@ def a(n):
     b = bernoulli(2*k)/(4*k)
     d = {0:1, 1:2, 4:1, 5:1}
     if n_ == 2:
-        return 2 * b.numerator()
+        return 2 * b.numerator
     elif n_ == 3:
-        return 2 * b.denominator()
+        return 2 * b.denominator
     elif n_ == 6:
-        return -1 * b.numerator()
+        return -1 * b.numerator
     elif n_ == 7:
-        return b.denominator()
+        return b.denominator
     else:
         return d[n_]
 

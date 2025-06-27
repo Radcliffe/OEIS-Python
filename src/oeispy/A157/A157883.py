@@ -3,6 +3,6 @@
 # OEIS sequence: A157883
 
 from sympy import bernoulli, Integer
-def a(n): return bernoulli(n, Integer(2)/5).numerator()
+def a(n): return bernoulli(n, Integer(2)/5).numerator
 print([a(n) for n in range(51)]) # _Indranil Ghosh_, Jul 06 2017
 

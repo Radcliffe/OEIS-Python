@@ -3,6 +3,6 @@
 # OEIS sequence: A285864
 
 from sympy import binomial, bernoulli
-def T(n, m): return (binomial(n, m) * 2**(n - m) * bernoulli(n - m)).numerator()
+def T(n, m): return (binomial(n, m) * (-2)**(n - m) * bernoulli(n - m)).numerator
 for n in range(21): print([T(n, m) for m in range(n + 1)]) # _Indranil Ghosh_, May 06 2017
 

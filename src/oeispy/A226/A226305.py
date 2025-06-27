@@ -3,6 +3,6 @@
 # OEIS sequence: A226305
 
 from sympy import divisors, totient, mobius, prod
-def a(n): return prod((2**totient(d) - 1)**mobius(n//d) for d in divisors(n)).numerator()
+def a(n): return prod((2**totient(d) - 1)**mobius(n//d) for d in divisors(n)).numerator
 print([a(n) for n in range(1, 51)]) # _Indranil Ghosh_, Apr 14 2017
 

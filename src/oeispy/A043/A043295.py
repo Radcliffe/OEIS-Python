@@ -3,6 +3,6 @@
 # OEIS sequence: A043295
 
 from sympy import bernoulli
-def a(n): return sum(map(int, str(abs(bernoulli(2*n).numerator()))))
+def a(n): return sum(map(int, str(abs(bernoulli(2*n).numerator))))
 print([a(n) for n in range(1, 59)]) # _Michael S. Branicky_, Jun 03 2021
 

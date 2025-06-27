@@ -3,6 +3,5 @@
 # OEIS sequence: A174341
 
 from sympy import bernoulli, Integer
-def B(n): return bernoulli(n) if n != 1 else -bernoulli(n)
-def a(n): return (B(n) + 1/Integer(n + 1)).numerator() # _Indranil Ghosh_, Jun 19 2017
+def a(n): return (bernoulli(n) + 1/Integer(n + 1)).numerator # _Indranil Ghosh_, Jun 19 2017
 

@@ -3,6 +3,6 @@
 # OEIS sequence: A285863
 
 from sympy import bernoulli
-def a(n): return (3**n * bernoulli(n)).numerator()
+def a(n): return -3 if n == 1 else (3**n * bernoulli(n)).numerator
 print([a(n) for n in range(51)]) # _Indranil Ghosh_, Jul 18 2017
 

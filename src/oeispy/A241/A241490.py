@@ -9,7 +9,7 @@ def Cu(n):
       c = []
       d = ''
       for i in list(str(k).partition("0")):
-        if int(i) == 0:
+        if len(i) and int(i) == 0:
           c.append('1'*len(i))
         else:
           c.append(i)
@@ -20,7 +20,7 @@ def Cu(n):
       return k
     else:
       k += 1
-n = 1
+n = 0
 while n < 50:
   print(Cu(n))
   n += 1

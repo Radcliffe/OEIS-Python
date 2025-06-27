@@ -9,6 +9,6 @@ def kappa(n): return (1-(n%2)*2) * Q(n).subs(x,1) if n else 1
 def Q(n): return (q(n).diff() * q(n-1)).integrate()
 @cache
 def q(n): return (1-x if n==1 else n%2-Q(n-1)/kappa(n-1)) if n else x
-def numer(c): return c.numerator() if c%1 else c
+def numer(c): return c.numerator if c%1 else c
 print([numer(kappa(n)) for n in range(15)])
 
