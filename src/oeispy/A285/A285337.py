@@ -11,5 +11,5 @@ def a065642(n):
     while a007947(n)!=r:
         n+=r
     return n
-def a(n): return (a065642(n)/Integer(n)).denominator() # _Indranil Ghosh_, Apr 20 2017
+def a(n): return (a065642(n)/Integer(n)).denominator # _Indranil Ghosh_, Apr 20 2017
 

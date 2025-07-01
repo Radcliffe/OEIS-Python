@@ -10,7 +10,7 @@ def a(n):
     d = {0:2, 1:2, 2:1, 4:1, 5:1, 6:1}
     if n_ in [3, 7]:
         k = (n+1)//4
-        return (bernoulli(2*k)/(4*k)).denominator()
+        return (bernoulli(2*k)/(4*k)).denominator
     else:
         return d[n_]
 

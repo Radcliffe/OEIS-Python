@@ -3,5 +3,5 @@
 # OEIS sequence: A285389
 
 from sympy import binomial, Integer
-def a(n): return (Integer(2)**(1-2*n**2) * Integer(n) * binomial(2*n**2, n**2)).denominator() # _Indranil Ghosh_, Apr 27 2017
+def a(n): return (Integer(2)**(1-2*n**2) * Integer(n) * binomial(2*n**2, n**2)).denominator # _Indranil Ghosh_, Apr 27 2017
 

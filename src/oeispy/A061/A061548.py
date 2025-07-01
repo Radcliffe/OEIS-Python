@@ -3,7 +3,6 @@
 # OEIS sequence: A061548
 
 import math
-from fractions import gcd
 f = math.factorial
-def A061548(n): return f(4*n) / gcd(f(4*n), (2**(4*n)*f(2*n)**2)) # _Indranil Ghosh_, Mar 11 2017
+def A061548(n): return f(4*n) // math.gcd(f(4*n), (2**(4*n)*f(2*n)**2)) # _Indranil Ghosh_, Mar 11 2017
 

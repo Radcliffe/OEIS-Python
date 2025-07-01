@@ -3,5 +3,5 @@
 # OEIS sequence: A284650
 
 from sympy import divisor_sigma, Integer
-print([sum(divisor_sigma(k)/Integer(k) for k in range(1, n + 1)).denominator() for n in range(1, 30)]) # _Indranil Ghosh_, Mar 31 2017
+print([sum(divisor_sigma(k)/Integer(k) for k in range(1, n + 1)).denominator for n in range(1, 30)]) # _Indranil Ghosh_, Mar 31 2017
 

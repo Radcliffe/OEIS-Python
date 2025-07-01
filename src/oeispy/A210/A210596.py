@@ -7,5 +7,5 @@ from sympy.abc import x
 def u(n, x): return 1 if n==1 else u(n - 1, x) + v(n - 1, x)
 def v(n, x): return 1 if n==1 else u(n - 1, x) + 2*x*v(n - 1, x)
 def a(n): return Poly(v(n, x), x).all_coeffs()[::-1]
-for n in range(1, 13): print (a(n)) # _Indranil Ghosh_, May 27, 2017
+for n in range(1, 13): print (a(n)) # _Indranil Ghosh_, May 27 2017
 

@@ -3,5 +3,5 @@
 # OEIS sequence: A027642
 
 from sympy import bernoulli
-[bernoulli(i).denominator() for i in range(51)] # _Indranil Ghosh_, Mar 18 2017
+[bernoulli(i).denominator for i in range(51)] # _Indranil Ghosh_, Mar 18 2017
 

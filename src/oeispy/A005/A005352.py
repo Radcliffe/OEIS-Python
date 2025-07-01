@@ -3,5 +3,5 @@
 # OEIS sequence: A005352
 
 def A005352(n):
-    return ((b:=(4 << (n.bit_length() | 1)) // 3) - n)^b # _Adrienne Leonardo_, Feb 3 2025
+    return ((b:=(4 << (n.bit_length() | 1)) // 3) - n)^b # _Adrienne Leonardo_, Feb 03 2025
 

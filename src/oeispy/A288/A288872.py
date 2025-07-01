@@ -3,6 +3,6 @@
 # OEIS sequence: A288872
 
 from sympy import bernoulli
-def a(n): return bernoulli(n, 1/Integer(5)).denominator()//(5**n)
+def a(n): return bernoulli(n, 1/Integer(5)).denominator//(5**n)
 print([a(n) for n in range(41)]) # _Indranil Ghosh_, Jul 06 2017
 

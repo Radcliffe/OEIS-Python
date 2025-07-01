@@ -3,6 +3,6 @@
 # OEIS sequence: A130562
 
 from sympy import binomial, factorial, Integer
-def a(n, m): return ((-1)**m * binomial(n + 1/Integer(2), n -m) / factorial(m)).denominator()
+def a(n, m): return ((-1)**m * binomial(n + 1/Integer(2), n -m) / factorial(m)).denominator
 for n in range(21): print([a(n, m) for m in range(n + 1)]) # _Indranil Ghosh_, Jun 29 2017
 

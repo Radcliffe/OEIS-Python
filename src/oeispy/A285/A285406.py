@@ -3,5 +3,5 @@
 # OEIS sequence: A285406
 
 from sympy import binomial, integer_log, Integer
-def a(n): return integer_log((Integer(2)**(1 - 2*n**2)*n*binomial(2*n**2, n**2)).denominator(), 2)[0] # _Indranil Ghosh_, Apr 27 2017
+def a(n): return integer_log((Integer(2)**(1 - 2*n**2)*n*binomial(2*n**2, n**2)).denominator, 2)[0] # _Indranil Ghosh_, Apr 27 2017
 

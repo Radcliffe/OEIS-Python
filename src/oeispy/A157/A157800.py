@@ -3,5 +3,5 @@
 # OEIS sequence: A157800
 
 from sympy import bernoulli, Integer
-def a(n): return bernoulli(n, 1/Integer(3)).denominator() # _Indranil Ghosh_, May 01 2017
+def a(n): return bernoulli(n, 1/Integer(3)).denominator # _Indranil Ghosh_, May 01 2017
 

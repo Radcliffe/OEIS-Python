@@ -3,5 +3,5 @@
 # OEIS sequence: A055023
 
 from sympy import Integer
-def a(n): return Integer(n)/((sum(m**(n - 1) for m in range(1, n)) + 1)/Integer(n)).denominator() # _Indranil Ghosh_, May 17 2017
+def a(n): return Integer(n)/((sum(m**(n - 1) for m in range(1, n)) + 1)/Integer(n)).denominator # _Indranil Ghosh_, May 17 2017
 

@@ -3,6 +3,6 @@
 # OEIS sequence: A125562
 
 from sympy import factorial, Integer
-def a(n): return (factorial(2*n + 1) / Integer(3)**n).denominator()
+def a(n): return (factorial(2*n + 1) / Integer(3)**n).denominator
 print([a(n) for n in range(51)]) # _Indranil Ghosh_, Jul 29 2017
 

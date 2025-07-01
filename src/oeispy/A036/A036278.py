@@ -4,6 +4,6 @@
 
 from sympy import bernoulli, factorial
 def a(n):
-    return ((-4)**(n + 1)*bernoulli(2*n + 2)/factorial(2*n + 2)).denominator()
+    return ((-4)**(n + 1)*bernoulli(2*n + 2)/factorial(2*n + 2)).denominator
 print([a(n) for n in range(-1, 20)]) # _Indranil Ghosh_, Jun 23 2017
 
