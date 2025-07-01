@@ -17,5 +17,5 @@ def seq(n):
    sequence=[1]
    while len(sequence)<n:
       sequence=addterm(sequence)
-   return sequence # David Nacin, May 31 2020
+   return sequence # _David Nacin_, May 31 2020
 
