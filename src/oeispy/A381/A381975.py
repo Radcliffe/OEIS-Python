@@ -9,5 +9,5 @@ def validMappings(n):
         if x > n:
             return 1 if checkCondition(f, n) else 0
         return sum(validMappingsDFS(n, f[:x] + [i] + f[x+1:], x+1) for i in range(1, n+1))
-    return validMappingsDFS(n, [0] * n, 0)
+    return validMappingsDFS(n, [0] * (n+1), 1)
 
