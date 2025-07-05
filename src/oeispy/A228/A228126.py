@@ -3,12 +3,12 @@
 # OEIS sequence: A228126
 
 ## sumdivisors(n) is a function that would return the sum of prime
-## divisors of n.
+## divisors of n. (See A001414)
 i=2
 while i < 100000:
   sdi=sumdivisors(i)
   sdip=sumdivisors(i+1)
   if sdi==sdip-1:
-    print i,i+1
+    print(i)
   i=i+1
 

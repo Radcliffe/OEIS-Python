@@ -4,7 +4,7 @@
 
 import math
 for i in range(1<<33):
-    t = i*(i+1)*(i+2)/6 + 1
+    t = i*(i+1)*(i+2)//6 + 1
     sr = math.isqrt(t)
     if sr*sr == t:
         print (t-1, sep=' ')

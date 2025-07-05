@@ -3,5 +3,5 @@
 # OEIS sequence: A228449
 
 import math
-for n in range(99): print str(math.factorial(n)/(4**n))+',',
+for n in range(99): print(math.factorial(n)//(4**n), end=', ')
 

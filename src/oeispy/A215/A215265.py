@@ -3,5 +3,5 @@
 # OEIS sequence: A215265
 
 for n in range(33):
-    print (n-1)**(n+1) - n**n,
+    print((n-1)**(n+1) - n**n)
 

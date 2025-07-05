@@ -3,5 +3,5 @@
 # OEIS sequence: A214698
 
 for n in range(1, 22):
-    print (n**n - n*n)/2,
+    print((n**n - n*n)//2)
 

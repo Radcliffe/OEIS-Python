@@ -3,5 +3,5 @@
 # OEIS sequence: A228448
 
 import math
-for n in range(99): print str(math.factorial(n)/(3**n))+',',
+for n in range(99): print(math.factorial(n)//(3**n), end=', ')
 
