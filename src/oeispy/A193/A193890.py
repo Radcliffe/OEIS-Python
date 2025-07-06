@@ -12,7 +12,7 @@ for l in range(1,10):
             for i in range(len(d)):
                 d2 = list(d)
                 d2[i] = str(3*int(d[i]))
-                if not is_prime(int(''.join(d2))):
+                if not isprime(int(''.join(d2))):
                     break
             else:
                  A193890_list.append(p) # _Chai Wah Wu_, Aug 13 2015

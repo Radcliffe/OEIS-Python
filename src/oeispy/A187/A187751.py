@@ -5,5 +5,5 @@
 import math
 for n in range(12):
   f = math.factorial(n)
-  print (n**f) % (f**n),
+  print(pow(n, f, f**n))
 
