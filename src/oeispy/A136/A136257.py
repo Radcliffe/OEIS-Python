@@ -8,9 +8,7 @@ def A136257(n, B=chess.Board()):
     count = 0
     for m in B.legal_moves:
         B.push(m)
-        if B.is_checkmate():
-            if n == 1: count += 1
-        else:
+        if not B.is_checkmate():
             m.from_square ^= 56
             m.to_square ^= 56  # reverse ranks through XOR with 7
             if B.is_legal(m):
@@ -19,6 +17,7 @@ def A136257(n, B=chess.Board()):
                     B.push(m)
                     count += A136257(n - 1, B)
                     B.pop()
+        elif n == 1: count += 1
         B.pop()
-    return count  # M. F. Hasler, Dec 08 2021
+    return count  # _M. F. Hasler_, Dec 08 2021
 

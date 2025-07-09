@@ -13,5 +13,5 @@ def t(n):
                             s+=1
     return s
 for i in range(0,286):
-    print str(i)+" "+str(t(i))
+    print(t(i), end=', ')
 
