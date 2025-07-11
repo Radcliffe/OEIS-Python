@@ -12,5 +12,5 @@ for i in it:
     a*=10
     a+=i
     if isprime(a):
-        print c
+        print(c)
 
