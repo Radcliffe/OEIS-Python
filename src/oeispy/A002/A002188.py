@@ -5,11 +5,11 @@
 def SpragueGrundy(bound):
   gnumbers = [0 for i in range(bound+2)]
   for i in range(bound+1):
-    excluded = [0 for z in range(i/2+1)]
-    for j in range(1, (i+1)/2):
+    excluded = [0 for z in range(i//2+1)]
+    for j in range(1, (i+1)//2):
       k = i - j
       excluded[gnumbers[j] ^ gnumbers[k]] = 1
     gnumbers[i] = excluded.index(0)
   return gnumbers[:-1]
-print('{}'.format(SpragueGrundy(100))) # _David Cleaver_, Mar 22 2025
+print(SpragueGrundy(100)) # _David Cleaver_, Mar 22 2025
 
