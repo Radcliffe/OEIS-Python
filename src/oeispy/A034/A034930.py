@@ -4,6 +4,32 @@
 
 from math import comb, isqrt
 def A034930(n):
-    def f(m,k): return comb(m,k)&7 if m<8 and k<8 else f(m>>3,k>>3)*f(m&7,k&7)&7
-    return f(r:=(m:=isqrt(k:=n+1<<1))-(k<=m*(m+1)),n-comb(r+1,2)) # _Chai Wah Wu_, Jul 14 2025
+    g = (m:=isqrt(f:=n+1<<1))-(f<=m*(m+1))
+    k = n-comb(g+1,2)
+    if k.bit_count()+(g-k).bit_count()-g.bit_count()>2: return 0
+    def g1(s,w,e):
+        c, d = 1, 0
+        if len(s) == 0: return c, d
+        a, b = int(s,2), int(w,2)
+        if a>=b:
+            k = comb(a,b)&7
+            j = (~k & k-1).bit_length()
+            d += j*e
+            k >>= j
+            c = c*pow(k,e,8)&7
+        else:
+            if int(s[0:1],2)<int(w[0:1],2): d += e
+            c0, d0 = g1(s[1:],w[1:],e)
+            c = c*c0&7
+            d += d0
+        return c, d
+    s = bin(g)[2:].zfill(3)
+    w = bin(k)[2:].zfill(l:=len(s))
+    c, d = g1(s[:3],w[:3],1)
+    for i in range(1,l-1):
+        c0, d0 = g1(s[i:i+3],w[i:i+3],1)
+        c1, d1 = g1(s[i:i+2],w[i:i+2],-1)
+        c = c*c0*c1&7
+        d += d0+d1
+    return (c<<d)&7 # _Chai Wah Wu_, Jul 20 2025
 

@@ -4,6 +4,32 @@
 
 from math import comb, isqrt
 def A034932(n):
-    def f(m,k): return comb(m,k)&15 if m<16 and k<16 else f(m>>4,k>>4)*f(m&15,k&15)&15
-    return f(r:=(m:=isqrt(k:=n+1<<1))-(k<=m*(m+1)),n-comb(r+1,2)) # _Chai Wah Wu_, Jul 14 2025
+    g = (m:=isqrt(f:=n+1<<1))-(f<=m*(m+1))
+    k = n-comb(g+1,2)
+    if k.bit_count()+(g-k).bit_count()-g.bit_count()>3: return 0
+    def g1(s,w,e):
+        c, d = 1, 0
+        if len(s) == 0: return c, d
+        a, b = int(s,2), int(w,2)
+        if a>=b:
+            k = comb(a,b)&15
+            j = (~k & k-1).bit_length()
+            d += j*e
+            k >>= j
+            c = c*pow(k,e,16)&15
+        else:
+            if int(s[0:1],2)<int(w[0:1],2): d += e
+            c0, d0 = g1(s[1:],w[1:],e)
+            c = c*c0&15
+            d += d0
+        return c, d
+    s = bin(g)[2:].zfill(4)
+    w = bin(k)[2:].zfill(l:=len(s))
+    c, d = g1(s[:4],w[:4],1)
+    for i in range(1,l-3):
+        c0, d0 = g1(s[i:i+4],w[i:i+4],1)
+        c1, d1 = g1(s[i:i+3],w[i:i+3],-1)
+        c = c*c0*c1&15
+        d += d0+d1
+    return (c<<d)&15 # _Chai Wah Wu_, Jul 20 2025
 

@@ -4,7 +4,7 @@
 
 from math import prod
 from sympy.ntheory.digits import digits
-def mp(n, b): # multiplicative persistence of n in base b
+def mp(n, b): # multiplicative persistence of n in base b [from _Michael S. Branicky_ in A330152]
     c = 0
     while n >= b:
         n, c = prod(digits(n, b)[1:]), c+1
