@@ -13,6 +13,6 @@ def A003586gen(): # generator of terms
             yield v
             oldv = v
             for p in psmooth_primes:
-                    heapq.heappush(h, v*p)
+                heapq.heappush(h, v*p)
 print(list(islice(A003586gen(), 65))) # _Michael S. Branicky_, Sep 17 2024
 
