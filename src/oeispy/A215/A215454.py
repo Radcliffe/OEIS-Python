@@ -16,5 +16,5 @@ while y<TOP:
     k += 1
     f *= k
 for i in range(1, TOP):
-    print res[i],
+    print(res[i], end=', ')
 

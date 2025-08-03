@@ -3,6 +3,7 @@
 # OEIS sequence: A275545
 
 x = [0]
+n = 20
 for i in range(n):
     x_tmp = []
     for s in x:
@@ -11,5 +12,5 @@ for i in range(n):
     x = x_tmp
     length_tmp = len(x)
     x = list(set(x))
-    print length_tmp-len(x)
+    print(length_tmp-len(x))
 

@@ -2,14 +2,12 @@
 | Sequence | Index | Line | Error type | Error message |
 |----------|-------|------|------------|----------------|
 | [A215453](https://oeis.org/A215453) | 1 | 14 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
-| [A215454](https://oeis.org/A215454) | 1 | 15 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A215460](https://oeis.org/A215460) | 1 | 3 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A215468](https://oeis.org/A215468) | 1 | 40 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A215471](https://oeis.org/A215471) | 1 | 52 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A215488](https://oeis.org/A215488) | 1 | 3 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A215526](https://oeis.org/A215526) | 1 | 3 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A219612](https://oeis.org/A219612) | 1 | 4 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
-| [A232863](https://oeis.org/A232863) | 1 | 7 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A235269](https://oeis.org/A235269) | 1 | 4 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A235707](https://oeis.org/A235707) | 1 | 2 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A236346](https://oeis.org/A236346) | 1 | 10 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
@@ -28,7 +26,6 @@
 | [A242346](https://oeis.org/A242346) | 1 | 26 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A242426](https://oeis.org/A242426) | 1 | 2 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A242427](https://oeis.org/A242427) | 1 | 2 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
-| [A275545](https://oeis.org/A275545) | 1 | 10 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A279018](https://oeis.org/A279018) | 1 | 12 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A279063](https://oeis.org/A279063) | 1 | 12 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A279409](https://oeis.org/A279409) | 1 | 9 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |

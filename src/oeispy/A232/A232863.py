@@ -8,7 +8,7 @@ for n in range(1,1000000):
   o *= 2*n-1
   f *= n
   cur = o % f
-  if prev>cur:  print str(n-1)+',',
+  if prev>cur: print(n-1, end=', ')
   prev=cur
-  if (n&8191)==0:  print '.',
+  if (n&8191)==0: print('.', end=', ')
 
