@@ -14,9 +14,7 @@ while y<TOP:
       if res[i]<0 and prev % ii[i] == 0:
         res[i] = k
         y += 1
-        for i in range(1, TOP):
-          print res[i],
-        print
+        print(res)
     curr = prpr+prev
     prpr = prev
     prev = curr

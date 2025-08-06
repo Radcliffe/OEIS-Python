@@ -53,5 +53,5 @@ for s in range(1, n):
         break
     z = prime[a]+prime[b]+prime[c]+prime[d]
     if z+prime[e]+prime[f]+prime[g]+prime[h] >= 5:
-        print s,
+        print(s, end=' ')
 

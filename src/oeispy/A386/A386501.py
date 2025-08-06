@@ -12,7 +12,7 @@ for x in range(1, 100000):
         continue
     if x % smallInt == 0:
         if x % 10 == 0:
-            if (x/10) % removeZeros(x/10) == 0:
+            if (x//10) % removeZeros(x//10) == 0:
                 continue
         print(x)
 
