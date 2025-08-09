@@ -5,11 +5,11 @@
 import math
 def getXY(n):
   y = int(math.sqrt(n*2))
-  if n<=y*(y+1)/2: y-=1
-  x = n - y*(y+1)/2
+  if n<=y*(y+1)//2: y-=1
+  x = n - y*(y+1)//2
   return x, y
 for n in range(1,88):
   ox, oy = getXY(n)
   nx, ny = getXY(2*n)
-  print str(abs(nx-ox)+abs(ny-oy))+',',
+  print(abs(nx-ox)+abs(ny-oy), end=', ')
 

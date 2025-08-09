@@ -14,5 +14,5 @@ for n in range(1000):
     while b.find(s)>=0:
         s += '1'
         L1 += 1
-    if L0>L1: print str(n)+',',
+    if L0>L1: print(n, end=', ')
 

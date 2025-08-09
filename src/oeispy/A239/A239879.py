@@ -9,7 +9,7 @@ for i in range(5,1000,2):
     if sympy.isprime(i):
         x = i - prev
         y = prev - prpr
-        if x%y==0 or y%x==0: print str(prev)+',',
+        if x%y==0 or y%x==0: print(prev, end=', ')
         prpr = prev
         prev = i
 

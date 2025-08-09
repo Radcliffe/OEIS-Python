@@ -5,11 +5,11 @@
 def T(n,m):
     if m==1:
         if n==1: return 1
-        return n/2
-    return min(m*(n/2), n*(m/2))/2
+        return n//2
+    return min(m*(n//2), n*(m//2))//2
 i=1
 for n in range(1,126):
     for m in range(1, n+1):
-        print str(i)+" "+str(T(n,m))
+        print(i, T(n,m))
         i+=1 # _Indranil Ghosh_, Mar 09 2017
 

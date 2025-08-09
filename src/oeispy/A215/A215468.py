@@ -41,10 +41,10 @@ for s in range(1, n):
         break
     k = grid[(posY-1)*SIZE+posX  ] + grid[(posY+1)*SIZE+posX  ]
     k+= grid[ posY   *SIZE+posX-1] + grid[ posY   *SIZE+posX+1]
-    print i+j+u+v+k,
-print
+    print(i+j+u+v+k, end=' ')
+print()
 for y in range(SIZE):
     for x in range(SIZE):
-        print '%3d' % grid[y*SIZE+x],
-    print
+        print('%3d' % grid[y*SIZE+x], end=' ')
+    print()
 

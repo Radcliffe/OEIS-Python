@@ -5,5 +5,5 @@
 import sympy
 from sympy import isprime
 for n in range(100000):
-    if isprime(n+1) and isprime(n*2+1) and isprime(n*n+1): print str(n)+',',
+    if isprime(n+1) and isprime(n*2+1) and isprime(n*n+1): print(n, end=', ')
 

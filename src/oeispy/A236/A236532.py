@@ -4,6 +4,6 @@
 
 for n in range(1, 21):
   for k in range(1, n+1):
-    print n*k // (n+k),
-  #print
+    print(n*k // (n+k), end=', ')
+  #print() # Uncomment to display as a triangle
 

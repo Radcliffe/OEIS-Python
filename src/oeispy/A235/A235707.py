@@ -3,5 +3,5 @@
 # OEIS sequence: A235707
 
 import math
-for n in range(1,100):  print str(int(n*n*math.log(n)))+',',
+for n in range(1, 100):  print(int(n*n*math.log(n)), end=', ')
 

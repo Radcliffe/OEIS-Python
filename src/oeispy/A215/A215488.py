@@ -4,6 +4,6 @@
 
 a = [1]*1000
 for n in range(1,777):
-    print a[n-1],
+    print(a[n-1], end=', ')
     a[n]= a[n-1] + a[2*n & n]
 

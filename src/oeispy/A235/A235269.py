@@ -4,6 +4,6 @@
 
 for n in range(1, 99):
   s = n*n
-  t = n*(n+1)/2
-  print str(s*t//(s+t))+',',
+  t = n*(n+1)//2
+  print((s*t)//(s+t), end=', ')
 

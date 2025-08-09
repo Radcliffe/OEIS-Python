@@ -9,5 +9,5 @@ def A347038_list(pmax):
     for p in primerange(2, pmax + 1):
         if not any(d(k + p) == sigma(k) for k in range(1, 2 + isqrt(4 * p))):
             a.append(p)
-    return a  # Pontus von Brömssen, Aug 20 2021
+    return a  # _Pontus von Brömssen_, Aug 20 2021
 

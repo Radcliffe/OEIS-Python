@@ -13,6 +13,6 @@ def C(n):
     for i in range(n,0,-1):
         s+=str(i)
     return int(s)
-for i in range(1,10001):
-    print str(i)+" "+str(C(i)%sigma(i))
+for i in range(1,101):
+    print(i, C(i)%sigma(i))
 

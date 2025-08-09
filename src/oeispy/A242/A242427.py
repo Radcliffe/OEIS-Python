@@ -3,5 +3,5 @@
 # OEIS sequence: A242427
 
 import math
-for i in range(1,77): print str(math.factorial(i) % (i**3))+',',
+for i in range(1,77): print(math.factorial(i) % (i**3), end=', ')
 
