@@ -23,6 +23,7 @@ dependencies = [
     "pydantic>=2.11.4",
     "pyroaring>=1.0.1",
     "requests>=2.32.3",
+    "requests-cache>=1.2.1",
     "scipy>=1.15.3",
     "sha256bit>=0.1.0",
     "sympy>=1.14.0",

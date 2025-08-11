@@ -2,6 +2,16 @@ import os
 
 from read_oeis import OEISReader
 
+def remove_python_files():
+    """
+    Remove all Python files in the oeispy directory.
+    """
+    for root, _, files in os.walk("oeispy"):
+        for file in files:
+            if file.endswith(".py") and not file.endswith("__init__.py"):
+                os.remove(os.path.join(root, file))
+                print(f"Removed {file}")
+
 
 def write_python_code(python_lines, sequence_number, index):
     """
@@ -107,9 +117,12 @@ def test_extract_python_code_from_file():
 if __name__ == "__main__":
     # Define the OEIS data directory
     oeis_data_dir = "../oeisdata/seq"
+    # Remove existing Python files in the oeispy directory
+    remove_python_files()
     # Walk through the directory and extract Python code from each file
     for root, _, files in sorted(os.walk(oeis_data_dir)):
+        print(f"Processing directory: {root}")
         for file in files:
-            if file.endswith(".seq") and not file.endswith("_indent_fixed.seq"):
+            if file.endswith(".seq"):
                 filepath = os.path.join(root, file)
                 extract_python_code_from_file(filepath)
