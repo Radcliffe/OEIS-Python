@@ -8,9 +8,8 @@ def MarkovNumbers(len: int = 50, MAX: int = 10**10) -> list[int]:
     def step(triples: markov) -> markov:
         ret: markov = set()
         for (a, b, c) in triples:
-            for k in (1, 2, 0):
-                x, y, z = (a, b, c) if k == 0 else (a, b, c)[k:] + (a, b, c)[:k]
-                t = tuple(sorted((x, y, 3 * x * y - z)))
+            for x, y, z in [(a, b, c), (b, c, a), (c, a, b)]:
+                t = (x, y, 3 * x * y - z)
                 if max(t) < MAX: ret.add(t)
         return ret
     while True:
