@@ -3,9 +3,11 @@
 # OEIS sequence: A280364
 
 def a(n):
-    if n==2:
+    if n==0:
+        return 0
+    if n==1:
         return 12
-    return (((-2*(n-1)-1)*a(n-1))/(2*(n-1)-1))+8*(n-1)**2+10*(n-1)+3
-for i in range(2,1001):
-    print str(i)+" "+str(a(i))
+    return (((-2*n-1)*a(n-1))//(2*n-1))+8*n**2+10*n+3
+for i in range(0,51):
+    print(i, a(i))
 

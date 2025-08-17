@@ -14,6 +14,6 @@ def a(n):
                                 if (a+d)%2==0:
                                     s+=1
     return s
-for i in range(0,201):
-    print str(i)+" "+str(a(i))
+for i in range(0,41):
+    print(i, a(i))
 
