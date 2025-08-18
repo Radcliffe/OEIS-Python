@@ -4,7 +4,7 @@
 
 from math import gcd
 from itertools import count, islice
-def agen(): # generator of terms
+def A386482_gen(): # generator of terms
     yield 1
     an, aset = 2, {2}
     while True:
@@ -13,5 +13,5 @@ def agen(): # generator of terms
         if not m: m = next(k for k in count(an+1) if k not in aset and gcd(k, an) > 1)
         an = m
         aset.add(an)
-print(list(islice(agen(), 83))) # _Michael S. Branicky_, Aug 15 2025
+print(list(islice(A386482_gen(), 83))) # _Michael S. Branicky_, Aug 15 2025
 
