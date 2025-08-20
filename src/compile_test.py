@@ -7,7 +7,6 @@ import os
 from pathlib import Path
 from typing import List, Tuple
 import py_compile
-from collections import Counter
 
 
 def compile_all_scripts(python_dir: Path) -> List[Tuple[str, str]]:
@@ -54,7 +53,7 @@ def write_report_markdown(compile_errors: List[Tuple[str, str]], report_file: Pa
         report_file (Path): Path to the report file.
     """
     with open(report_file, 'w') as f:
-        f.write("# OEIS Python scripts that fail to compile in Python 3.13.2\n")
+        f.write("# OEIS Python scripts that fail to compile in Python 3.13.7\n")
         f.write("| Sequence | Index | Line | Error type | Error message |\n")
         f.write("|----------|-------|------|------------|----------------|\n")
         for error in compile_errors:

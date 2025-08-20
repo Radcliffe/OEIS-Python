@@ -2,5 +2,4 @@
 | Sequence | Index | Line | Error type | Error message |
 |----------|-------|------|------------|----------------|
 | [A279063](https://oeis.org/A279063) | 1 | 12 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
-| [A279905](https://oeis.org/A279905) | 1 | 14 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
 | [A317248](https://oeis.org/A317248) | 1 | 59 | Print without parentheses | SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)? |
