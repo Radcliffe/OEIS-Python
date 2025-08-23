@@ -3,4 +3,5 @@
 # OEIS sequence: A376951
 
 def A376951(n): return (m:=n**2)**2*(m-9)*(m-3)**6 # _Chai Wah Wu_, Oct 12 2024
+print([a(n) for n in range(0, 18)])
 

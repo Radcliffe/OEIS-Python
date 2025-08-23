@@ -5,6 +5,6 @@
 from math import isqrt
 from sympy import factorint, isprime
 def is_square(n): return n >= 0 and isqrt(n)**2 == n
-def ok(n): return n > 1 and not isprime(n) and is_square(n**2-sum(p*e for p,e in factorint(n).items())**2)
+def ok(n): return  not isprime(n) and is_square(n**2-sum(p*e for p,e in factorint(n).items())**2)
 print([k for k in range(10**6) if ok(k)]) # _Michael S. Branicky_, Aug 14 2025
 
