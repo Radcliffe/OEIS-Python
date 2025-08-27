@@ -13,7 +13,8 @@ class OEISReader:
     def __init__(self, file_path: str):
         self.file_path = file_path
         self.lines: List[OEISLine] = []
-        self.current_sequence_id: Optional[str] = None
+        self.sequence_id: Optional[str] = None
+        self.name: Optional[str] = None
 
     def read_file(self):
         language = None
@@ -30,10 +31,15 @@ class OEISReader:
             return language
         line_type, sequence_id, content = parts
         line_type = OEISLineType(line_type)
-        if self.current_sequence_id is None:
-            self.current_sequence_id = sequence_id
-        elif self.current_sequence_id != sequence_id:
-            raise ValueError(f"Unexpected sequence ID: {sequence_id}. Expected: {self.current_sequence_id}")
+        if line_type == OEISLineType.NAME:
+            if self.name is not None:
+                raise ValueError(f"Duplicate name line for sequence {self.sequence_id}")
+            self.name = content.strip()
+            return language
+        if self.sequence_id is None:
+            self.sequence_id = sequence_id
+        elif self.sequence_id != sequence_id:
+            raise ValueError(f"Unexpected sequence ID: {sequence_id}. Expected: {self.sequence_id}")
         if line_type == OEISLineType.MATHEMATICA_PROGRAM:
             language = "Mathematica"
         elif line_type == OEISLineType.MAPLE_PROGRAM:
@@ -76,7 +82,7 @@ class OEISReader:
         %H A034874 Reinhard Zumkeller, <a href="/A034874/b034874.txt">Table of n, a(n) for n = 1..250</a>
         :return: The bfile data as a list of integers or None if not found.
         """
-        target = f"<a href=\"/{self.current_sequence_id}/b"
+        target = f"<a href=\"/{self.sequence_id}/b"
         for line in self.lines:
             if line.line_type == OEISLineType.LINK and target in line.content:
                 match = re.search(r'href="/(\w+)/b(\w+).txt"', line.content)
@@ -105,7 +111,7 @@ class OEISWriter:
                 file.write(f"{line.line_type.value} {line.sequence_id} {line.content}\n")
 
 def test_oeis_reader():
-    oeis_reader = OEISReader("../oeisdata/seq/A034/A034874.seq")
+    oeis_reader = OEISReader("../oeisdata/seq/A003/A003586.seq")
     oeis_reader.read_file()
     for line in oeis_reader.lines:
         print(line.language, line, sep=' | ')

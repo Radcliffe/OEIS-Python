@@ -62,6 +62,7 @@ class OEISLine(BaseModel):
     """
     line_type: OEISLineType
     sequence_id: Annotated[str, AfterValidator(validate_sequence_id)]
+    name: Optional[str] = None
     content: str
     language: Optional[str] = None
 
