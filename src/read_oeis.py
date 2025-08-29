@@ -45,13 +45,20 @@ class OEISReader:
         elif line_type == OEISLineType.MAPLE_PROGRAM:
             language = "Maple"
         elif line_type == OEISLineType.OTHER_PROGRAM:
-            if match := re.search(r"^\((.*?)\)", content):
-                language = match.group(1)
+            language = self.get_language(content, language)
+
         else:
             language = None
         oeis_line = OEISLine(line_type=line_type, sequence_id=sequence_id, content=content, language=language)
         self.lines.append(oeis_line)
         return language
+
+    def get_language(self, content, language):
+        match = re.search(r"^\((.*?)\)", content)
+        if match is None:
+            return language
+        new_language = match.group(1)
+        return new_language
 
     def get_data(self) -> List[int]:
         """

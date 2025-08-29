@@ -10,9 +10,9 @@ def A385976(n):
     for k in count(6,2):
         c = Counter()
         for x in range(1,k//3+1):
-            for y in range(x+1,k//2+1):
+            for y in range(x,k//2+1):
                 s, m = k>>1, x+y
-                if  (m<<1)>k>m+y and gcd(x,y,k-m)==1 and is_square(s*(a:=(s-x)*(s-y)*(m-s))):
+                if  (m<<1)>k>=m+y and gcd(x,y,k-m)==1 and is_square(s*(a:=(s-x)*(s-y)*(m-s))):
                     c[a]+=1
                     if c[a]>n:
                         break
