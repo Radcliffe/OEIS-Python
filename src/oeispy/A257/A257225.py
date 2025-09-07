@@ -5,5 +5,5 @@
 from itertools import count, islice
 from sympy import divisors
 def A257225_gen(): return filter(lambda n:any('8' in str(d) for d in divisors(n, generator=True)), count(1))
-A257225_list = list(islice(A257225_gen(), 20)) # Chai Wah Wu, Dec 27 2021
+A257225_list = list(islice(A257225_gen(), 58)) # _Chai Wah Wu_, Dec 27 2021
 

@@ -4,5 +4,5 @@
 
 from itertools import count, islice
 def A079523_gen(startvalue=1): return filter(lambda n:(~(n+1)&n).bit_length()&1,count(max(startvalue,1))) # generator of terms >= startvalue
-A079523_list = list(islice(A079523_gen(),30)) # Chai Wah Wu, Jul 05 2022
+A079523_list = list(islice(A079523_gen(),61)) # _Chai Wah Wu_, Jul 05 2022
 

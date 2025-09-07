@@ -10,5 +10,5 @@ def A105451(max):
         if (p - 8) % n == 0: terms.append(n)
         p = nextprime(p)
     return terms
-# Eric M. Schmidt, Feb 05 2013
+# _Eric M. Schmidt_, Feb 05 2013
 

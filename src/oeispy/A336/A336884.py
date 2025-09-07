@@ -15,5 +15,5 @@ for n in range(n_start, n_end, 4):
     if (n-r)*r % n ==1:
         print(k, n-r)
         k = k + 1
-# modified by Georg Fischer, Oct 16 2020
+# modified by _Georg Fischer_, Oct 16 2020
 

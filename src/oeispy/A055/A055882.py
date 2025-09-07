@@ -9,5 +9,5 @@ for _ in range(2, 201):
     blist = list(accumulate([b]+blist))
     b = blist[-1]
     A055882_list.append(b*n2)
-    n2 *= 2 # Chai Wah Wu, Sep 19 2014
+    n2 *= 2 # _Chai Wah Wu_, Sep 19 2014
 

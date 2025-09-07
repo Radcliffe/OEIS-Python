@@ -8,5 +8,5 @@ def b(n, k):
     if n == 0: return k + 1
     return sum(b(j, k)*b(n-j-1, k+j) for j in range(n))
 def A082161(n): return b(n, 0)
-print([A082161(n) for n in range(1, 19)]) # G. C. Greubel, Jan 18 2024
+print([A082161(n) for n in range(1, 19)]) # _G. C. Greubel_, Jan 18 2024
 

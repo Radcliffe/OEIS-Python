@@ -11,7 +11,7 @@ def addPrime(k):
     if k%p==0:  return
     if p*p > k:  break
   primes.append(k)
-  print(primorial % (n*(n+1)/2), end=',')
+  print(primorial % (n*(n+1)//2), end=',')
   primorial *= k
   n += 1
 print(0, end=',')  # 2 % 1

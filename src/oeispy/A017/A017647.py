@@ -4,5 +4,5 @@
 
 def a017647(n):
     return (12*n+10)**7
-# Edward Jiang, Aug 20 2014
+# _Edward Jiang_, Aug 20 2014
 

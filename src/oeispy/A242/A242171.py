@@ -16,5 +16,5 @@ for _ in range(20):
             break
     else:
         A242171_list.append(1)
-    bell.append(b) # Chai Wah Wu, Sep 19 2014
+    bell.append(b) # _Chai Wah Wu_, Sep 19 2014
 

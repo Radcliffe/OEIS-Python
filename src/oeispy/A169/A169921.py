@@ -8,5 +8,5 @@ def A169921(m):
     hold = [x for x in list(zip(*[list(str(sum((int(b)+int(d))*10**a for a,b in enumerate(reversed(str(m))))).ljust(c+n,"X").rjust(8,"X")) for c,d in enumerate(reversed(str(m)))])) if x != ('X',)*(n-1)]
     store = [prod([int(b) for b in c if b.isdigit()])*10**a for a,c in enumerate(reversed(hold))]
     return sum(store)
-# David Consiglio, Oct 24 2022
+# _David Consiglio, Jr._, Oct 24 2022
 

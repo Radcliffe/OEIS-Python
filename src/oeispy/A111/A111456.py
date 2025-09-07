@@ -17,5 +17,5 @@ def dgen(n, b):
                     u = list(v)
                     u.remove(g)
                     yield k, u
-print([a for n in range(2, 15, 2) for a, b in dgen(n, n)]) # Chai Wah Wu, Jun 07 2015
+print([a for n in range(2, 15, 2) for a, b in dgen(n, n)]) # _Chai Wah Wu_, Jun 07 2015
 

@@ -18,5 +18,5 @@ def a():
     else:
       n = 10*n
 a()
-# Derek Orr, Jul 03 2014
+# _Derek Orr_, Jul 03 2014
 

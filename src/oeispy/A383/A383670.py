@@ -22,5 +22,5 @@ def A383670(n):
         return kmin
     for i, f in enumerate((A276885, A001950)):
         if f(bsearch(f, n))==n: return i
-    return 2 # Chai Wah Wu, May 21 2025
+    return 2 # _Chai Wah Wu_, May 21 2025
 

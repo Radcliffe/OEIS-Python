@@ -6,6 +6,23 @@ from models.oeis_models import OEISLine, OEISLineType
 
 session = requests_cache.CachedSession('demo_cache')
 
+
+def get_language(content, language):
+    match = re.search(r"^\((.*?)\)", content)
+    if match is None:
+        return language
+    new_language = match.group(1).strip()
+    if new_language == '': return language
+    whitelist = ['bash', 'bc', 'ksh', 'mzscheme', 'nauty', 'newLISP', 'perl/tcsh', 'plantri', 'zsh']
+    if (new_language < 'A' or new_language[0] > 'Z') and not new_language in whitelist:
+        return language
+    if re.search(r'[aA]\d{6}', new_language): return language
+    if new_language not in languages_seen:
+        languages_seen.add(new_language)
+    return new_language
+
+languages_seen = set()
+
 class OEISReader:
     """
     A class to read and parse the OEIS file.
@@ -45,20 +62,13 @@ class OEISReader:
         elif line_type == OEISLineType.MAPLE_PROGRAM:
             language = "Maple"
         elif line_type == OEISLineType.OTHER_PROGRAM:
-            language = self.get_language(content, language)
+            language = get_language(content, language)
 
         else:
             language = None
         oeis_line = OEISLine(line_type=line_type, sequence_id=sequence_id, content=content, language=language)
         self.lines.append(oeis_line)
         return language
-
-    def get_language(self, content, language):
-        match = re.search(r"^\((.*?)\)", content)
-        if match is None:
-            return language
-        new_language = match.group(1)
-        return new_language
 
     def get_data(self) -> List[int]:
         """
