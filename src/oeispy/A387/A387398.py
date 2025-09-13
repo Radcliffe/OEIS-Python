@@ -8,7 +8,7 @@ def a387398(n):
     if n < 0: raise ValueError("n>=0")
     if n == 0: return 1
     import math
-    s=[1,1]; h=2; p=0; idx=0; r=1
+    s=[1, 1]; h=2; p=0; idx=0; r=1
     while True:
         while len(s) < p+2:
             t = 2 if (h & 1) == 0 else 1
@@ -17,18 +17,16 @@ def a387398(n):
             p+=1; idx+=1
             if idx==n: return 2
             K=((r & -r).bit_length()-1)+1
-            pk=math.comb(1<<(K+1),1<<K)-1
             idx+=1
-            if idx==n: return pk
+            if idx==n: return math.comb(1<<(K+1), 1<<K)-1
         elif p+1<len(s) and s[p]==1 and s[p+1]==1:
             p+=2; idx+=1
             if idx==n: return 1
             idx+=1
             if idx==n: return 1
             K=((r & -r).bit_length()-1)+1
-            pk=math.comb(1<<(K+1),1<<K)-1
             idx+=1
-            if idx==n: return pk
+            if idx==n: return math.comb(1<<(K+1), 1<<K)-1
         else:
             continue
         r+=1
