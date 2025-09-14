@@ -60,7 +60,7 @@ def write_report_markdown(compile_errors: List[Tuple[str, str]], report_file: Pa
             sequence_number = error[0]
             seq_link = f"[{sequence_number}](https://oeis.org/{sequence_number})"
             f.write(f"| {seq_link} | {error[1]} | {error[2]} | {error[3]} | {error[4]} |\n")
-    print(f"Report written to {report_file}. Found {len(compile_errors)} compile errors.")
+    print(f"Report written to {report_file}. Found {len(compile_errors)} compile error{'s' if len(compile_errors) != 1 else '' }.")
 
 
 def remove_compiled_files(python_dir: Path):

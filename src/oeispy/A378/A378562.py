@@ -9,5 +9,5 @@ def fd(t, b): return sum(t[-1-i]*b**i for i in range(len(t)))
 def f(n): return next(fd(r, b) for b in range(2, n+1) if (s:=digits(n, b)[1:]) > (r:=s[::-1]))
 @cache
 def a(n): return 0 if n == 1 else 1 + a(f(n))
-print([a(n) for n in range(1, 88)]) # Michael S. Branicky, Dec 01 2024
+print([a(n) for n in range(1, 88)]) # _Michael S. Branicky_, Dec 01 2024
 

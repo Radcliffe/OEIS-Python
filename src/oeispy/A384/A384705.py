@@ -24,5 +24,5 @@ def a(n):
             c.update(sspw)
         u += sum(1 for x in c if c[x] == 1)  # count results w/unique roots
     return u
-print([a(n) for n in range(1, 10)]) # Michael S. Branicky, Jun 17 2025
+print([a(n) for n in range(1, 10)]) # _Michael S. Branicky_, Jun 17 2025
 

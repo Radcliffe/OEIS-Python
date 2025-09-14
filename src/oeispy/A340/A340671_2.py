@@ -14,5 +14,5 @@ def agen(): # generator of terms
         insort(names, (n2w(n), n-1))
         fixed = [j+1 for j in range(n) if names[j][1] == j]
         yield len(fixed) # use "yield fixed" for list of fixed points
-print(list(islice(agen(), 87))) # Michael S. Branicky, Jul 05 2024
+print(list(islice(agen(), 100))) # _Michael S. Branicky_, Jul 05 2024
 
