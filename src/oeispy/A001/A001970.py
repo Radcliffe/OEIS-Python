@@ -7,7 +7,7 @@ from sympy import npartitions, divisors
 @cacheit
 def a(n): return 1 if n == 0 else sum([sum([d*npartitions(d) for d in divisors(j)])*a(n - j) for j in range(1, n + 1)]) / n
 [a(n) for n in range(51)]  # _Indranil Ghosh_, Aug 19 2017, after Maple code
-# (Sage) # uses[EulerTransform from A166861]
+# (SageMath) # uses[EulerTransform from A166861]
 b = BinaryRecurrenceSequence(0, 1, 1)
 a = EulerTransform(EulerTransform(b))
 print([a(n) for n in range(36)]) # _Peter Luschny_, Nov 17 2022
