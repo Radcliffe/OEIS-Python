@@ -13,6 +13,8 @@ for c in range(1, 101):
             val = math.factorial(c) // math.factorial(b)
             val *= math.factorial(a) # can also extract squarefree part here if desired
             if is_square(val):
-                results.append((c, a, b))
+                results.append(c)
                 break
+        else: continue
+        break
 

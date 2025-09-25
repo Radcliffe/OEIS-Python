@@ -3,5 +3,5 @@
 # OEIS sequence: A242569
 
 import math
-{print(math.factorial(n)-2*n) for n in range(1,25)}
+{print(math.factorial(n)-2*n) for n in range(0,25)}
 
