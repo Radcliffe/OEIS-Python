@@ -4,18 +4,9 @@
 
 from math import isqrt
 from sympy import mobius, integer_nthroot, primepi
+from oeis_sequences.OEISsequences import bisection
 def A388304(n):
     if n == 1: return 216
-    def bisection(f,kmin=0,kmax=1):
-        while f(kmax) > kmax: kmax <<= 1
-        kmin = kmax >> 1
-        while kmax-kmin > 1:
-            kmid = kmax+kmin>>1
-            if f(kmid) <= kmid:
-                kmax = kmid
-            else:
-                kmin = kmid
-        return kmax
     def g(x): return int(sum(mobius(k)*(x//k**2) for k in range(1, isqrt(x)+1))-primepi(x))
     def f(x): return n-3+x+(y:=x.bit_length())-sum(g(integer_nthroot(x,k)[0]) for k in range(3,y))
     return bisection(f,n,n) # _Chai Wah Wu_, Sep 20 2025

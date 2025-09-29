@@ -3,17 +3,8 @@
 # OEIS sequence: A351663
 
 from sympy import mobius, integer_nthroot
+from oeis_sequences.OEISsequences import bisection
 def A351663(n):
-    def bisection(f,kmin=0,kmax=1):
-        while f(kmax) > kmax: kmax <<= 1
-        kmin = kmax >> 1
-        while kmax-kmin > 1:
-            kmid = kmax+kmin>>1
-            if f(kmid) <= kmid:
-                kmax = kmid
-            else:
-                kmin = kmid
-        return kmax
     def f(x): return int(n+x+sum(mobius(k)*(integer_nthroot(x,k)[0]//7) for k in range(2,x.bit_length())))
     return bisection(f,n,n) # _Chai Wah Wu_, Sep 18 2025
 

@@ -4,19 +4,8 @@
 
 from math import isqrt
 from sympy import integer_nthroot, mobius
+from oeis_sequences.OEISsequences import bisection, squarefreepi
 def A383394(n):
-    def squarefreepi(n): return int(sum(mobius(k)*(n//k**2) for k in range(1, isqrt(n)+1)))
-    def bisection(f,kmin=0,kmax=1):
-        while f(kmax) > kmax: kmax <<= 1
-        while f(kmin) < kmin: kmin >>= 1
-        kmin = max(kmin,kmax >> 1)
-        while kmax-kmin > 1:
-            kmid = kmax+kmin>>1
-            if f(kmid) <= kmid:
-                kmax = kmid
-            else:
-                kmin = kmid
-        return kmax
     def g(x):
         c, l = squarefreepi(integer_nthroot(x,3)[0])+sum(mobius(k)*(integer_nthroot(x, k)[0]-1) for k in range(2, x.bit_length()))-1, 0
         j = isqrt(x)

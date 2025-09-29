@@ -4,15 +4,8 @@
 
 from math import isqrt
 from sympy import primepi
+from oeis_sequences.OEISsequences import bisection
 def A388980(n):
-    def bisection(f,kmin=0,kmax=1):
-		while f(kmax) > kmax: kmax <<= 1
-		kmin = kmax >> 1
-		while kmax-kmin > 1:
-			kmid = kmax+kmin>>1
-			if f(kmid) <= kmid: kmax = kmid
-			else: kmin = kmid
-		return kmax
     def f(x): return n+x-(isqrt(x>>1)+1>>1)-sum(primepi(x//y**2) for y in range(2,isqrt(x)+1,2))
     return bisection(f,n,n) # _Chai Wah Wu_, Sep 22 2025
 
