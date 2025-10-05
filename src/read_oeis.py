@@ -17,6 +17,8 @@ def get_language(content, language):
     if (new_language < 'A' or new_language[0] > 'Z') and not new_language in whitelist:
         return language
     if re.search(r'[aA]\d{6}', new_language): return language
+    if new_language.startswith('Python'):
+        new_language = 'Python'
     if new_language not in languages_seen:
         languages_seen.add(new_language)
     return new_language

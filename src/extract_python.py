@@ -6,7 +6,7 @@ def remove_python_files():
     """
     Remove all Python files in the oeispy directory.
     """
-    for root, _, files in os.walk("oeispy"):
+    for root, _, files in sorted(os.walk("oeispy")):
         for file in files:
             if file.endswith(".py") and not file.endswith("__init__.py"):
                 os.remove(os.path.join(root, file))
@@ -93,11 +93,13 @@ def extract_python_code_from_file(file_path):
         if line.language != "Python":
             continue
         line = line.content.rstrip()
-        if line.startswith('(Python)'):
+        if line.startswith('(Python'):
             if len(python_lines) > 0:
                 write_python_code(python_lines, sequence_number, index)
                 index += 1
-            line = line[8:].lstrip()
+            line = line.split(')', maxsplit=1)[-1].lstrip()
+            if line.startswith('//'):
+                continue
         if line:
             if line.lower().lstrip().startswith('see '):
                 continue
@@ -110,19 +112,22 @@ def test_extract_python_code_from_file():
     """
     Test the extract_python_code_from_file function.
     """
-    file_path = "../oeisdata/seq/A034/A034874.seq"
+    file_path = "../oeisdata/seq/A050/A050412.seq"
     extract_python_code_from_file(file_path)
 
-
-if __name__ == "__main__":
-    # Define the OEIS data directory
-    oeis_data_dir = "../oeisdata/seq"
-    # Remove existing Python files in the oeispy directory
+def main():
+    """
+    Extract Python code from all OEIS sequence files.
+    """
     remove_python_files()
-    # Walk through the directory and extract Python code from each file
-    for root, _, files in sorted(os.walk(oeis_data_dir)):
-        print(f"Processing directory: {root}")
+    base_dir = "../oeisdata/seq"
+    for root, _, files in sorted(os.walk(base_dir)):
         for file in files:
             if file.endswith(".seq"):
-                filepath = os.path.join(root, file)
-                extract_python_code_from_file(filepath)
+                file_path = os.path.join(root, file)
+                extract_python_code_from_file(file_path)
+
+if __name__ == "__main__":
+    main()
+    # test_extract_python_code_from_file()
+

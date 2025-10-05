@@ -36,12 +36,29 @@ def compile_all_scripts(python_dir: Path) -> List[Tuple[str, str]]:
                     else:
                         sequence_number = stem
                         index = 1
-                    line_no = int(e.msg.split()[3]) - 4
-                    short_error = e.msg.split('\n')[-2]
+                    line_no = get_error_line_number(e)
+                    short_error = extract_short_error_message(e)
                     error_type = detect_error(short_error)
                     compile_errors.append((sequence_number, index, line_no, error_type, short_error))
 
     return compile_errors
+
+def extract_short_error_message(e):
+    try:
+        short_error = e.msg.split('\n')[-2]
+        return short_error
+    except IndexError as v:
+        print(f"Failed to extract short error message: {e.msg}")
+        return e.msg[:40]
+
+
+def get_error_line_number(e):
+    try:
+        line_no = int(e.msg.split()[3]) - 4
+    except ValueError as e1:
+        print(f"Failed to extract line number in error message: {e.msg}")
+        line_no = -1
+    return line_no
 
 
 def write_report_markdown(compile_errors: List[Tuple[str, str]], report_file: Path):
@@ -54,8 +71,11 @@ def write_report_markdown(compile_errors: List[Tuple[str, str]], report_file: Pa
     """
     with open(report_file, 'w') as f:
         f.write("# OEIS Python scripts that fail to compile in Python 3.13.7\n")
-        f.write("| Sequence | Index | Line | Error type | Error message |\n")
-        f.write("|----------|-------|------|------------|----------------|\n")
+        if compile_errors:
+            f.write("| Sequence | Index | Line | Error type | Error message |\n")
+            f.write("|----------|-------|------|------------|----------------|\n")
+        else:
+            f.write("\nNo compile errors found.\n")
         for error in compile_errors:
             sequence_number = error[0]
             seq_link = f"[{sequence_number}](https://oeis.org/{sequence_number})"

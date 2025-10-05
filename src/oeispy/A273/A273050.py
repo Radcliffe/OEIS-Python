@@ -8,7 +8,7 @@ def ROR(n):                # returns A038572(n)
 def ROL(n):                # returns A006257(n) for n>0
     BL = len(bin(n))-2
     return (n*2) - (1<<BL) + 1
-print('0', end=',')
+print('0', end=', ')
 for n in range(1,100000):
-    if  ROR(n) ^ ROL(n) == n: print(n, end=',')
+    if ROR(n) ^ ROL(n) == n: print(n, end=', ')
 
