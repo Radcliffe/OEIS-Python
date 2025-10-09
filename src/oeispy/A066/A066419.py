@@ -3,6 +3,8 @@
 # OEIS sequence: A066419
 
 from math import factorial
+from sys import set_int_max_str_digits
+set_int_max_str_digits(0)
 def sd(n): return sum(map(int, str(n)))
 def ok(f): return f%sd(f) != 0
 print([n for n in range(1, 715) if ok(factorial(n))]) # _Michael S. Branicky_, Jun 13 2021
