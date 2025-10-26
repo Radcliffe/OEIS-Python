@@ -4,14 +4,14 @@
 
 def A382482(n):
     if not hasattr(A:=A382482, 'U'): A.terms=[1]; A.L=1; A.U=A.N=2
-    while n >= len(A.terms) or not A.terms[n-1]:
-       if A.U < A.L: A.terms[A.U-1], A.L = A.terms[A.L-1] + A.U-A.L, A.U
-       else:
+    while n > len(A.terms) or not A.terms[n-1]:
+        if A.U < A.L: A.terms[A.U-1], A.L = A.terms[A.L-1] + A.U-A.L, A.U
+        else:
             A.L += next(i for i in range(A.terms[A.L-1], max(A.terms)+1)
                         if A.L+i > len(A.terms) or not A.terms[A.L+i-1])
             if A.L > len(A.terms): A.terms += [0]*(A.L - len(A.terms))
             while A.N in A.terms: A.N += 1
             A.terms[A.L-1] = A.N
-       while A.U <= len(A.terms) and A.terms[A.U-1]: A.U += 1
+        while A.U <= len(A.terms) and A.terms[A.U-1]: A.U += 1
     return A.terms[n-1] # _M. F. Hasler_, Oct 21 2025
 

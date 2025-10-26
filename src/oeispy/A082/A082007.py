@@ -9,5 +9,5 @@ def A082007( n ):
   yc = 2 ** 2 ** int( log( log( y, 2 ), 2 ) )
   yr = y / yc
   return (yc-1) * int( (n+1-y)/yr + 1 ) + A082007( yr + (n+1)%yr - 1 )
-# Steve Witham (sw(AT)tiac.net), Oct 11 2009
+# _Stephen E. Witham_, Oct 11 2009
 

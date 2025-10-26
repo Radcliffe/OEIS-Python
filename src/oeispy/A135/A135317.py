@@ -8,5 +8,5 @@ def a(n):
         m += 1; b = (-h) % m; h += 2*b
         m += 1; c = (-h) % m; h += 2*c
     return c
-print([a(n) for n in range(30)]) # _Andrey Zabolotskiy_, Dec 25 2024
+print([a(n) for n in range(30)]) # _Andrei Zabolotskii_, Dec 25 2024
 

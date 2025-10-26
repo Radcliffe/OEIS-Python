@@ -8,5 +8,5 @@ def A082008( n ):
     yc = 2 ** 2 ** int( log( log( y, 2 ), 2 ) )
     yr = y // yc
     return (yc-1) * int( (n-y) / yr + 1 ) + A082008( yr + n % yr )
-# Steve Witham (sw(AT)tiac.net), Oct 13 2009
+# _Stephen E. Witham_, Oct 13 2009
 
