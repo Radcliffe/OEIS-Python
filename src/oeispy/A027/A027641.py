@@ -3,6 +3,5 @@
 # OEIS sequence: A027641
 
 from sympy import bernoulli
-from fractions import Fraction
-[bernoulli(i).as_numer_denom()[0] for i in range(51)]  # _Indranil Ghosh_, Mar 18 2017
+[bernoulli(i).numerator for i in range(51)]  # _Indranil Ghosh_, Mar 18 2017
 
