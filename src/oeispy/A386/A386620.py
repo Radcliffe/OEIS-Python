@@ -4,13 +4,15 @@
 
 from itertools import count
 from collections import Counter
-from sympy import factorint
+from sympy import primerange, multiplicity
 def A386620(n):
-    f = sum((Counter(factorint(2*n+1-i)) for i in range(1,n+1)),start=Counter())
+    plist = list(primerange(n+1,2*n))
+    def q(x): return sum((Counter({p:multiplicity(p,x)}) for p in plist), start=Counter())
+    f = sum((Counter(q(2*n+1-i)) for i in range(1,n+1)),start=Counter())._keep_positive()
     for k in count(2*n+1):
-        if not any(n<p<2*n for p in f):
+        if not len(f):
             return k
-        f += Counter(factorint(k))
-        f -= Counter(factorint(k-n))
-        f = f._keep_positive() # _Chai Wah Wu_, Nov 03 2025
+        f += q(k)
+        f -= q(k-n)
+        f = f._keep_positive() # _Chai Wah Wu_, Nov 07 2025
 
