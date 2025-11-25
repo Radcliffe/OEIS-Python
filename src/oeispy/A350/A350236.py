@@ -5,4 +5,5 @@
 for n in range(1, nmax):
   sum = round(3/4*n**2 * (n**2 - 2/3*n + n % 2))
   print(sum, end=', ')
+# _Georg Fischer_, Sep 30 2022
 
