@@ -6,7 +6,7 @@ from math import gcd
 i=j=1
 while j<=100:
     if gcd(bin(i)[2:].count("0"),i)==1 and gcd(bin(i)[2:].count("1"),i)==1 and gcd(len(bin(i)[2:]),i)==1:
-        print(j, i)
+        print(i, end=", ")
         j+=1
     i+=1 # _Indranil Ghosh_, Mar 08 2017
 

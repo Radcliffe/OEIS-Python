@@ -3,6 +3,6 @@
 # OEIS sequence: A369104
 
 from sympy import pi, N;
-def A369104(n):
-    return list(map(int, str(N((pi*(pi-2))/(4+(pi-2)**2), n)).replace(".", "")))
+def A369104_list(n):
+    return list(map(int, str(N((pi*(pi-2))/(4+(pi-2)**2), n)).replace(".", "")))[1:]
 
