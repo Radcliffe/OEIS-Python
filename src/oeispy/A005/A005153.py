@@ -3,11 +3,11 @@
 # OEIS sequence: A005153
 
 from sympy import factorint
-def is_A005153(n):
+def is_A005153(n: int) -> bool:
     if n & 1: return n == 1
     f = factorint(n) ; P = (2 << f.pop(2)) - 1
     for p in f: # factorint must have prime factors in increasing order
-        if p > 1 + P: return
+        if p > 1 + P: return False
         P *= p**(f[p]+1)//(p-1)
     return True # _M. F. Hasler_, Jan 02 2023
 
