@@ -4,7 +4,7 @@
 
 def A000401(n):
     def f(x): return n-1+sum(((x>>i)-7>>3)+1 for i in range(1,x.bit_length(),2))
-    m, k = n, f(n)
+    m, k = n-1, f(n-1)
     while m != k: m, k = k, f(k)
     return m # _Chai Wah Wu_, Feb 24 2025
 
