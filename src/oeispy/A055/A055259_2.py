@@ -3,5 +3,5 @@
 # OEIS sequence: A055259
 
 from math import isqrt
-def A055259(n): return (1<<3*(a:=(k:=isqrt(m:=n<<1))+(m>k*(k+1))-1))+(1<<3*(n-1-(a*(a+1)>>1))) # _Chai Wah Wu_, Apr 08 2025
+def A055259(n): return (1<<3*(a:=(k:=isqrt(m:=(n+1)<<1))+(m>k*(k+1))-1))+(1<<3*(n-(a*(a+1)>>1))) # _Chai Wah Wu_, Apr 08 2025
 
