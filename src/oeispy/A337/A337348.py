@@ -5,6 +5,6 @@
 def a(n):
     x = y = ''
     for _ in range(n):
-        x, y  = y + '1', x + '0'
+        x, y = y + '1', x + '0'
     return int(x, 2) * int(y, 2)
 
