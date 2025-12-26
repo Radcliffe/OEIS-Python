@@ -112,7 +112,7 @@ def test_extract_python_code_from_file():
     """
     Test the extract_python_code_from_file function.
     """
-    file_path = "../oeisdata/seq/A050/A050412.seq"
+    file_path = "../oeisdata/seq/A389/A389975.seq"
     extract_python_code_from_file(file_path)
 
 def main():

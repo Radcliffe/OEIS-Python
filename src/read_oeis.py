@@ -13,7 +13,7 @@ def get_language(content, language):
         return language
     new_language = match.group(1).strip()
     if new_language == '': return language
-    whitelist = ['bash', 'bc', 'ksh', 'mzscheme', 'nauty', 'newLISP', 'perl/tcsh', 'plantri', 'zsh']
+    whitelist = ['bash', 'bc', 'clingo', 'ksh', 'mzscheme', 'nauty', 'newLISP', 'perl/tcsh', 'plantri', 'zsh']
     if (new_language < 'A' or new_language[0] > 'Z') and not new_language in whitelist:
         return language
     if re.search(r'[aA]\d{6}', new_language): return language
@@ -115,6 +115,9 @@ class OEISReader:
                                  if line.strip() and not line.startswith('#')]
                         return [int(x) for x in ' '.join(lines).split()[1::2]]
         return None
+
+    def get_links(self):
+        return [line for line in self.lines if line.line_type == OEISLineType.LINK]
 
 
 class OEISWriter:
