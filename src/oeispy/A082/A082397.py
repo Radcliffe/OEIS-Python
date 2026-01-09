@@ -4,8 +4,7 @@
 
 import math
 def Sum(k):
-    S= sum((-1)**(i+1)*math.comb(k,i+1)*math.comb(i,math.floor((i-1)/2)) for i in range(1,k))
-    return S
-for i in range (2,20): print(Sum(i))
+    return sum((-1)**(i+1)*math.comb(k,i+1)*math.comb(i,(i-1)//2) for i in range(1,k))
+print([Sum(i) for i in range(2,30)])
 # _Rigoberto Florez_, Dec 10 2022
 

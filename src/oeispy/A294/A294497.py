@@ -3,15 +3,16 @@
 # OEIS sequence: A294497
 
 import math
-for k in range(1,1000000000):
+from itertools import count
+for k in count(1):
    p = 0
    z = 0
    n = k*k
    while n >= 100:
-      z = z + int(math.floor(math.sqrt(n % 100)) * math.pow(10, p))
-      n = int((n - (n % 100)) / 100)
-      p = p + 1
-   z = z + int(math.floor(math.sqrt(n)) * math.pow(10, p))
+      z += math.isqrt(n % 100) * 10**p
+      n = (n - (n % 100)) // 100
+      p += 1
+   z += math.isqrt(n) * 10**p
    if z == k and k % 10 > 0:
       print(k * k, k)
 

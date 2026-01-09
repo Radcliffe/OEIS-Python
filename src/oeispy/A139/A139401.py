@@ -4,7 +4,7 @@
 
 import math
 def A139401(n):
-    if int(math.sqrt(n)) == math.sqrt(n):
+    if math.isqrt(n)**2 == n:
         return 0
     for pp in range(2, n + 2):  # only really need to check prime powers
         residues = frozenset(pow(k, 2, pp) for k in range(pp))

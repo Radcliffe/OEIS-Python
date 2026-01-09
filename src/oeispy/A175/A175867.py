@@ -5,13 +5,13 @@
 import math
 from sympy import isprime
 a = [2]
-while not a[ -1] in a[:-1]:
-    if isprime(a[ -1]):
-        a.append(a[ -1] * 2 + 1)
+while not a[-1] in a[:-1]:
+    if isprime(a[-1]):
+        a.append(a[-1] * 2 + 1)
     else:
-        for div in range(2, int(math.sqrt(a[ -1])) + 1):
-            if not a[ -1] % div:
-                a.append(a[ -1] // div)
+        for div in range(2, math.isqrt(a[-1]) + 1):
+            if not a[-1] % div:
+                a.append(a[-1] // div)
                 break
 print(a)
 

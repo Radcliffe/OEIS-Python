@@ -6,8 +6,8 @@ import math
 x = 0
 for i in range(1<<20):
     x ^= i*i
-    t = int(math.sqrt(x))
+    t = math.isqrt(x)
     if x == t*t:
-        print(str(i), end=', ')
+        print(i, end=', ')
 # _Alex Ratushnyak_, Mar 27 2013
 
