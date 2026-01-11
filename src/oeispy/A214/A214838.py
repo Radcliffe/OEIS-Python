@@ -4,8 +4,8 @@
 
 import math
 for i in range(2, 1<<32):
-      t = i*(i+1)//2 - 2
-      sr = int(math.sqrt(t))
-      if sr*sr == t:
-          print(f'{sr:10} {i:10} {t+2}')
+    t = i*(i+1)//2 - 2
+    sr = math.isqrt(t)
+    if sr*sr == t:
+        print(f'{sr:10} {i:10} {t+2}')
 

@@ -3,15 +3,15 @@
 # OEIS sequence: A234143
 
 import math
-def isTriangular(n):  # OK for relatively small n
+def isTriangular(n):
   n+=n
-  sr = int(math.sqrt(n))
+  sr = math.isqrt(n)
   return (n==sr*(sr+1))
 for n in range(1,264444):
   tn = n*(n+1)//2
-  r = int(math.sqrt(tn-1))
+  r = math.isqrt(tn-1)
   i = tn-r*r
-  r = int(math.sqrt(tn))
+  r = math.isqrt(tn)
   j = (r+1)*(r+1)-tn
-  if isTriangular(i) and isTriangular(j):  print(str(n), end=',')
+  if isTriangular(i) and isTriangular(j): print(n, end=', ')
 

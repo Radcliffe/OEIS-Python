@@ -3,19 +3,17 @@
 # OEIS sequence: A258060
 
 import math
-list =[]
-for i in range(1,100000):
+list = []
+for i in range(1,2000):
    a = i*i
    b = str(a)
-   l = len(b)
-   for j in range(1, l):
+   for j in range(1, len(b)):
       a_1 = b[:j]
       a_2 = b[j:]
-      c = int(a_1)* int(a_2)
-      sqrt_c = int(math.sqrt(int(c)))
+      c = int(a_1)*int(a_2)
+      sqrt_c = math.isqrt(c)
       if (sqrt_c * sqrt_c == c) and (int(a_2[:1]) > 0):
          if not a in list:
             list.append(a)
-         list.append(a)
 print(list)
 

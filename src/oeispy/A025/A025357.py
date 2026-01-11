@@ -5,7 +5,8 @@
 # see link for faster version
 limit = 1664
 from functools import lru_cache
-sq = [k*k for k in range(1, int(limit**.5)+2) if k*k + 3 <= limit]
+from math import isqrt
+sq = [k*k for k in range(1, isqrt(limit)+2) if k*k + 3 <= limit]
 sqs = set(sq)
 @lru_cache(maxsize=None)
 def findsums(n, m):

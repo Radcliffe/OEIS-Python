@@ -5,7 +5,7 @@
 import math
 for i in range(1<<30):
     t = i*(i+1)*(i+2)//6 + 1
-    sr = int(math.sqrt(t))
+    sr = math.isqrt(t)
     if sr*sr == t:
         print(sr)
 

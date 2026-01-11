@@ -3,16 +3,15 @@
 # OEIS sequence: A245584
 
 import math
-max = 10000
-print('los')
+max = 10**5
 for n in range(1, max):
    nst = str(n*n)
    nnewst = nst[1:] + nst[0]
    d = int(nnewst)
-   e = int(math.sqrt(d))
+   e = math.isqrt(d)
    est = str(e)
    enewst = est[len(est)-1] + est[:len(est)-1]
    if (e * e == d) and (nnewst[0] != "0") and (str(n) == enewst):
-      print(n, '  ',  e)
+      print(n, e)
 print('End.')
 

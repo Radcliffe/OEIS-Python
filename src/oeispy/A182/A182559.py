@@ -5,8 +5,8 @@
 import math
 prpr = 0
 prev = 1
-for n in range(55):
-    current = prpr*2 + int(math.sqrt(prev))
+for n in range(50):
+    current = prpr*2 + math.isqrt(prev)
     print(prpr, end=', ')
     prpr = prev
     prev = current

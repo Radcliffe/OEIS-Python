@@ -4,8 +4,9 @@
 
 from collections import Counter
 from itertools import combinations
+from math import isqrt
 def aupto(lim):
-  s = filter(lambda x: x <= lim, (i*i for i in range(1, int(lim**.5)+2)))
+  s = filter(lambda x: x <= lim, (i*i for i in range(1, isqrt(lim)+2)))
   s2 = filter(lambda x: x <= lim, (sum(c) for c in combinations(s, 2)))
   s2counts = Counter(s2)
   return sorted(k for k in s2counts if k <= lim and s2counts[k] == 1)

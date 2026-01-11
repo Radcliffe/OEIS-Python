@@ -8,13 +8,13 @@ f = 1
 for n in range(2, 1025):
     f *= n
     factorials[n-1] = f
-for n in range(1<<30):
+for n in range(1000):
     t = n*n
     for a in factorials:
         r = t - a
         if r<0: break
-        b = int(math.sqrt(2*r))
+        b = math.isqrt(2*r)
         if b*(b+1)==r*2:
-            print(t, end=',')
+            print(t, end=', ')
             break
 

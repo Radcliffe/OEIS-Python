@@ -4,19 +4,20 @@
 
 import math
 def get_x_y(n):
-  sr = int(math.sqrt(n-1))  # Ok for small n's
+  sr = math.isqrt(n-1)
   sr = sr-1+(sr&1)
   rm = n-sr*sr
   d = (sr+1)//2
   if rm<=sr+1:
-     return -d+rm, d
+    return -d+rm, d
   if rm<=sr*2+2:
-     return d, d-(rm-(sr+1))
+    return d, d-(rm-(sr+1))
   if rm<=sr*3+3:
-     return d-(rm-(sr*2+2)), -d
+    return d-(rm-(sr*2+2)), -d
   return -d, -d+rm-(sr*3+3)
-for n in range(1, 77):
+def a(n):
   x0, y0 = get_x_y(n**3)
   x1, y1 = get_x_y((n+1)**3)
-  print(abs(x1-x0)+abs(y1-y0), end=', ')
+  return abs(x1-x0)+abs(y1-y0)
+print([a(n) for n in range(1, 61)])
 

@@ -8,16 +8,16 @@ i = 0
 terms = [-1] * n
 while n:
   s = (i*i) ^ ((i+1)*(i+1))
-  r = int(math.sqrt(s))
+  r = math.isqrt(s)
   if s == r*r:
-    if (r&1)==0:  break
+    if (r&1)==0: break
     r = (r-1)//2
     if r < needTerms:
-        if terms[r] >= 0:  break
-        terms[r] = i
-        n -= 1
+      if terms[r] >= 0: break
+      terms[r] = i
+      n -= 1
   i += 1
-if n:  print('Error')
+if n: print('Error')
 else:
   for i in range(needTerms):
     t = terms[i]

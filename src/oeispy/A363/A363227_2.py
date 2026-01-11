@@ -11,5 +11,5 @@ def A363227_gen(startvalue=1): # generator of terms >= startvalue
             c |= {a+d for a in c}|{a-d for a in c}
         if all(k in c for k in range(1,m+1)):
             yield m
-A363227_list = list(islice(A363227_gen(),20)) # _Chai Wah Wu_, Jul 04 2023
+A363227_list = list(islice(A363227_gen(),70)) # _Chai Wah Wu_, Jul 04 2023
 

@@ -4,12 +4,13 @@
 
 import math
 def getXY(n):
-  y = int(math.sqrt(n*2))
+  y = math.isqrt(n*2)
   if n<=y*(y+1)//2: y-=1
   x = n - y*(y+1)//2
   return x, y
-for n in range(1,77):
+def a(n):
   ox, oy = getXY(n)
   nx, ny = getXY(n*n)
-  print(str(abs(nx-ox)+abs(ny-oy)), end=',')
+  return abs(nx-ox)+abs(ny-oy)
+print([a(n) for n in range(1, 66)])
 

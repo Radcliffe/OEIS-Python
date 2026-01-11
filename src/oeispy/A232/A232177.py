@@ -3,12 +3,12 @@
 # OEIS sequence: A232177
 
 import math
-for n in range(77):
+def a(n):
   tn = n*(n+1)//2
-  for k in range(1, n+9):
+  for k in range(1, n+2):
     sum = tn + k*(k+1)//2
-    r = int(math.sqrt(sum))
+    r = math.isqrt(sum)
     if r*r == sum:
-      print(str(k), end=',')
-      break
+      return k
+print([a(n) for n in range(80)])
 

@@ -4,7 +4,7 @@
 
 import math
 for i in range(1<<30):
-        s = i*(i+1)/2 + i*(2*i+1)
-        t = int(math.sqrt(s))
-        if s == t*t:  print(i)
+        s = i*(i+1)//2 + i*(2*i+1)
+        t = math.isqrt(s)
+        if s == t*t: print(i)
 

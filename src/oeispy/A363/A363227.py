@@ -5,11 +5,11 @@
 import math
 def divisorGenerator(n):
   large_divisors = []
-  for i in range(1, int(math.sqrt(n) + 1)):
+  for i in range(1, math.isqrt(n) + 1):
     if n % i == 0:
       yield i
       if i*i != n:
-        large_divisors.append(int(n / i))
+        large_divisors.append(n // i)
     for divisor in reversed(large_divisors):
       yield divisor
 from itertools import chain, combinations
@@ -23,6 +23,6 @@ def all_combinations(iterable,n):
         yield value
 def is_A363227(n):
   return len(set(all_combinations(divisorGenerator(n),n)))==n
-max_n = 250
-print([x for x in range(max_n+1) if is_A363227(x)])
+max_n = 30
+print([x for x in range(1, max_n+1) if is_A363227(x)])
 

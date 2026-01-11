@@ -3,9 +3,9 @@
 # OEIS sequence: A224511
 
 import math
-for i in range(1<<16):
+for i in range(6000):
     s = (i*i) ^ ((i+1)*(i+1))
-    r = int(math.sqrt(s));
+    r = math.isqrt(s)
     if s == r*r:
         print(r, end=', ')
 

@@ -3,8 +3,9 @@
 # OEIS sequence: A192336
 
 from itertools import combinations
+from math import isqrt
 def aupto(lim):
-  s = [i*i for i in range(1, int(lim**.5)+2) if i*i <= lim]
+  s = [i*i for i in range(1, isqrt(lim)+2) if i*i <= lim]
   ss = set(sum(c) for i in range(2, len(s)+1) for c in combinations(s, i))
   return sorted(filter(lambda x: x <= lim, ss))
 print(aupto(104)) # _Michael S. Branicky_, May 10 2021

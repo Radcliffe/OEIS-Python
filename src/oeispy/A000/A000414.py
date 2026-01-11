@@ -4,7 +4,8 @@
 
 limit = 10026 # 10000th term in b-file
 from functools import lru_cache
-nzs = [k*k for k in range(1, int(limit**.5)+2) if k*k + 3 <= limit]
+from math import isqrt
+nzs = [k*k for k in range(1, isqrt(limit)+2) if k*k + 3 <= limit]
 nzss = set(nzs)
 @lru_cache(maxsize=None)
 def ok(n, m): return n in nzss if m == 1 else any(ok(n-s, m-1) for s in nzs)

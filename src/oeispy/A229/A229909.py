@@ -5,22 +5,22 @@
 import math
 def isTriangular(a):
     a+=a
-    sr = int(math.sqrt(a))
+    sr = math.isqrt(a)
     return (a==sr*(sr+1))
 for n in range(1, 1000000000):
-    tn = int(n*(n+1)/2)  # = x+y = distance between squares
+    tn = n*(n+1)//2  # = x+y = distance between squares
     if tn&1:
         k = tn>>1
         k*= k       # square below t
-        a = int(math.sqrt(k*2))
-        t = a*(a+1)/2
+        a = math.isqrt(k*2)
+        t = a*(a+1)//2
         if t <= k:
             a+=1
             t+=a
         ktn = k+tn   # square above t
         while t <= ktn:  # check if x and y are triangular:
             if isTriangular(t-k) and isTriangular(ktn-t):
-                print(int(t))
+                print(t)
             a+=1
             t+=a
     if (n&0xfffff)==0: print('.', end='')

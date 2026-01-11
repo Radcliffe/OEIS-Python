@@ -4,7 +4,8 @@
 
 limit = 226
 from functools import lru_cache
-sq = [k**2 for k in range(1, int(limit**.5)+2) if k**2 + 3 <= limit]
+from math import isqrt
+sq = [k**2 for k in range(1, isqrt(limit)+2) if k**2 + 3 <= limit]
 sqs = set(sq)
 @lru_cache(maxsize=None)
 def findsums(n, m):

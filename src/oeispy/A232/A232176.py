@@ -3,15 +3,11 @@
 # OEIS sequence: A232176
 
 import math
-for n in range(77):
-  n2 = n*n
-  y=1
-  for k in range(1,10000001):
-    sum = n2 + k*(k+1)//2
-    r = int(math.sqrt(sum))
+def a(n):
+  for k in range(1,max(1,4*n-2)+1):
+    sum = n*n + k*(k+1)//2
+    r = math.isqrt(sum)
     if r*r == sum:
-      print(str(k), end=',')
-      y=0
-      break
-  if y: print('-', end=',')
+      return k
+print([a(n) for n in range(70)])
 

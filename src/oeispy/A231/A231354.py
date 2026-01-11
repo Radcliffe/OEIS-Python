@@ -3,14 +3,13 @@
 # OEIS sequence: A231354
 
 import math
-for n in range(333):
-  for k in range(1000000):
-    t = n - k*(k+1)/2
+def a(n):
+  for k in range(n+2):
+    t = n - k*(k+1)//2
     if t<0:
-      print('-1', end=', ')
-      break
-    r = int(math.sqrt(t))
+      return -1
+    r = math.isqrt(t)
     if r*r==t:
-      print(str(k), end=', ')
-      break
+      return k
+print([a(n) for n in range(100)])
 

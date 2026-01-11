@@ -9,15 +9,14 @@ def coprime(k,m,n):
     while k:
         n,k=k,n%k
     return n
-oeis=[0]
-for n in range(n):
-    kv=[i**2 for i in range(2*n)]
-    pyt=[]
+def a(n):
+    kv=set(i**2 for i in range(2*n))
+    pyt=0
     for a in range(1,n):
         for b in range(a,n+1):
             for c in range(b,n+1):
                 if a**2+b**2+c**2 in kv and coprime(a,b,c)==1:
-                    pyt.append([a,b,c,int((a**2+b**2+c**2)**0.5+0.1)])
-    oeis.append(len(pyt))
-print(pyt)
+                    pyt+=1
+    return pyt
+print([a(n) for n in range(70)])
 

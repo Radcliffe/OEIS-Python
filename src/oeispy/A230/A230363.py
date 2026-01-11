@@ -9,7 +9,7 @@ for n in range(1, 1000000):
     t = b = 0
     while t<=f:
         x = f-t
-        a = int(math.sqrt(x))
+        a = math.isqrt(x)
         if a*a==x:
             print(f, end=", ")
             break
