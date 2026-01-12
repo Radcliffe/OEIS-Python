@@ -19,13 +19,6 @@ def pi(digits):
     unity = 10**(digits + 10)
     pi = 4 * (4*arccot(5, unity) - arccot(239, unity))
     return pi // 10**10
-def primes(n):
-    """ Returns  a list of primes < n """
-    sieve = [True] * n
-    for i in range(3, int(n**0.5)+1, 2):
-        if sieve[i]:
-            sieve[i*i::2*i]=[False]*((n-i*i-1)/(2*i)+1)
-    return [2] + [i for i in range(3, n, 2) if sieve[i]]
 a = pi(400)
 b = range(100000)
 y = str(a)
@@ -39,5 +32,5 @@ z = filter(None, z)#remove null terms
 f = list(map(int, z))#convert to integers
 print(f[0:-1])
 # Code for A245770 by David Consiglio, Jr., Jan 03 2015
-# Modified by Manfred Scheucher,  Jun 05 2015
+# Modified by _Manfred Scheucher_, Jun 05 2015
 

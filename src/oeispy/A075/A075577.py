@@ -6,7 +6,7 @@ from math import isqrt
 from sympy import isprime
 def aupto(limit):
   alst, is2 = [], False
-  for k in range(1, isqrt(limit) + 2):
+  for k in range(1, isqrt(limit) + 1):
     is1, is2 = is2, isprime(k**2 + (k+1)**2)
     if is1 and is2: alst.append(k**2)
   return alst

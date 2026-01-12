@@ -3,18 +3,11 @@
 # OEIS sequence: A248804
 
 from decimal import *
+from sympy import sieve
 getcontext().prec = 300
-def primes(n):
-    """ Returns  a list of primes < n """
-    sieve = [True] * n
-    for i in range(3,int(n**0.5)+1,2):
-        if sieve[i]:
-            sieve[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
-    return [2] + [i for i in range(3,n,2) if sieve[i]]
-b = primes(429526060)
 x = (Decimal(1).exp())
 y = str(x).replace(".","")
-for x in b:
+for x in sieve.primerange(429526060):
     y = y.replace(str(x)," ",1) #replace first occurrence only
 f = [int(x) for x in y.split()[:-1]]
 print(f)

@@ -4,8 +4,8 @@
 
 from sympy import prime, nextprime
 def A073325(n):
-    p, m = prime(n), n
-    while p%m != n-1:
+    p, m = prime(n+1), n+1
+    while p%m != n:
         p = nextprime(p)
         m += 1
     return m # _Chai Wah Wu_, Mar 18 2023
