@@ -4,14 +4,15 @@
 
 from collections import Counter
 from itertools import count, combinations_with_replacement as mc
+from math import isqrt
 def aupto(lim):
-  sq = filter(lambda x: x<=lim, (i**2 for i in range(int(lim**(1/2))+2)))
+  sq = filter(lambda x: x<=lim, (i**2 for i in range(isqrt(lim)+2)))
   s3 = filter(lambda x: 0<x<=lim, (sum(m) for m in mc(sq, 3)))
   counts, alst = Counter(s3), [7]
   for n in count(1):
-      mink = min((k for k in counts if counts[k]==n), default=False)
-      if not mink: break
-      alst.append(mink)
+    mink = min((k for k in counts if counts[k]==n), default=False)
+    if not mink: break
+    alst.append(mink)
   return alst
 print(aupto(11600)) # _Michael S. Branicky_, Jul 01 2021
 

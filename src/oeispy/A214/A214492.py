@@ -4,15 +4,11 @@
 
 import math
 sum = k = 0
-for n in range(1, 220000):
+for n in range(1, 100000):
     sum += n*n
     k += 1
-    sqr = int(math.sqrt(sum*1.0/k))
-    while sqr*sqr*k<sum:
-        sqr+=1
-    while sqr*sqr*k>sum:
-        sqr-=1
+    sqr = math.isqrt(sum//k)
     if sqr*sqr*k==sum and k>1:
-        print(k, end=',')
+        print(k, end=', ')
         sum = k = 0
 

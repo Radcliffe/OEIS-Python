@@ -4,6 +4,6 @@
 
 import math
 def A000075(n):
-    return len(set([2*x**2+3*y**2 for x in range(1+int(math.floor(2**((n-1)/2)))) for y in range(1+int(math.floor(math.sqrt((2**n-2*x**2)/3)))) if 0 < 2*x**2+3*y**2 <= 2**n]))
+    return len(set([2*x**2+3*y**2 for x in range(1+math.isqrt(2**n//2)) for y in range(1+math.isqrt((2**n-2*x**2)//3)) if 0 < 2*x**2+3*y**2 <= 2**n]))
 # _Chai Wah Wu_, Aug 20 2014
 

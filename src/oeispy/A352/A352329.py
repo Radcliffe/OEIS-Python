@@ -3,6 +3,7 @@
 # OEIS sequence: A352329
 
 from itertools import permutations
+from math import isqrt
 def pmap(s, m): return sum(s[i-1]*10**(m-i) for i in range(1, len(s)+1))
 def agen():
   m = 1
@@ -14,6 +15,6 @@ def aupton(terms):
   while len(alst) < terms: alst += [next(g)]
   return alst
 def is_perfect_square(n):
-        return round(n ** 0.5) ** 2 == n
-print([x for x in aupton(5000000) if is_perfect_square(x)])
+  return isqrt(n) ** 2 == n
+print([x for x in aupton(300000) if is_perfect_square(x)])
 

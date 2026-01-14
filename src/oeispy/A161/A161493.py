@@ -3,5 +3,5 @@
 # OEIS sequence: A161493
 
 from sympy import divisor_count
-print([n**2 for n in range(1, 1001) if int(math.floor(n**2/divisor_count(n**2)))%2]) # _Indranil Ghosh_, Mar 23 2017
+print([n**2 for n in range(1, 101) if (n**2//divisor_count(n**2))%2]) # _Indranil Ghosh_, Mar 23 2017
 

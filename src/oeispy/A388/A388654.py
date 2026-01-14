@@ -3,9 +3,10 @@
 # OEIS sequence: A388654
 
 from collections import defaultdict
+from math import isqrt
 def spf_sieve(n):
     spf = list(range(n+1))
-    for i in range(2, int(n**0.5)+1):
+    for i in range(2, isqrt(n)+1):
         if spf[i] == i:  # prime
             step = i
             start = i*i
