@@ -3,5 +3,5 @@
 # OEIS sequence: A000321
 
 from sympy import hermite
-def a(n): return hermite(n, -1/2) # _Indranil Ghosh_, May 26 2017
+def a(n): return hermite(n, '-1/2') # _Indranil Ghosh_, May 26 2017
 

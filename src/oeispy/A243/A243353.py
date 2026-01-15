@@ -3,9 +3,8 @@
 # OEIS sequence: A243353
 
 from sympy import prime
-import math
-def A(n): return n - 2**int(math.floor(math.log(n, 2)))
-def b(n): return n + 1 if n<2 else prime(1 + (len(bin(n)[2:]) - bin(n)[2:].count("1"))) * b(A(n))
+def a053645(n): return n - 2**(n.bit_length()-1)
+def b(n): return n + 1 if n<2 else prime(1 + (len(bin(n)[2:]) - bin(n)[2:].count("1"))) * b(a053645(n))
 def a005940(n): return b(n - 1)
 def a003188(n): return n^int(n/2)
 def a243353(n): return a005940(1 + a003188(n)) # _Indranil Ghosh_, May 07 2017

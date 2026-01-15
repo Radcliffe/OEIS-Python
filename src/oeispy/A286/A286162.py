@@ -3,10 +3,9 @@
 # OEIS sequence: A286162
 
 from sympy import prime, factorint
-import math
-def T(n, m): return ((n + m)**2 - n - 3*m + 2)/2
-def A(n): return n - 2**int(math.floor(math.log(n, 2)))
-def b(n): return n + 1 if n<2 else prime(1 + (len(bin(n)[2:]) - bin(n)[2:].count("1"))) * b(A(n))
+def T(n, m): return ((n + m)**2 - n - 3*m + 2)//2
+def a053645(n): return n - 2**(n.bit_length()-1)
+def b(n): return n + 1 if n<2 else prime(1 + (len(bin(n)[2:]) - bin(n)[2:].count("1"))) * b(a053645(n))
 def a005940(n): return b(n - 1)
 def P(n):
     f = factorint(n)

@@ -8,8 +8,8 @@ def wt(n): return bin(n).count("1")
 def a037445(n):
     f=factorint(n)
     return 2**sum([wt(f[i]) for i in f])
-def A(n): return n - 2**int(math.floor(log(n, 2)))
-def b(n): return n + 1 if n<2 else prime(1 + (len(bin(n)[2:]) - bin(n)[2:].count("1"))) * b(A(n))
+def a053645(n): return n - 2**(n.bit_length()-1)
+def b(n): return n + 1 if n<2 else prime(1 + (len(bin(n)[2:]) - bin(n)[2:].count("1"))) * b(a053645(n))
 def a286575(n): return a037445(b(n))
 def a(n): return int(math.floor(log(a286575(n), 2))) # _Indranil Ghosh_, May 30 2017
 

@@ -3,6 +3,5 @@
 # OEIS sequence: A283806
 
 from sympy import isprime
-import math
-print([n for n in range(1001) if n%2 and sum([isprime(n-2**k) for k in range(int(math.floor(math.log(n)/math.log(2))) + 1)]) == 1]) # _Indranil Ghosh_, Mar 29 2017
+print([n for n in range(1001) if n%2 and sum([isprime(n-2**k) for k in range(n.bit_length())]) == 1]) # _Indranil Ghosh_, Mar 29 2017
 
