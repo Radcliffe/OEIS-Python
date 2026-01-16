@@ -3,12 +3,12 @@
 # OEIS sequence: A000326
 
 # Intended to compute the initial segment of the sequence, not isolated terms.
-def aList():
+def agen():
      x, y = 1, 1
      yield 0
      while True:
          yield x
          x, y = x + y + 3, y + 3
-A000326 = aList()
+A000326 = agen()
 print([next(A000326) for i in range(47)]) # _Peter Luschny_, Aug 04 2019
 

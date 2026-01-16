@@ -9,7 +9,7 @@ def f(N): # compute terms a(0)..a(N)
         C = 2
     else:
         C = Rational(166,125)
-    for i in primerange(C*sqrt(N*log(N))):
+    for i in primerange(int(C*sqrt(N*log(N)))):
         for j in range(N, i-1, -1):
             hi = V[j]
             pp = i

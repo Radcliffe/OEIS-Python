@@ -3,7 +3,7 @@
 # OEIS sequence: A000182
 
 # The objective of this implementation is efficiency.
-# n -> [0, a(1), a(2), ..., a(n)] for n > 0.
+# n -> [a(1), a(2), ..., a(n)] for n > 0.
 def A000182_list(n):
     T = [0 for i in range(1, n+2)]
     T[1] = 1
@@ -12,6 +12,6 @@ def A000182_list(n):
     for k in range(2, n+1):
         for j in range(k, n+1):
             T[j] = (j-k)*T[j-1]+(j-k+2)*T[j]
-    return T
+    return T[1:]
 print(A000182_list(100)) # _Peter Luschny_, Aug 07 2011
 
