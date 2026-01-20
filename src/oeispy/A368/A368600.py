@@ -3,7 +3,7 @@
 # OEIS sequence: A368600
 
 from itertools import combinations, product, chain
-from scipy.special import comb
+from math import comb
 def v(c):
     for elements in product(*c):
         if len(set(elements)) == len(elements):
@@ -16,5 +16,5 @@ def a(n):
     cs = combinations(subsets, n)
     c = sum(1 for c in cs if v(c))
     return c
-[print(int(comb(2**n-1,n) - a(n))) for n in range(7)] # _Robert P. P. McKone_, Jan 02 2024
+[print(comb(2**n-1,n) - a(n), end=', ') for n in range(7)] # _Robert P. P. McKone_, Jan 02 2024
 
