@@ -4,5 +4,5 @@
 
 from math import gcd
 def T(n, k): return n*k-min((n*x)%k for x in range(k) if gcd(k-x, n*x//k)==1)
-print([T(n, k) for n in range(1, 12) for k in range(1, n+1)]) # _Fülöp Tamás_, Nov 05 2025
+print([T(n, k) for n in range(1, 12) for k in range(1, n+1)]) # _Tamás Fülöp_, Nov 05 2025
 
