@@ -4,7 +4,7 @@
 
 from math import isqrt, prod
 from sympy import primerange, integer_nthroot, primepi
-def A067274(n):
+def A069274(n):
     def bisection(f, kmin=0, kmax=1):
         while f(kmax) > kmax: kmax <<= 1
         while kmax-kmin > 1:
