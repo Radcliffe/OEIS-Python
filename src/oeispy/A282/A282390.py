@@ -9,5 +9,5 @@ for i in range(1, 10):
 for i in range(100):
     print(w)
     w, h, bp, bp2 = w*2-(2 if (bp&1) else 1), h-1, bp2, (bp>>1)
-# _Andrey Zabolotskiy_, Feb 14 2017
+# _Andrei Zabolotskii_, Feb 14 2017
 
