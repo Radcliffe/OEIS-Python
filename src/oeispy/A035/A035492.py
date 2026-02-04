@@ -10,5 +10,5 @@ def agen(): # generator of terms
         first, next = deck[:n], deck[n:2*n]
         deck[0:2*n:2], deck[1:2*n:2] = next, first
         yield deck.index(1) + 1
-print(list(islice(agen(), 65))) # _Michael S. Branicky_, Aug 11 2022
+print(list(islice(agen(), 70))) # _Michael S. Branicky_, Aug 11 2022
 
