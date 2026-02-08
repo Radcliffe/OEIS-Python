@@ -8,5 +8,5 @@ for i in range(25):
     print(sum(m)) # print(w) for widths of the polyominoes
     m2 = [w-x for x in reversed(m) if w>x]
     m = [w+x for x in m2] + [w for x in m if x==w] + m2
-# _Andrey Zabolotskiy_, Feb 14 2017
+# _Andrei Zabolotskii_, Feb 14 2017
 
