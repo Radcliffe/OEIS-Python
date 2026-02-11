@@ -9,8 +9,7 @@ pi = gmpy2.const_pi()
 binary_pi = gmpy2.digits(pi, 2)[0] # zero-th element is the string of bits
 outVec = []
 for lenRun in range(1,20):
-  str0 = "".join( ["0" for _ in range (lenRun)])
-  l1 = binary_pi.find("1"+str0+"1")
-  outVec.append(l1)
+  l1 = binary_pi.find("1" + "0"*lenRun + "1")
+  outVec.append(l1) # edited by _M. F. Hasler_, Feb 04 2026
 print(outVec)
 
