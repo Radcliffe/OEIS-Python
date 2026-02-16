@@ -3,6 +3,6 @@
 # OEIS sequence: A153282
 
 from sympy import isprime
-def A153282(k): return not isprime(3*k+4)
-print([k for k in range(200) if A153282(k)]) # _Aidan Chen_, Dec 21 2025
+def isA153282(k): return not isprime(3*k+4)
+print([k for k in range(200) if isA153282(k)]) # _Aidan Chen_, Dec 21 2025
 

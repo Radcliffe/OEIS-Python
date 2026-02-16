@@ -3,17 +3,13 @@
 # OEIS sequence: A387663
 
 import sympy as sp
-def T(n, k):
-  m = sp.symbols('m', integer=True)
+from sympy.functions.combinatorial import numbers
+def T(n,k):
   sum = 0
-  for S in range(1, n+1):
-    for T in range(1, n+1):
-      inner_sum = 0
-      for I in range(0, S+1):
-        for J in range(0, T+1):
-          inner_sum += (-1)**(I+J) * sp.binomial(S, I) * sp.binomial(T, J) * sp.binomial((S-I)*(T-J), n)
-      sum += sp.binomial(m, S) * sp.binomial(m-S, T) * inner_sum
-  coeffs = sp.Poly(sp.simplify(sum * sp.factorial(n)), m).all_coeffs()
-  coeffs.reverse()
-  print(coeffs[k])
+  for i in range(sp.ceiling(k/2), n+1):
+    for s in range(0, i+1):
+      for t in range(0, i+1):
+        if (s + t >= k):
+          sum += numbers.stirling(n, i, signed=True) * numbers.stirling(s+t, k, signed=True) * numbers.stirling(i, s) * numbers.stirling(i, t)
+  return sum # _Eytan Chong_, Feb 12 2026
 

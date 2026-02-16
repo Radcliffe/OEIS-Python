@@ -3,6 +3,6 @@
 # OEIS sequence: A062326
 
 from sympy import isprime
-def A062326(p): return isprime(p) and isprime(p**2-2)
-print([p for p in range(1100) if A062326(p)]) # _Aidan Chen_, Dec 24 2025
+def isA062326(p): return isprime(p) and isprime(p**2-2)
+print([p for p in range(1100) if isA062326(p)]) # _Aidan Chen_, Dec 24 2025
 

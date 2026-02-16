@@ -3,5 +3,5 @@
 # OEIS sequence: A295496
 
 from sympy import totient as phi
-def A295496(n): return phi(6**n-1)/n # _Aidan Chen_, Jan 21 2026
+def A295496(n): return phi(6**n-1)//n # _Aidan Chen_, Jan 21 2026
 
