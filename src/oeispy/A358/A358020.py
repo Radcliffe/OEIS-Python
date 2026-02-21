@@ -6,12 +6,12 @@ from sympy import isprime, prime
 from itertools import count, product
 def a(n):
     pn = prime(n)
-    s = str(pn)
-    for d in count(len(s)):
-        for p in product(set(s), repeat=d):
-            if p[0] == "0": continue
+    S = sorted(set(str(pn)))
+    for d in count(len(S)):
+        for p in product(S, repeat=d):
+            if p[0] == "0" or len(set(p)) != len(S): continue
             t = int("".join(p))
             if t > pn and isprime(t):
                 return t
-print([a(n) for n in range(5, 56)]) # _Michael S. Branicky_, Oct 25 2022
+print([a(n) for n in range(5, 56)]) # _Michael S. Branicky_, Oct 25 2022, edited Feb 20 2026
 
