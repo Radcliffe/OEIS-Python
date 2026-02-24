@@ -7,11 +7,12 @@ from sympy import floor, continued_fraction_convergents
 from collections import deque
 from os.path import commonprefix
 def reliable_digits_from_cf(coeffs, prec):
-    frac_lower, frac_upper = deque(continued_fraction_convergents(coeffs+[1]), maxlen=2)
+    bound1, bound2 = deque(continued_fraction_convergents(coeffs+[1]), maxlen=2)
     order = 10**prec
-    trunc_lower = floor(frac_lower*order) / order
-    trunc_upper = floor(frac_upper*order) / order
-    return commonprefix([f'{trunc_lower:.{prec}f}'[2:], f'{trunc_upper:.{prec}f}'[2:]])
-coeffs = sample_gauss_kuzmin_distribution(120)
-A390737 = [len(reliable_digits_from_cf([0]+coeffs[:i], 100)) for i in range(1, len(coeffs)+1)]
+    trunc_bound1 = floor(bound1*order) / order
+    trunc_bound2 = floor(bound2*order) / order
+    rel_digits = commonprefix([f'{trunc_bound1:.{prec}f}', f'{trunc_bound2:.{prec}f}'])
+    return len(rel_digits) - 1 if rel_digits else 0
+coeffs = sample_gauss_kuzmin_distribution(100)
+A390737 = [reliable_digits_from_cf([0]+coeffs[:i], 1+int(i*1.031)) for i in range(len(coeffs)+1)]
 
