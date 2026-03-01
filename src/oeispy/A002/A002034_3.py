@@ -10,8 +10,11 @@ def A002034(n):
         if e<=p:
             m = max(m,e*p)
         else:
-            c = 0
-            for k in count(p,p):
+            c, a = 0, max(p,(e*(p-1)//p**2)*p)
+            b = a-p
+            while b>0:
+                c += (b:=b//p)
+            for k in count(a,p):
                 c += multiplicity(p,k) if p>2 else (~k&k-1).bit_length()
                 if c+k+p > e:
                     m = max(m, p*(max(k,e-c) if e>=p else e+1-c))
