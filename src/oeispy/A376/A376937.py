@@ -4,7 +4,7 @@
 
 from itertools import count, islice
 def rs(t): # rhyme scheme of t
-    s, k, m  = [], 1, dict()
+    s, k, m = [], 1, dict()
     for e in t:
         if e not in m: m[e] = k; k += 1
         s.append(m[e])
