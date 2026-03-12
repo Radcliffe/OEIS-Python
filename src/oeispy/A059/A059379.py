@@ -12,7 +12,7 @@ def MoebiusTrans(a, i):
 def Jrow(n, size):
     return [MoebiusTrans(lambda m: m ** n, k) for k in range(1, size)]
 for n in range(1, 8): print(Jrow(n, 13))
-# Alternatively:
+# Alternative:
 from sympy import primefactors as prime_divisors
 from fractions import Fraction as QQ
 from math import prod as product
