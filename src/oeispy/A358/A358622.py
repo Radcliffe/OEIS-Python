@@ -14,7 +14,7 @@ def StirlingCycleOrd2(n: int) -> list[int]:
         row[k] = (n - 1) * (rov[k - 1] + row[k])
     return row
 for n in range(9): print(StirlingCycleOrd2(n))
-# Alternative, using function BellMatrix from A264428.
+# Alternative: using function BellMatrix from A264428.
 from math import factorial
 def f(k: int) -> int:
     return factorial(k) if k > 0 else 0

@@ -6,7 +6,7 @@
 # can be layered on the Jacobi symbol.
 from sympy import igcd
 from sympy.ntheory import jacobi_symbol
-# Alternatively, you can use the function JacobiSymbol from A372877.
+# Alternative: you can use the function JacobiSymbol from A372877.
 def is_even(n): return n % 2 == 0
 def kronecker_symbol(n, k):
     if not (igcd(n, k) == 1): return 0

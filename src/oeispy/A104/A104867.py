@@ -5,7 +5,7 @@
 from sympy import S
 # download https://stuff.mit.edu/afs/sipb/contrib/pi/pi-billion.txt, then
 # with open('pi-billion.txt', 'r') as f: pi_digits = f.readline()
-pi_digits = str(S.Pi.n(2*10**5))[:-1] # alternative to above
+pi_digits = str(S.Pi.n(2*10**5))[:-1] # Alternative to above
 pi_digits = pi_digits.replace(".", "")
 def afind():
     idx, record = 0, -1

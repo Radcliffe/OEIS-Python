@@ -14,7 +14,7 @@ def StirlingSetOrd2(n: int) -> list[int]:
         row[k] = (n - 1) * rov[k - 1] + k * row[k]
     return row
 for n in range(9): print(StirlingSetOrd2(n))
-# Alternative, using function BellMatrix from A264428.
+# Alternative: using function BellMatrix from A264428.
 def f(k: int) -> int:
     return 1 if k > 0 else 0
 print(BellMatrix(f, 9))

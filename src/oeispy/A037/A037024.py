@@ -6,7 +6,7 @@ from itertools import takewhile
 from sympy import S, prime, primerange
 # download https://stuff.mit.edu/afs/sipb/contrib/pi/pi-billion.txt, then
 # with open('pi-billion.txt', 'r') as f: pi_digits = f.readline()[1:]
-pi_digits = str(S.Pi.n(10**4))[1:] # alternative to above
+pi_digits = str(S.Pi.n(10**4))[1:] # Alternative to above
 def aupton(nn):
     plocs = (pi_digits.find(str(p)) for p in primerange(2, prime(nn)+1))
     return list(takewhile(lambda x: x>=0, plocs)) # until p not found
