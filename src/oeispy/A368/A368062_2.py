@@ -13,6 +13,5 @@ def agen(): # generator of terms
                 n = base + rest
                 if first*rest + (n%10)*(n//10) == n:
                     yield n
-            print("...", digits, first, time()-time0, alst)
 print(list(islice(agen(), 18))) # _Michael S. Branicky_, Dec 10 2023
 

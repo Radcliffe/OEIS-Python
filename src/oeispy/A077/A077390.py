@@ -21,7 +21,6 @@ def agen(): # generator of terms
         old = new
         if digits%2: odds = old
         else: evens = old
-        print("...", digits, time()-time0)
         digits += 1
 print(list(islice(agen(), 80))) # _Michael S. Branicky_, May 06 2022
 

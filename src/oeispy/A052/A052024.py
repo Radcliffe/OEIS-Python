@@ -17,6 +17,6 @@ def agen(verbose=False):
         prime_strings |= new_prime_strings
         pals = [int(s) for s in new_prime_strings if s == s[::-1]]
         yield from sorted(pals)
-        if verbose: print("...", digs, len(prime_strings), time()-time0)
+        if verbose: print("...", digs, len(prime_strings))
 print(list(islice(agen(), 20))) # _Michael S. Branicky_, Apr 04 2022
 

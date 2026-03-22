@@ -16,7 +16,7 @@ def a(n, verbose=False):
             if bdeckn in ndecks:
                 return N
             ndecks.add(bdeckn)
-        if verbose: print("...", N, time()-time0)
+        if verbose: print("...", N)
         N += 1
 print([a(n) for n in range(1, 5)]) # _Michael S. Branicky_, Sep 20 2021
 
