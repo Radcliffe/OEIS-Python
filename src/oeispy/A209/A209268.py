@@ -4,7 +4,7 @@
 
 f = open("result.csv", "w")
 def A007814(n):
-### author        Richard J. Mathar 2010-09-06 (Start)
+### author Richard J. Mathar 2010-09-06 (Start)
 ### https://oeis.org/wiki/User:R._J._Mathar/oeisPy/oeisPy/oeis_bulk.py
         a = 0
         nshft = n
