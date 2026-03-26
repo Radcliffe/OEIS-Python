@@ -6,5 +6,5 @@ def a(n):
     seen, x = set(), 3
     while x not in seen: seen.add(x); q, r = divmod(n, x); x = q + r
     return x
-print([a(n) for n in range(1, 90)]) # _Michael S. Branicky_, Oct 06 2022~
+print([a(n) for n in range(1, 90)]) # _Michael S. Branicky_, Oct 06 2022
 
