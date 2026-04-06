@@ -8,7 +8,6 @@ def cfact2(n, j):
     if j == 1 or j == n: return 1
     if j < 1 or j > n: return 0
     return cfact2(n-1, j-1) + j * j * cfact2(n-1, j)
-def a(n: int):
-    return 1 if n == 0 else sum(j*cfact2(n, j) for j in range(1, n + 1))
-L = [a(n) for n in range(0, 20)]; print(L)
+def a(n: int): return 1 if n == 0 else sum(j*cfact2(n, j) for j in range(1, n + 1))
+L = [a(n) for n in range(0, 20)]; print(L)  # _Peter Luschny_, Apr 04 2026
 
