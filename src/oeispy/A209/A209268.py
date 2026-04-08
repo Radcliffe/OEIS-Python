@@ -4,15 +4,14 @@
 
 f = open("result.csv", "w")
 def A007814(n):
-### author Richard J. Mathar 2010-09-06 (Start)
-### https://oeis.org/wiki/User:R._J._Mathar/oeisPy/oeisPy/oeis_bulk.py
+# Richard J. Mathar 2010-09-06
+# https://oeis.org/wiki/User:R._J._Mathar/oeisPy/oeisPy/oeis_bulk.py
         a = 0
         nshft = n
         while (nshft %2 == 0):
                 a += 1
                 nshft >>= 1
         return a
-###(End)
 for  n in range(1,10001):
      x = A007814(n)
      y = (n+2**x)/2**(x+1)
