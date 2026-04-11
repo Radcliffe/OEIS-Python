@@ -11,5 +11,5 @@ def p(b, d):
     return (k-b)//d
 def A194943(n):
     return max(p(b, n) for b in range(1, n) if gcd(b, n) == 1)
-print([A194943(n) for n in range(2, 82)]) # _Michael S. Branicky_, May 18 2023 after _Charles R Greathouse IV_
+print([A194943(n) for n in range(2, 83)]) # _Michael S. Branicky_, May 18 2023 after _Charles R Greathouse IV_
 
