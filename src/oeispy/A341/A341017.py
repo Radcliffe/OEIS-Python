@@ -10,5 +10,5 @@ def aupto(limit): # only test primes
     if ok(p): alst.append(p)
     p = nextprime(p)
   return alst
-print(aupto(1277)) #_Michael S. Branicky_, Feb 02 2021
+print(aupto(1277)) # _Michael S. Branicky_, Feb 02 2021
 
