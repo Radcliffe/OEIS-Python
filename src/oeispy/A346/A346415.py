@@ -3,7 +3,7 @@
 # OEIS sequence: A346415
 
 F = lambda n: (1<<((n+1)*(n+1)))//((4<<(2*n))-(2<<n)-1)&((2<<n)-1)
-N = 10; weights = [F(n) for n in range(N+1)]
-WeightedSetPartitionTransform(weights, N) # function defined in A394559.
-# _Peter Luschny_, Mar 29 2026
+N = 10; seq = [F(n) for n in range(N+1)]
+BellTransform(seq) # function defined in A394439.
+# _Peter Luschny_, Apr 23 2026
 
