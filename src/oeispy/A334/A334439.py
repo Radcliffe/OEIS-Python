@@ -13,5 +13,5 @@ def A334439row(n):
     if n == 0: return [[]]
     partitions = list(b(n, n))
     partitions.sort(key=len)
-return partitions  # _Peter Luschny_, May 01 2026
+    return partitions  # _Peter Luschny_, May 01 2026
 
