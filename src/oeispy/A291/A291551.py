@@ -3,7 +3,6 @@
 # OEIS sequence: A291551
 
 from functools import cache
-from itertools import permutations
 from math import prod
 def a(n):
     @cache
