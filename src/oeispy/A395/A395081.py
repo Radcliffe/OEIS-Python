@@ -18,11 +18,11 @@ def A395081(n: int) -> list[list[int]]:
                     else:
                         yield p + [i, 1]
             yield from gen(n, i - 1)
-    if n == 0: return [[0, 0]] # [0, 0] represents [] by convention
+    if n == 0: return [[]]
     partitions = list(gen(n, n))
     # Sort by length: length is sum of multiplicities (every second element)
     partitions.sort(key=lambda p: sum(p[1::2]))
     return partitions
-row = lambda n: [p for parts in A395081(n) for p in parts] # flatten
-for n in range(8): print([n], row(n))
+A395081row = lambda n: [p for parts in A395081(n) for p in parts] # flatten
+for n in range(1, 8): print([n], A395081row(n))
 
