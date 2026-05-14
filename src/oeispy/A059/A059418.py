@@ -4,5 +4,7 @@
 
 from sympy.functions.combinatorial.numbers import stirling
 cycle=lambda n,k: stirling(n,k,kind=1)
-A059418=lambda n, k: cycle(n-1,k-1) + sum(cycle(n-1, i)*2**(i-k) for i in range(k, n)) # _Natalia L. Skirrow_, May 06 2026
+A059418=lambda n, k: cycle(n-1,k-1) + sum(cycle(n-1, i)*2**(i-k) for i in range(k, n))
+print([A059418(n, k) for n in range(1, 7) for k in range(1, n+1)])
+# _Natalia L. Skirrow_, May 06 2026
 

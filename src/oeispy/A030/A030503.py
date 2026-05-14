@@ -3,7 +3,5 @@
 # OEIS sequence: A030503
 
 from math import comb
-def A030503(n):
-    a, b = divmod(comb(n,3)<<3,(n<<1|1))
-    return a+bool(b) # _Chai Wah Wu_, May 12 2026
+def A030503(n): return 1+(comb(n,3)<<3)//(2*n+1) if n>2 else 0 # _Chai Wah Wu_, May 12 2026
 
