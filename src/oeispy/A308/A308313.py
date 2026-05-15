@@ -4,5 +4,5 @@
 
 from math import isqrt
 from sympy import bernoulli
-def A308313(n): return (-1 if n&1 else 1)*((((s:=isqrt(m:=n>>1))+1)*(bernoulli(n+1)-bernoulli(n+1,s+1))<<n+1)-((t:=isqrt(n))+1)*(bernoulli(n+1)-bernoulli(n+1,t+1))+(sum(w**n*(n+1)*((q:=m//w)+1)-bernoulli(n+1)+bernoulli(n+1,q+1) for w in range(1,s+1))<<n+1)-sum(w**n*(n+1)*((q:=n//w)+1)-bernoulli(n+1)+bernoulli(n+1,q+1) for w in range(1,t+1)))//(n+1)
+def A308313(n): return (-1 if n&1 else 1)*((((s:=isqrt(m:=n>>1))+1)*(bernoulli(n+1)-bernoulli(n+1,s+1))<<n+1)-((t:=isqrt(n))+1)*(bernoulli(n+1)-bernoulli(n+1,t+1))+(sum(w**n*(n+1)*((q:=m//w)+1)-bernoulli(n+1)+bernoulli(n+1,q+1) for w in range(1,s+1))<<n+1)-sum(w**n*(n+1)*((q:=n//w)+1)-bernoulli(n+1)+bernoulli(n+1,q+1) for w in range(1,t+1)))//(n+1) #  _Chai Wah Wu_, Oct 28 2023
 
