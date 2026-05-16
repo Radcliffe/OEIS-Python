@@ -10,9 +10,9 @@ def agen(): # generator of terms
         v = len(wlst[0] | wlst[1] | wlst[2] | wlst[3])
         if v >= n and v not in adict:
             adict[v] = m
-            for i in range(n, v+1):
-                yield m
-            n = v+1
+            while n in adict:
+                yield adict[n]
+                n += 1
         wlst = wlst[1:] + [set(factorint(m+4))]
 print(list(islice(agen(), 15))) # _Michael S. Branicky_, May 05 2026
 
