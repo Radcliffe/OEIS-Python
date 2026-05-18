@@ -4,15 +4,12 @@
 
 from functools import cache
 @cache
-def Trow(n):
-    if n == 0: return [1]
-    if n == 1: return [0, 1]
-    if n == 2: return [0, 1, 1]
-    A = Trow(n - 2) + [0, 0]
-    B = Trow(n - 1) + [1]
-    for k in range(n - 1, 1, -1):
-        B[k] = (((B[k] + B[k - 1]) * (2 * n - 1)
-               - (A[k] - 2 * A[k - 1] + A[k - 2]) * (n - 2)) // (n + 1))
-    return B
-for n in range(10): print(Trow(n)) # _Peter Luschny_, May 02 2022
+def A090181(n: int, k: int) -> int:
+    if k == n or k == 1: return 1
+    if k < 1 or k > n: return 0
+    if k > n - k + 1: k = n - k + 1
+    num = (n - k + 2) * (n - k + 1)
+    den = k * (k - 1)
+    return A090181(n, k - 1) * num // den
+for n in range(9):  print([A090181(n, k) for k in range(n + 1)]) # _Peter Luschny_, May 17 2026
 
