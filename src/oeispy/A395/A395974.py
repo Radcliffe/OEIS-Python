@@ -3,12 +3,12 @@
 # OEIS sequence: A395974
 
 from functools import cache
+@cache
+def h(m: int) -> int:
+    if m == 1: return 1
+    return -sum(A090181(m, j) * h(j) for j in range(1, m))
 def A395974(n: int) -> int:
-    if n == 1: return 1
-    @cache
-    def h(m: int) -> int:  # A103365
-        if m == 1: return 1
-        return -sum(A090181(m, j) * h(j) for j in range(1, m))
+    if n == 0: return 0
     s = 0; cnj = 1
     sgn = 1 if n & 1 else -1
     for j in range(1, n + 1):
