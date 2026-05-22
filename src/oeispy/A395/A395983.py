@@ -10,16 +10,16 @@ def A395983_generator():
     primes = primerange(5,float('inf'))
     while True:
         P = []
-        p0 = float('inf')
+        p0 = next(primes)
         I = defaultdict(list)
         for i,p in enumerate(primes):
             g = p-p0
             if g == 2: break
-            P.append(p)
-            if i: I[g].append(i-1)
+            P.append(p0)
+            I[g].append(i)
             p0 = p
         deleted = [False]*len(P)
-        deleted[-1] = True
+        deleted.append(True)
         for g in range(4,max(I,default=0)+1,2):
             for i in I[g]:
                 if not deleted[i] and not deleted[i+1]:
