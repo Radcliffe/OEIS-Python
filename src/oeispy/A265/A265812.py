@@ -6,7 +6,7 @@ from sympy import prevprime, nextprime, pi
 def POBA(x):
     q = 2; best = 99
     while p := x*q:
-        dL = p - (pL := prevprime(p))
+        dL = p - (pL := prevprime(p) if p>2 else 0)
         dR = (pR := nextprime(p)) - p
         if dL < dR and dL < best*q:
             yield (pL,q); best = dL/q
