@@ -8,7 +8,7 @@ def agen(): # generator of terms
     yield from [0, 1]
     for n in count(2):
         mask = (an1<<2)|(an1>>2)|(an2<<1)|(an2>>1)
-        an2, an1 = an1, next(k for k in count(m) if not (k in aset or k&mask))
+        an2, an1 = an1, next(k for k in count(m) if not (k&mask or k in aset))
         yield an1
         aset.add(an1)
         while m in aset: m += 1
