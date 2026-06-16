@@ -18,5 +18,5 @@ r = [0]
 for n in range(1, 100):
     r.append(1 + sum(r[x] for x in dei(n-1)))
 print([r.index(x) for x in range(max(r)+1)])
-# _Andrey Zabolotskiy_, Dec 20 2017
+# _Andrei Zabolotskii_, Dec 20 2017
 
