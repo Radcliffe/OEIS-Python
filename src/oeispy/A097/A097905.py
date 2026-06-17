@@ -5,12 +5,12 @@
 from math import factorial, isqrt, comb
 from sympy import factorint
 from sympy.ntheory.factor_ import digits
-def A097905_T(m,n):
-    k = factorial(m)
-    for p, e in factorint(n).items():
-        k //= p**min(e*m, (m-sum(digits(m, p)[1:]))//(p-1))
+def A097905_T(n,m):
+    k = factorial(n)
+    for p, e in factorint(m).items():
+        k //= p**min(e*n,(n-sum(digits(n,p)[1:]))//(p-1))
     return k
-def A097905(n):
-    a = (m:=isqrt(k:=n<<1))+(k>m*(m+1))
-    return A097905_T(a,n-comb(a,2)) # _Chai Wah Wu_, Jun 12 2026
+def A097905(m):
+    a = (n:=isqrt(k:=m<<1))+(k>n*(n+1))
+    return A097905_T(a,m-comb(a,2)) # _Chai Wah Wu_, Jun 12 2026
 
