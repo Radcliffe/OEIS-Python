@@ -9,6 +9,6 @@ def A395242(n):
     def f(x):
         s = bin(x)[-1:1:-1]
         t = '0'+s+'0'
-        return n-1+sum(sum(fibonacci(k+1)*comb(i-k+1,k) for k in range(i+1))  for i in range(len(s)) if s[i]=='1' and not '0110' in '0'+t[i+2:])+('0110' not in t)
+        return n-1+sum(sum(fibonacci(k+1)*comb(i-k+1,k) for k in range(i+1)) for i in range(len(s)) if s[i]=='1' and not '0110' in '0'+t[i+2:])+('0110' not in t)
     return bisection(f,n,n)
 

@@ -34,5 +34,5 @@ for m in range(1, m_range+1):
     delta = Pidx_product - omega_product
     if delta < delta_limit:
         delta_min[delta] = m
-print(f"Final m = {m:,} and minimum deltas were at m = {delta_min}")
+print(f"Final m = {m:, } and minimum deltas were at m = {delta_min}")
 

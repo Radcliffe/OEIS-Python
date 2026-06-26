@@ -3,7 +3,7 @@
 # OEIS sequence: A118909
 
 from itertools import accumulate
-from sympy.ntheory.factor_ import primeomega
+from sympy import primeomega
 def nextsemiprime(n):
   while primeomega(n + 1) != 2: n += 1
   return n + 1
