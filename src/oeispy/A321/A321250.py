@@ -3,5 +3,5 @@
 # OEIS sequence: A321250
 
 from networkx import find_cliques, complement, cartesian_product, cycle_graph
-def A321250(n): return sum(1 for c in find_cliques(complement(cartesian_product(cycle_graph(n),cycle_graph(n))))) # _Chai Wah Wu_, Jan 11 2024
+def A321250(n): return sum(1 for c in find_cliques(complement(cartesian_product(cycle_graph(n), cycle_graph(n))))) # _Chai Wah Wu_, Jan 11 2024
 
